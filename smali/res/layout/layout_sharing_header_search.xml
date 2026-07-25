@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <EditText
+        android:id="@id/sharing_search_input"
+        android:layout_width="fill_parent"
+        android:layout_height="32.0dip"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="4.0dip"
+        android:layout_marginRight="4.0dip"
+        android:background="@drawable/transparent"
+        android:ellipsize="end"
+        android:hint="@string/sharing_hint_search_by_dialogs"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:maxLines="1"
+        android:saveEnabled="false"
+        android:textColor="?text_muted"
+        android:textColorHint="?text_secondary"
+        android:textSize="16.0dip" />
+
+    <ImageButton
+        android:id="@id/sharing_clear_button"
+        style="@style/Widget.AppCompat.ActionButton"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:layout_gravity="end|center"
+        android:layout_marginEnd="4.0dip"
+        android:layout_marginRight="4.0dip"
+        android:contentDescription="@string/close"
+        android:tint="?icon_medium"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_cancel_24" />
+</FrameLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/profile_wall_selector"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/profile_selector_bar"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/post_side_padding_btn"
+    android:paddingRight="@dimen/post_side_padding_btn"
+    android:weightSum="1.0">
+
+    <HorizontalScrollView
+        android:layout_width="0.0dip"
+        android:layout_height="48.0dip"
+        android:layout_weight="1.0"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="48.0dip"
+            android:orientation="horizontal"
+            android:paddingEnd="@dimen/post_side_padding_menu">
+
+            <TextView
+                android:id="@id/profile_wall_all_posts"
+                style="@style/VKUIText.Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="48.0dip"
+                android:background="@drawable/profile_selector_milkshake"
+                android:gravity="center"
+                android:paddingLeft="16.0dip"
+                android:paddingRight="16.0dip"
+                android:singleLine="true"
+                android:text="@string/wall_all_posts"
+                android:textColor="@color/selector_color_milkshake" />
+
+            <TextView
+                android:id="@id/profile_wall_owner_posts"
+                style="@style/VKUIText.Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="48.0dip"
+                android:background="@drawable/profile_selector_milkshake"
+                android:gravity="center"
+                android:paddingLeft="16.0dip"
+                android:paddingRight="16.0dip"
+                android:singleLine="true"
+                android:text="@string/wall_owners_posts"
+                android:textColor="@color/selector_color_milkshake" />
+
+            <TextView
+                android:id="@id/profile_wall_archived_posts"
+                style="@style/VKUIText.Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="48.0dip"
+                android:background="@drawable/profile_selector_milkshake"
+                android:gravity="center"
+                android:paddingLeft="16.0dip"
+                android:paddingRight="16.0dip"
+                android:singleLine="true"
+                android:text="@string/wall_tab_archived_posts"
+                android:textColor="@color/selector_color_milkshake"
+                android:visibility="gone" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/post_side_padding_menu">
+
+        <ImageView
+            android:id="@id/profile_wall_post_btn"
+            android:layout_width="48.0dip"
+            android:layout_height="48.0dip"
+            android:background="@drawable/highlight_icon"
+            android:contentDescription="@string/accessibility_search_by_user"
+            android:scaleType="center"
+            android:src="@drawable/ic_search_outline_28"
+            android:tint="?icon_outline_secondary"
+            android:visibility="invisible" />
+
+        <ProgressBar
+            android:id="@id/profile_wall_progress"
+            android:layout_width="24.0dip"
+            android:layout_height="24.0dip"
+            android:layout_gravity="center"
+            android:indeterminateTint="?activity_indicator_tint"
+            android:indeterminateTintMode="src_in" />
+    </FrameLayout>
+</LinearLayout>

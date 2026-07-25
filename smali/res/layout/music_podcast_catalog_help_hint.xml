@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16.0dip"
+    android:layout_marginTop="14.0dip"
+    android:layout_marginEnd="16.0dip"
+    android:layout_marginBottom="8.0dip"
+    android:background="@drawable/music_podcast_special_background"
+    android:foreground="@drawable/highlight_radius_12">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32.0dip"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="16.0dip">
+
+        <TextView
+            android:id="@id/title"
+            style="@style/VKUIText.Title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17.0sp" />
+
+        <TextView
+            android:id="@id/description"
+            style="@style/VKUIText.Subhead2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5.0dip" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="16.0dip"
+        android:layout_height="24.0dip"
+        android:layout_gravity="end|center"
+        android:layout_marginEnd="16.0dip"
+        android:background="@drawable/ic_chevron_24"
+        android:backgroundTint="?icon_secondary" />
+</FrameLayout>

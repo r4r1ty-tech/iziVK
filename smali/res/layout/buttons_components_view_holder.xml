@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16.0dip">
+
+    <TextView
+        style="@style/VKUIText.Subhead1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8.0dip"
+        android:text="Primary" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/VKUIButton.Primary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8.0dip"
+            android:clickable="true"
+            android:text="@string/group_accept_member" />
+
+        <TextView
+            style="@style/VKUIButton.Primary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="@string/group_accept_member" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/VKUIText.Subhead1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:text="Primary Rounded" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/VKUIButton.Primary.Rounded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8.0dip"
+            android:clickable="true"
+            android:text="@string/send" />
+
+        <TextView
+            style="@style/VKUIButton.Primary.Rounded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="@string/send" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/VKUIText.Subhead1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:text="Secondary" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/VKUIButton.Secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8.0dip"
+            android:clickable="true"
+            android:text="@string/vkim_msg_request_reject" />
+
+        <TextView
+            style="@style/VKUIButton.Secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="@string/vkim_msg_request_reject" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/VKUIText.Subhead1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:text="Secondary Rounded" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/VKUIButton.Secondary.Rounded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8.0dip"
+            android:clickable="true"
+            android:text="@string/apps_remove_action" />
+
+        <TextView
+            style="@style/VKUIButton.Secondary.Rounded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="@string/apps_remove_action" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/VKUIText.Subhead1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:text="Muted" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/VKUIButton.Muted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8.0dip"
+            android:clickable="true"
+            android:text="@string/vkim_request_money" />
+
+        <TextView
+            style="@style/VKUIButton.Muted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="@string/vkim_request_money" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/VKUIText.Subhead1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:text="Muted Rounded" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/VKUIButton.Muted.Rounded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8.0dip"
+            android:clickable="true"
+            android:text="@string/delete" />
+
+        <TextView
+            style="@style/VKUIButton.Muted.Rounded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="@string/delete" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/VKUIText.Subhead1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:text="Tertiary" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/VKUIButton.Tertiary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8.0dip"
+            android:clickable="true"
+            android:text="@string/accessibility_more" />
+
+        <TextView
+            style="@style/VKUIButton.Tertiary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="@string/accessibility_more" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/VKUIText.Subhead1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:text="Outline" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/VKUIButton.Outline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8.0dip"
+            android:clickable="true"
+            android:text="@string/buy" />
+
+        <TextView
+            style="@style/VKUIButton.Outline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="@string/buy" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/VKUIText.Subhead1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:text="Commerce" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/VKUIButton.Green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8.0dip"
+            android:clickable="true"
+            android:text="@string/nine_votes" />
+
+        <TextView
+            style="@style/VKUIButton.Green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="@string/nine_votes" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/VKUIText.Subhead1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:text="Media Overlay" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:orientation="horizontal"
+        android:padding="8.0dip">
+
+        <TextView
+            style="@style/VKUIButton.MediaOverlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8.0dip"
+            android:clickable="true"
+            android:text="@string/music_artist_listen_all_btn" />
+
+        <TextView
+            style="@style/VKUIButton.MediaOverlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="@string/music_artist_listen_all_btn" />
+    </LinearLayout>
+</LinearLayout>

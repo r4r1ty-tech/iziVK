@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="48.0dip">
+
+    <TextView
+        android:id="@id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center"
+        android:layout_marginStart="16.0dip"
+        android:ellipsize="end"
+        android:fontFamily="@string/fontRobotoRegular"
+        android:gravity="start|center"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:textColor="?text_primary"
+        android:textSize="14.0sp" />
+
+    <TextView
+        android:id="@id/open"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center"
+        android:layout_marginEnd="44.0dip"
+        android:background="@drawable/vkim_ripple_dark"
+        android:ellipsize="end"
+        android:fontFamily="@string/fontRobotoRegular"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:padding="8.0dip"
+        android:text="@string/vkim_business_notify_open"
+        android:textColor="?accent"
+        android:textSize="14.0sp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@id/hide"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:layout_gravity="end|center|top"
+        android:background="@drawable/vkim_ripple_dark_borderless"
+        android:contentDescription="@null"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_cancel_24"
+        android:tint="?icon_secondary" />
+</FrameLayout>

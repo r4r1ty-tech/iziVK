@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/sett_media">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="true"
+                android:key="compressPhotos"
+                android:summary="@string/sett_compress_photo_summ"
+                android:title="@string/sett_compress_photos" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="true"
+                android:key="compressVideos"
+                android:summary="@string/sett_compress_video_summ"
+                android:title="@string/sett_compress_videos"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/vtl_video_settings">
+        <Preference
+                android:key="download_video"
+                android:title="@string/vtl_download_video_title"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="isEnableExternalOpening"
+                android:summary="@string/interfacevideoextsum"
+                android:title="@string/interfacevideoext"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="maxquality"
+                android:summary="@string/maxquality_summ"
+                android:title="@string/maxquality_title"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="false"
+                android:key="__dbg_disable_video_feed"
+                android:summary="@string/interfacevideorecsum"
+                android:title="@string/interfacevideorec"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+                android:defaultValue="true"
+                android:key="sendVideoMetrics"
+                android:summary="Статистика необходима для работы рекомендаций и истории видео"
+                android:title="Отправлять статистику"/>
+        <Preference
+                android:key="clearvideohistory"
+                android:summary="@string/clearvideohistory_summ"
+                android:title="@string/clearvideohistory_title"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/vtl_photo_settings">
+        <Preference
+                android:key="select_photo_search_engine"
+                android:title="@string/photo_search_engine_title"/>
+    </PreferenceCategory>
+</PreferenceScreen>

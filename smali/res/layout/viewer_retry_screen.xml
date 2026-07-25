@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32.0dip"
+        android:layout_marginEnd="32.0dip"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="@string/viewer_error_network"
+        android:textColor="@color/viewer_retry_description_text_color"
+        android:textSize="16.0sp" />
+
+    <TextView
+        android:id="@id/retry_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12.0dip"
+        android:background="?selectableItemBackground"
+        android:fontFamily="sans-serif-medium"
+        android:padding="8.0dip"
+        android:text="@string/viewer_retry"
+        android:textColor="@color/viewer_retry_button_text_color"
+        android:textSize="14.0sp" />
+</LinearLayout>

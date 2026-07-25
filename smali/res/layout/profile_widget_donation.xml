@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/post_side_padding"
+    android:paddingTop="12.0dip"
+    android:paddingRight="@dimen/post_side_padding"
+    android:paddingBottom="24.0dip">
+
+    <TextView
+        android:id="@id/text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12.0dip"
+        android:ellipsize="end"
+        android:fontFamily="@string/font_family_regular"
+        android:lineSpacingExtra="4.0sp"
+        android:maxLines="3"
+        android:textColor="?text_primary"
+        android:textSize="16.0sp" />
+
+    <ProgressBar
+        android:id="@id/progress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="8.0dip"
+        android:indeterminate="false"
+        android:progressDrawable="@drawable/progress_widget_donation" />
+
+    <TextView
+        android:id="@id/text_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12.0dip"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="?text_primary"
+        android:textSize="13.0sp" />
+
+    <TextView
+        android:id="@id/text_backers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2.0dip"
+        android:ellipsize="end"
+        android:fontFamily="@string/font_family_regular"
+        android:maxLines="1"
+        android:textColor="?text_primary"
+        android:textSize="13.0sp" />
+
+    <TextView
+        android:id="@id/button"
+        style="@style/outline_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12.0dip"
+        android:ellipsize="end"
+        android:fontFamily="@string/font_family_medium"
+        android:gravity="center"
+        android:maxLines="1" />
+</LinearLayout>

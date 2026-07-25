@@ -1,0 +1,207 @@
+import org.apache.tools.ant.taskdefs.condition.Os
+
+import java.util.zip.ZipFile
+
+plugins {
+    id 'com.android.application'
+    id 'net.nemerosa.versioning' version '3.1.0'
+    // id 'org.mozilla.rust-android-gradle.rust-android'
+}
+
+// cargo {
+//     profile = 'release'
+//     module = '../native-effects'
+//     libname = 'native-effects'
+//     targets = ["arm", "arm64"]
+//     prebuiltToolchains = true
+//     pythonCommand = "python3"
+// }
+
+def smaliFolder = projectDir.toPath().resolve("../smali").normalize()
+def scriptsFolder = projectDir.toPath().resolve("../scripts").normalize()
+//you can add own folders with decompiled smali code
+def dexes = smaliFolder.toFile()
+        .listFiles({ f -> f.isDirectory() && f.name.startsWith("smali") } as FileFilter)
+        .size()
+
+versionFile {
+    file = projectDir.toPath().resolve("src/main/assets/version.properties").toFile()
+}
+
+task cleanVersionFile {
+    projectDir.toPath().resolve("src/main/assets/version.properties").toFile().delete()
+}
+
+android {
+    compileSdkVersion 32
+    buildToolsVersion '32.0.0'
+
+    sourceSets {
+        main {
+            java.srcDirs += 'build/generated/aidl_source_output_dir/release/out'
+        }
+    }
+
+    defaultConfig {
+        applicationId "ru.vtosters.lite.utils.lite"
+        minSdk 22
+        targetSdkVersion 32
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            buildConfigField 'String', 'APPCENTER_KEY', '""'
+            proguardFile 'proguard-rules.pro'
+        }
+        rc {
+            minifyEnabled true
+            buildConfigField 'String', 'APPCENTER_KEY', '""'
+            proguardFile 'proguard-rules.pro'
+        }
+        dev {
+            minifyEnabled false
+            buildConfigField 'String', 'APPCENTER_KEY', '""'
+        }
+        beta {
+            minifyEnabled false
+            buildConfigField 'String', 'APPCENTER_KEY', '""'
+        }
+    }
+
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+        sourceCompatibility JavaVersion.VERSION_14
+        targetCompatibility JavaVersion.VERSION_14
+    }
+    namespace 'ru.vtosters.lite'
+    ndkVersion '25.2.9519653'
+    buildFeatures {
+        aidl true
+    }
+}
+
+task testClasses {
+    doLast {
+        println 'This is a dummy testClasses task'
+    }
+}
+
+dependencies {
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.4'
+    implementation 'net.sourceforge.streamsupport:streamsupport-minifuture:1.7.4'
+    implementation 'com.google.guava:guava:33.2.1-android'
+
+    implementation 'com.mpatric:mp3agic:0.9.1'
+
+    implementation fileTree(dir: 'libs', include: ['*.aar'])
+    compileOnly fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+task generateBuildTasks() {
+    android.applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def buildType = output.name.toString().capitalize()
+            if (buildType == "Base") return
+            task "exportDex$buildType"() {
+                dependsOn('assemble' + buildType)
+                doLast {
+                    try {
+                        def suffix = buildType.toLowerCase()
+                        String apkPath = projectDir.getAbsolutePath() + "/build/outputs/apk/$suffix/app-$suffix"
+                        def apk = new File(apkPath + "-unsigned.apk")
+                        if (!apk.exists()) apk = new File(apkPath + ".apk")
+                        def zip = new ZipFile(apk)
+                        def dexCounter = dexes
+                        zip.stream()
+                                .filter(entry -> entry.name.matches("^classes(?:(?=\\d)2|)\\.dex\$") || entry.name == "assets/version.properties")
+                                .forEach(entry -> {
+                                    String filename
+                                    if (entry.name.matches("^classes(?:(?=\\d)2|)\\.dex\$")) filename = "classes${++dexCounter}.dex"
+                                    else filename = "version.properties"
+                                    println("Exporting " + entry.name)
+                                    def tmpFile = new File(projectDir, filename)
+                                    try (def is = zip.getInputStream(entry); def fos = new FileOutputStream(tmpFile)) {
+                                        def buff = new byte[0x800]
+                                        int len
+                                        while ((len = is.read(buff)) > 0) fos.write(buff, 0, len)
+                                    }
+                                });
+                    } catch (Exception e) {
+                        e.printStackTrace()
+                    }
+
+                }
+            }
+            task "prepareDexForMerge$buildType"(type: Copy) {
+                dependsOn('exportDex' + buildType)
+                // Remove comment for native lib build
+                //dependsOn('cargoBuild')
+                into smaliFolder.toString()
+                from(projectDir) {
+                    into '../smali'
+                    include "classes*.dex"
+                }
+                from(projectDir) {
+                    include 'version.properties'
+                    into 'assets'
+                }
+                from('../native-effects/target/aarch64-linux-android/release') {
+                    include 'libnative_effects.so'
+                    into 'lib/arm64-v8a'
+                }
+                from('../native-effects/target/armv7-linux-androideabi/release') {
+                    include 'libnative_effects.so'
+                    into 'lib/armeabi-v7a'
+                }
+            }
+            task "cleanTemporaryFiles$buildType"(type: Delete)
+            {
+                delete fileTree(dir: projectDir, include: ["*.dex", "version.properties"])
+                delete fileTree(dir: smaliFolder, include: ['*.dex', "assets/version.properties"])
+            }
+            task "buildVTL$buildType"(type: Exec) {
+                dependsOn('prepareDexForMerge' + buildType)
+                workingDir(projectDir.parentFile)
+                finalizedBy "cleanTemporaryFiles$buildType"
+                if (Os.isFamily("unix") || Os.isFamily("mac")) {
+                    commandLine 'bash', '-c', './scripts/build.sh'
+                } else {
+                    commandLine 'cmd', '/C', '.\\scripts\\build.bat'
+                }
+            }
+            task "buildAndInstallVTL$buildType"(type: Exec) {
+                dependsOn('buildVTL' + buildType)
+                workingDir(scriptsFolder.toString())
+                ignoreExitValue true
+                if (Os.isFamily("unix") || Os.isFamily("mac")) {
+                    commandLine 'bash', '-c', 'adb install VTLite.apk'
+                } else {
+                    commandLine 'adb', 'install', 'VTLite.apk'
+                }
+            }
+            task "buildAndLaunchVTL$buildType"(type: Exec) {
+                dependsOn('buildAndInstallVTL' + buildType)
+                if (Os.isFamily("unix") || Os.isFamily("mac"))
+                    commandLine 'bash', '-c', 'adb shell monkey -p com.vtosters.lite -c android.intent.category.LAUNCHER 1'
+                else
+                    commandLine 'adb', 'shell', 'monkey', '-p', 'com.vtosters.lite', '-c', 'android.intent.category.LAUNCHER', '1'
+            }
+        }
+    }
+}
+
+task generateRjava(type: Exec) {
+    workingDir(projectDir.parentFile)
+    if (Os.isFamily("unix") || Os.isFamily("mac"))
+        commandLine "bash", "-c", "./scripts/rclass_regenerator.sh"
+    else
+        commandLine "cmd", "/C", ".\\scripts\\rclass_regenerator.sh"
+}
+
+clean.dependsOn('cleanVersionFile')
+versionFile.dependsOn('cleanVersionFile')
+preBuild.dependsOn('versionFile')

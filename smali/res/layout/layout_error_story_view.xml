@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/fl_error"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ff2c2d2e"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@id/error_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:paddingLeft="32.0dip"
+            android:paddingRight="32.0dip"
+            android:text="@string/story_loading_error"
+            android:textColor="#ffffffff"
+            android:textSize="14.0sp" />
+
+        <TextView
+            android:id="@id/tv_retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16.0dip"
+            android:background="@drawable/btn_white_2dp"
+            android:fontFamily="@string/font_family_medium"
+            android:paddingLeft="12.0dip"
+            android:paddingTop="8.0dip"
+            android:paddingRight="12.0dip"
+            android:paddingBottom="8.0dip"
+            android:text="@string/story_retry"
+            android:textColor="@color/header_blue" />
+    </LinearLayout>
+</FrameLayout>

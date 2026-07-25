@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout style="@style/RegistrationCardBlock">
+
+            <Spinner
+                android:id="@id/signup_phone_countries"
+                style="@style/EditTextStandard"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:dropDownWidth="fill_parent"
+                android:dropDownVerticalOffset="-4.0dip" />
+
+            <LinearLayout
+                android:id="@id/signup_phone_number_wrap"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@id/signup_phone_code"
+                    style="@style/EditTextStandard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16.0dip"
+                    android:enabled="false"
+                    android:inputType="phone"
+                    android:minWidth="48.0dip" />
+
+                <com.vtosters.lite.ui.XEditText
+                    android:id="@id/signup_phone_number"
+                    style="@style/EditTextStandard"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/signup_phone_hint"
+                    android:inputType="phone" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/RegistrationTextInfo"
+                android:gravity="start"
+                android:paddingTop="12.0dip"
+                android:paddingBottom="12.0dip"
+                android:text="@string/signup_enter_number"
+                android:textSize="14.0sp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@id/terms_frame"
+            style="@style/RegistrationCardBlock"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6.0dip">
+
+            <com.vk.core.view.links.LinkedCheckBox
+                android:id="@id/terms"
+                style="@style/Base.Widget.AppCompat.CompoundButton.CheckBox"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16.0dip"
+                android:lineSpacingExtra="1.0dip"
+                android:paddingStart="16.0dip"
+                android:paddingTop="18.0dip"
+                android:paddingEnd="16.0dip"
+                android:paddingBottom="18.0dip"
+                android:textSize="16.0sp" />
+        </FrameLayout>
+    </LinearLayout>
+</ScrollView>

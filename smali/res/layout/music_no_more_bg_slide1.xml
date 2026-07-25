@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@id/close"
+            android:layout_width="48.0dip"
+            android:layout_height="48.0dip"
+            android:layout_marginStart="4.0dip"
+            android:layout_marginTop="4.0dip"
+            android:contentDescription="@string/close"
+            android:foreground="@drawable/highlight"
+            android:paddingStart="12.0dip"
+            android:paddingEnd="12.0dip"
+            android:src="@drawable/ic_cancel_24"
+            android:tint="?text_subhead"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@id/divider"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginTop="4.0dip"
+            android:background="?separator_alpha"
+            app:layout_constraintTop_toBottomOf="@id/close" />
+
+        <ImageView
+            android:id="@id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/music_promo_sticker_margin_top"
+            android:src="@drawable/ic_music_nobackground_sticker"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@id/title"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16.0dip"
+            android:layout_marginTop="20.0dip"
+            android:layout_marginEnd="16.0dip"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="4.0sp"
+            android:text="@string/music_promo_no_more_music_title"
+            android:textColor="?text_primary"
+            android:textSize="20.0sp"
+            app:fontFamily="@font/roboto_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image" />
+
+        <TextView
+            android:id="@id/music_no_more_subtitle"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16.0dip"
+            android:layout_marginTop="4.0dip"
+            android:layout_marginEnd="16.0dip"
+            android:gravity="center_horizontal"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="5.0sp"
+            android:text="@string/music_promo_no_more_music_subtitle"
+            android:textColor="?text_subhead"
+            android:textSize="15.0sp"
+            app:fontFamily="@font/roboto_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <TextView
+            android:id="@id/music_no_more_why_link"
+            style="@style/VKUIButton.Tertiary"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16.0dip"
+            android:layout_marginTop="12.0dip"
+            android:layout_marginEnd="16.0dip"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:minHeight="36.0dip"
+            android:text="@string/music_promo_no_more_why"
+            android:textSize="15.0sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/music_no_more_subtitle" />
+
+        <FrameLayout
+            android:id="@id/button"
+            style="@style/VKUIButton.Primary"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:layout_marginStart="12.0dip"
+            android:layout_marginTop="21.0dip"
+            android:layout_marginEnd="12.0dip"
+            android:layout_marginBottom="53.0dip"
+            android:gravity="center"
+            android:minHeight="44.0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/music_no_more_why_link"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@id/button_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableEnd="@drawable/ic_chevron_24"
+                android:drawablePadding="5.0dip"
+                android:drawableTint="?button_primary_foreground"
+                android:fontFamily="@string/font_family_medium"
+                android:gravity="center"
+                android:minHeight="44.0dip"
+                android:text="@string/continue_"
+                android:textColor="?button_primary_foreground"
+                android:textSize="16.0dip" />
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

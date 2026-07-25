@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:ordering="together">
+    <objectAnimator
+        android:duration="133"
+        android:interpolator="@drawable/$$notification_receive_28_60fps__2__0"
+        android:propertyName="rotation"
+        android:startOffset="0"
+        android:valueFrom="0"
+        android:valueTo="15"
+        android:valueType="floatType" />
+    <objectAnimator
+        android:duration="133"
+        android:interpolator="@drawable/$$notification_receive_28_60fps__2__1"
+        android:propertyName="rotation"
+        android:startOffset="133"
+        android:valueFrom="15"
+        android:valueTo="-15"
+        android:valueType="floatType" />
+    <objectAnimator
+        android:duration="133"
+        android:interpolator="@drawable/$$notification_receive_28_60fps__2__2"
+        android:propertyName="rotation"
+        android:startOffset="267"
+        android:valueFrom="-15"
+        android:valueTo="15"
+        android:valueType="floatType" />
+    <objectAnimator
+        android:duration="133"
+        android:interpolator="@drawable/$$notification_receive_28_60fps__2__3"
+        android:propertyName="rotation"
+        android:startOffset="400"
+        android:valueFrom="15"
+        android:valueTo="-15"
+        android:valueType="floatType" />
+    <objectAnimator
+        android:duration="133"
+        android:interpolator="@drawable/$$notification_receive_28_60fps__2__4"
+        android:propertyName="rotation"
+        android:startOffset="533"
+        android:valueFrom="-15"
+        android:valueTo="5"
+        android:valueType="floatType" />
+    <objectAnimator
+        android:duration="133"
+        android:interpolator="@drawable/$$notification_receive_28_60fps__2__5"
+        android:propertyName="rotation"
+        android:startOffset="667"
+        android:valueFrom="5"
+        android:valueTo="0"
+        android:valueType="floatType" />
+</set>

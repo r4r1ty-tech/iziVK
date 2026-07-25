@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/activity_sms_messages"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="@dimen/libverify_activity_sms_messages_margin_left"
+    android:paddingTop="@dimen/libverify_activity_vertical_margin"
+    android:paddingRight="@dimen/libverify_activity_sms_messages_margin_right"
+    android:paddingBottom="@dimen/libverify_activity_vertical_margin">
+
+    <ListView
+        android:id="@id/messages"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@null"
+        android:scrollbars="none" />
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/button"
+    style="@style/TextButton.Blue"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/music_playlist_selectable_bg_6"
+    android:fontFamily="@string/font_family_medium"
+    android:text="@string/catalog_button_show_all" />

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <View
+        android:id="@id/vkim_background_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/black_alpha35" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@id/im_appbar"
+        style="@style/Vk.Theme.Appbar"
+        android:layout_height="?actionBarSize"
+        android:background="?background_content">
+
+        <com.vk.core.view.search.MilkshakeSearchView
+            android:id="@id/vkim_search"
+            style="?im_toolbar_search_style"
+            android:layout_width="fill_parent"
+            android:layout_height="?actionBarSize"
+            android:background="?background_content"
+            android:visibility="gone" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:id="@id/vkim_list_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="?background_content"
+        android:visibility="invisible"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@id/vkim_empty_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="?background_content"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.vk.im.ui.views.EmptyViewForList
+            android:id="@id/vkim_empty"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            app:icon_size="@dimen/vkim_search_empty_icon_size"
+            app:text="@string/vkim_msg_search_empty"
+            app:text_color="?text_subhead"
+            app:text_size="16.0sp" />
+    </androidx.core.widget.NestedScrollView>
+
+    <com.vk.core.view.AppBarShadowView
+        android:id="@id/shadow"
+        style="@style/AppBarShadow"
+        app:appbar_forceMode="separator" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

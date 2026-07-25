@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="40.0dip"
+    android:background="@drawable/highlight_radius_14_top"
+    android:paddingStart="10.0dip"
+    android:paddingEnd="10.0dip">
+
+    <com.vk.imageloader.view.VKImageView
+        android:id="@id/header_icon"
+        android:layout_width="24.0dip"
+        android:layout_height="24.0dip"
+        android:layout_marginTop="10.0dip"
+        app:roundedCornerRadius="6.0dip" />
+
+    <TextView
+        android:id="@id/header_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34.0dip"
+        android:layout_marginTop="15.0dip"
+        android:layout_marginEnd="37.0dip"
+        android:fontFamily="@font/roboto_medium"
+        android:includeFontPadding="false"
+        android:letterSpacing="0.02"
+        android:singleLine="true"
+        android:textAllCaps="true"
+        android:textColor="?header_text_secondary"
+        android:textSize="13.0sp" />
+
+    <ImageView
+        android:layout_width="16.0dip"
+        android:layout_height="24.0dip"
+        android:layout_gravity="end"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginEnd="5.0dip"
+        android:src="@drawable/ic_chevron_24"
+        android:tint="?icon_tertiary" />
+</FrameLayout>

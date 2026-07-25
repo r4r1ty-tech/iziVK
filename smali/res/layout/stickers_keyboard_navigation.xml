@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="46.0dip"
+    android:orientation="horizontal">
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="6.0dip"
+        android:background="@drawable/bg_bottom_navigation_shadow" />
+
+    <FrameLayout
+        android:id="@id/tabs_wrap"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_gravity="bottom"
+        android:background="?background_content"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@id/store_button"
+            android:layout_width="48.0dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="left"
+            android:background="?selectableItemBackground">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/accessibility_open_sticker_store"
+                android:scaleType="center"
+                android:src="@drawable/ic_add_outline_24"
+                android:tint="?icon_outline_secondary" />
+
+            <TextView
+                android:id="@id/store_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="20.0dip"
+                android:layout_gravity="right"
+                android:layout_marginTop="1.0dip"
+                android:layout_marginRight="5.0dip"
+                android:background="@drawable/sticker_store_icon_badge"
+                android:fontFamily="@string/font_family_medium"
+                android:gravity="center"
+                android:lines="1"
+                android:paddingLeft="7.0dip"
+                android:paddingRight="7.0dip"
+                android:textColor="@color/white"
+                android:textSize="12.0sp" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@id/emoji_button"
+            android:layout_width="48.0dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="left"
+            android:layout_marginLeft="48.0dip"
+            android:background="@drawable/sticker_tab"
+            android:contentDescription="@string/accessibility_emojis"
+            android:scaleType="center" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@id/stickers_navigation"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="96.0dip"
+            android:paddingRight="48.0dip" />
+
+        <ImageView
+            android:id="@id/backspace_btn"
+            android:layout_width="48.0dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right"
+            android:background="?background_content"
+            android:contentDescription="@string/accessibility_backspace"
+            android:importantForAccessibility="yes"
+            android:scaleType="center"
+            android:src="@drawable/ic_backspace_28"
+            android:tint="?accent" />
+    </FrameLayout>
+</FrameLayout>

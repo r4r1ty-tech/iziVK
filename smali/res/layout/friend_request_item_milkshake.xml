@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_list_selector"
+    android:orientation="horizontal"
+    android:paddingStart="16.0dip"
+    android:paddingTop="8.0dip"
+    android:paddingBottom="8.0dip">
+
+    <FrameLayout
+        android:layout_width="72.0dip"
+        android:layout_height="72.0dip"
+        android:layout_gravity="top">
+
+        <com.vk.imageloader.view.VKCircleImageView
+            android:id="@id/photo"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            app:placeholderImage="@drawable/user_placeholder" />
+
+        <com.vk.imageloader.view.VKImageView
+            android:id="@id/online"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom|center"
+            android:layout_marginEnd="4.0dip"
+            android:layout_marginBottom="4.0dip" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0.0px"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12.0dip"
+        android:layout_weight="1.0"
+        android:orientation="vertical">
+
+        <com.vk.core.widget.FluidHorizontalLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10.0dip"
+                android:ellipsize="end"
+                android:fontFamily="@string/font_family_medium"
+                android:singleLine="true"
+                android:textColor="?text_primary"
+                android:textSize="15.0sp"
+                app:vk_layout_isFluid="true" />
+
+            <View
+                android:id="@id/icon"
+                android:layout_width="16.0dip"
+                android:layout_height="16.0dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4.0dip"
+                android:layout_marginTop="-2.0dip" />
+        </com.vk.core.widget.FluidHorizontalLayout>
+
+        <TextView
+            android:id="@id/subtitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="?text_secondary"
+            android:textSize="13.0sp" />
+
+        <TextView
+            android:id="@id/subtitle2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1.0dip"
+            android:singleLine="true"
+            android:textColor="?text_secondary"
+            android:textSize="13.0sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@id/user_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2.0dip"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="?text_secondary"
+            android:textSize="13.0sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5.0dip"
+            android:orientation="horizontal">
+
+            <com.vk.core.view.PhotoStripView
+                android:id="@id/users"
+                android:layout_width="wrap_content"
+                android:layout_height="24.0dip"
+                android:layout_gravity="center_vertical"
+                app:placeholder="@drawable/user_placeholder" />
+
+            <TextView
+                android:id="@id/info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8.0dip"
+                android:singleLine="true"
+                android:textColor="?text_tertiary"
+                android:textSize="14.0sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8.0dip"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@id/positive"
+                style="@style/primary_button"
+                android:layout_gravity="center"
+                android:background="@drawable/vkui_bg_button_primary"
+                android:contentDescription="@string/accessibility_add_friend"
+                android:paddingTop="6.0dip"
+                android:paddingBottom="6.0dip"
+                android:text="@string/friends_add" />
+
+            <TextView
+                android:id="@id/negative"
+                style="@style/secondary_button"
+                android:layout_gravity="center"
+                android:layout_marginStart="8.0dip"
+                android:background="@drawable/vkui_bg_button_secondary"
+                android:paddingTop="6.0dip"
+                android:paddingBottom="6.0dip"
+                android:text="@string/friends_hide" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@id/request_check_icon"
+                android:layout_width="16.0dip"
+                android:layout_height="16.0dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="8.0dip"
+                android:src="@drawable/ic_check_20"
+                android:tint="?text_secondary"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@id/message"
+                android:layout_width="wrap_content"
+                android:layout_height="32.0dip"
+                android:layout_marginTop="0.0dip"
+                android:layout_marginRight="2.0dip"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColor="?text_secondary"
+                android:textSize="14.0sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@id/divider_message_secondary_action"
+                android:layout_width="wrap_content"
+                android:layout_height="32.0dip"
+                android:gravity="center_vertical"
+                android:text=" · "
+                android:textColor="?text_secondary"
+                android:textSize="14.0sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@id/secondary_action"
+                style="@style/tertiary_button"
+                android:gravity="center_vertical"
+                android:paddingLeft="2.0dip"
+                android:paddingRight="2.0dip"
+                android:paddingBottom="7.0dip"
+                android:singleLine="true"
+                android:textSize="14.0sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

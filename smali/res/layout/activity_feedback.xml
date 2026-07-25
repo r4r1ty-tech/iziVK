@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="@color/background"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@id/stars_header"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="70.0">
+
+        <TextView
+            android:id="@id/question_holder"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/base"
+            android:gravity="center"
+            android:padding="20.0dip"
+            android:textAlignment="center"
+            android:textColor="@color/background"
+            android:textSize="18.0sp" />
+
+        <ImageView
+            android:id="@id/feedback_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="10.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginEnd="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginBottom="10.0dip"
+            android:onClick="onClosed"
+            android:src="@drawable/ic_action_close" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@id/fragment_holder"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:layout_weight="40.0"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20.0dip" />
+
+    <Button
+        android:id="@id/feedback_send_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20.0dip"
+        android:layout_marginEnd="20.0dip"
+        android:layout_marginBottom="20.0dip"
+        android:onClick="onSend"
+        android:text="@string/send" />
+</LinearLayout>

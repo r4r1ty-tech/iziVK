@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/content"
+    android:layout_width="128.0dip"
+    android:layout_height="wrap_content"
+    android:background="@drawable/highlight_post"
+    android:orientation="vertical">
+
+    <com.vk.imageloader.view.VKImageView
+        android:id="@id/icon"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:roundedCornerRadius="2.0dip" />
+
+    <TextView
+        android:id="@id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="?text_muted"
+        android:textSize="14.0dip" />
+
+    <TextView
+        android:id="@id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1.0dip"
+        android:ellipsize="end"
+        android:lineSpacingExtra="1.0dip"
+        android:maxLines="1"
+        android:textColor="?text_secondary"
+        android:textSize="13.0dip" />
+
+    <TextView
+        android:id="@id/button"
+        style="@style/outline_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:ellipsize="end"
+        android:fontFamily="@string/font_family_medium"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingLeft="8.0dip"
+        android:paddingRight="8.0dip" />
+</LinearLayout>

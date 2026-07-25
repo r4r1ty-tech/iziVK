@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <com.vk.core.view.TintTextView
+        android:id="@id/btn_start_date"
+        style="@style/PostingDateTimeButton"
+        android:layout_width="0.0dip"
+        android:layout_height="44.0dip"
+        android:layout_weight="6.0"
+        android:fontFamily="@string/font_family_regular"
+        android:gravity="start|center"
+        android:paddingStart="12.0dip"
+        android:paddingEnd="12.0dip"
+        android:textColor="?text_primary"
+        android:textSize="16.0sp" />
+
+    <androidx.legacy.widget.Space
+        android:layout_width="8.0dip"
+        android:layout_height="0.0dip" />
+
+    <com.vk.core.view.TintTextView
+        android:id="@id/btn_start_time"
+        style="@style/PostingDateTimeButton"
+        android:layout_width="0.0dip"
+        android:layout_height="44.0dip"
+        android:layout_weight="4.0"
+        android:fontFamily="@string/font_family_regular"
+        android:gravity="start|center"
+        android:paddingStart="12.0dip"
+        android:paddingEnd="12.0dip"
+        android:textColor="?text_primary"
+        android:textSize="16.0sp" />
+</merge>

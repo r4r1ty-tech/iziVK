@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@id/toolbar"
+        style="?actionBarTheme"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:background="?header_background"
+        android:elevation="3.0dip" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clipToPadding="true">
+
+        <com.vk.stories.archive.list.StoryArchiveRecyclerPaginatedView
+            android:id="@id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <TextView
+            android:id="@id/current_date"
+            android:layout_width="116.0dip"
+            android:layout_height="36.0dip"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="10.0dip"
+            android:background="@drawable/floating_date_background"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:paddingStart="20.0dip"
+            android:paddingTop="7.5dip"
+            android:paddingEnd="20.0dip"
+            android:paddingBottom="8.5dip"
+            android:singleLine="true"
+            android:textColor="?text_primary"
+            android:textSize="16.0dip" />
+
+        <com.vk.stories.archive.views.StoryArchiveFastScrollView
+            android:id="@id/fast_scroller"
+            android:layout_width="40.0dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="end"
+            android:paddingStart="4.0dip"
+            android:paddingTop="16.0dip"
+            android:paddingEnd="0.0dip"
+            android:paddingBottom="16.0dip" />
+    </FrameLayout>
+</LinearLayout>

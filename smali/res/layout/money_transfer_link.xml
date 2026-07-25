@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:orientation="vertical">
+
+        <com.vk.core.view.AppBarShadowView
+            android:id="@id/shadow"
+            style="@style/AppBarShadow"
+            android:layout_marginStart="-16.0dip"
+            android:layout_marginEnd="-16.0dip" />
+
+        <TextView
+            style="@style/VKUIText.Title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:letterSpacing="0.01"
+            android:maxLines="1"
+            android:minHeight="44.0dip"
+            android:paddingTop="15.0dip"
+            android:text="@string/money_transfer_public_link"
+            android:textColor="?text_primary" />
+
+        <TextView
+            style="@style/VKUIText.Text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1.0dip"
+            android:text="@string/money_transfer_public_link_description"
+            android:textColor="?text_primary" />
+
+        <TextView
+            android:id="@id/public_link_view"
+            style="@style/VKUIText.Headline"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.0dip"
+            android:layout_marginBottom="12.0dip"
+            android:background="@drawable/bg_money_chat_request"
+            android:gravity="center_vertical"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="4.0sp"
+            android:minHeight="44.0dip"
+            android:paddingStart="12.0dip"
+            android:paddingEnd="12.0dip"
+            android:textColor="?text_primary" />
+
+        <Button
+            android:id="@id/public_link_copy_view"
+            style="@style/VKUIText.Title2"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:layout_marginBottom="16.0dip"
+            android:background="@drawable/vkim_ripple_dark"
+            android:gravity="center"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="4.0sp"
+            android:text="@string/copy_link"
+            android:textAllCaps="false"
+            android:textColor="?accent" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="?separator_alpha" />
+
+        <TextView
+            style="@style/VKUIText.Title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:letterSpacing="0.01"
+            android:maxLines="1"
+            android:minHeight="44.0dip"
+            android:paddingTop="15.0dip"
+            android:text="@string/money_transfer_anon_link"
+            android:textColor="?text_primary" />
+
+        <TextView
+            style="@style/VKUIText.Text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1.0dip"
+            android:text="@string/money_transfer_anon_link_description"
+            android:textColor="?text_primary" />
+
+        <TextView
+            android:id="@id/anon_link_view"
+            style="@style/VKUIText.Headline"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.0dip"
+            android:layout_marginBottom="12.0dip"
+            android:background="@drawable/bg_money_chat_request"
+            android:gravity="center_vertical"
+            android:minHeight="44.0dip"
+            android:paddingStart="12.0dip"
+            android:paddingEnd="12.0dip"
+            android:textColor="?text_primary" />
+
+        <Button
+            android:id="@id/anon_link_copy_view"
+            style="@style/VKUIText.Title2"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:layout_marginBottom="16.0dip"
+            android:background="@drawable/vkim_ripple_dark"
+            android:gravity="center"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="4.0sp"
+            android:text="@string/copy_link"
+            android:textAllCaps="false"
+            android:textColor="?accent" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="?separator_alpha" />
+
+        <TextView
+            style="@style/VKUIText.Title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:minHeight="44.0dip"
+            android:paddingTop="15.0dip"
+            android:text="@string/money_transfer_qr"
+            android:textColor="?text_primary" />
+
+        <TextView
+            style="@style/VKUIText.Text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/money_transfer_qr_description"
+            android:textColor="?text_primary" />
+
+        <FrameLayout
+            android:id="@id/money_transfer_qr_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12.0dip"
+            android:layout_marginBottom="12.0dip"
+            android:background="@drawable/bg_money_transfer_qr"
+            android:padding="16.0dip"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@id/money_transfer_qr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/money_transfer_qr"
+                android:maxWidth="350.0dip" />
+        </FrameLayout>
+
+        <Button
+            android:id="@id/money_transfer_qr_save"
+            style="@style/VKUIText.Title2"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:layout_marginBottom="12.0dip"
+            android:background="@drawable/vkim_ripple_dark"
+            android:gravity="center"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="4.0sp"
+            android:text="@string/money_transfer_qr_save"
+            android:textAllCaps="false"
+            android:textColor="?accent" />
+
+        <Button
+            android:id="@id/money_transfer_qr_share"
+            style="@style/VKUIText.Title2"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:layout_marginBottom="16.0dip"
+            android:background="@drawable/vkim_ripple_dark"
+            android:gravity="center"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="4.0sp"
+            android:text="@string/money_transfer_qr_share"
+            android:textAllCaps="false"
+            android:textColor="?accent" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

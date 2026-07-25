@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    style="@style/VKUIText.Title2"
+    android:layout_width="fill_parent"
+    android:layout_height="48.0dip"
+    android:background="@drawable/highlight"
+    android:ellipsize="end"
+    android:fontFamily="@font/roboto_regular"
+    android:gravity="start|center"
+    android:paddingStart="24.0dip"
+    android:paddingTop="1.0dip"
+    android:paddingEnd="24.0dip"
+    android:paddingBottom="0.0dip"
+    android:singleLine="true"
+    android:textColor="?text_primary" />

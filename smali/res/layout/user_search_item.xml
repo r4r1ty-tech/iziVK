@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/UserMediumRoot">
+
+    <com.vk.imageloader.view.VKCircleImageView
+        android:id="@id/photo"
+        style="@style/UserMediumPhoto"
+        app:placeholderImage="@drawable/photo_loading" />
+
+    <ImageView
+        android:id="@id/action"
+        style="@style/UserMediumAction"
+        android:src="@drawable/ic_recommendations_add_friend" />
+
+    <ImageView style="@style/Online.Medium" />
+
+    <LinearLayout
+        style="@style/UserMediumTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@id/title"
+            style="@style/UserMediumTitle"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="0.0dip" />
+
+        <TextView
+            android:id="@id/subtitle"
+            style="@style/UserMediumSubtitle" />
+    </LinearLayout>
+</RelativeLayout>

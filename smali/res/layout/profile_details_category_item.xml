@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="48.0dip"
+    android:background="@drawable/highlight"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/post_side_padding"
+    android:paddingRight="@dimen/post_side_padding">
+
+    <com.vk.imageloader.view.VKImageView
+        android:id="@id/icon"
+        android:layout_width="28.0dip"
+        android:layout_height="28.0dip"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="16.0dip"
+        android:tint="?accent" />
+
+    <TextView
+        android:id="@id/text"
+        style="@style/VKUIText.Headline"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1.0"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="2.0dip"
+        android:lines="1" />
+
+    <TextView
+        android:id="@id/counter"
+        style="@style/VKUIText.Headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="2.0dip"
+        android:lines="1"
+        android:textColor="?text_secondary" />
+</LinearLayout>

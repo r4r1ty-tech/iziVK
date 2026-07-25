@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="6.0dip">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.vk.imageloader.view.VKImageView
+            android:id="@android:id/icon"
+            android:layout_width="fill_parent"
+            android:layout_height="100.0dip"
+            app:placeholderImage="@drawable/image_placeholder" />
+
+        <ImageButton
+            android:id="@android:id/closeButton"
+            android:layout_width="48.0dip"
+            android:layout_height="48.0dip"
+            android:layout_gravity="end"
+            android:layout_margin="4.0dip"
+            android:background="@null"
+            android:contentDescription="@string/accessibility_hide"
+            android:scaleType="center"
+            android:src="@drawable/ic_dismiss_dark_24" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@android:id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1.0dip"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:paddingLeft="@dimen/post_side_padding"
+        android:paddingTop="16.0dip"
+        android:paddingRight="@dimen/post_side_padding"
+        android:paddingBottom="4.0dip"
+        android:textColor="?text_muted"
+        android:textSize="16.0sp" />
+
+    <TextView
+        android:id="@android:id/message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineSpacingExtra="2.0dip"
+        android:paddingLeft="@dimen/post_side_padding"
+        android:paddingRight="@dimen/post_side_padding"
+        android:textColor="?text_subhead"
+        android:textSize="14.0sp" />
+</LinearLayout>
