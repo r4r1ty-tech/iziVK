@@ -116,7 +116,7 @@
 
     move-result-object v2
 
-    const-string v3, "com.vtosters.lite.permission.ACCESS_DATA"
+    const-string v3, "com.izivk.permission.ACCESS_DATA"
 
     invoke-virtual {v2, v0, v3}, Landroid/app/Activity;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 

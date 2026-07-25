@@ -160,7 +160,7 @@
 
     move-result-object p1
 
-    const-string v0, "com.vtosters.lite"
+    const-string v0, "com.izivk"
 
     .line 21
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z

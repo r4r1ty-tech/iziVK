@@ -111,7 +111,9 @@ public class ExternalLinkParser {
 
     @SuppressLint("QueryPermissionsNeeded")
     private static String getMXPlayerPackageName(Context context) {
-        for (var info : context.getPackageManager().getInstalledApplications(0))
+        var apps = DevicePrivacyShield.sanitizeInstalledApplications(
+                context.getPackageManager().getInstalledApplications(0));
+        for (var info : apps)
             if ("com.mxtech.videoplayer.ad".equals(info.packageName)
                     || "com.mxtech.videoplayer.pro".equals(info.packageName))
                 return info.packageName;

@@ -661,7 +661,7 @@
         }
     .end annotation
 
-    const-string v0, "com.vtosters.lite"
+    const-string v0, "com.izivk"
 
     const-string v1, "com.vk.im"
 

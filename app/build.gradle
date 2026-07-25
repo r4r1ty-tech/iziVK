@@ -43,7 +43,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "ru.vtosters.lite.utils.lite"
+        applicationId "com.izivk"
         minSdk 22
         targetSdkVersion 32
         versionCode 1
@@ -186,9 +186,9 @@ task generateBuildTasks() {
             task "buildAndLaunchVTL$buildType"(type: Exec) {
                 dependsOn('buildAndInstallVTL' + buildType)
                 if (Os.isFamily("unix") || Os.isFamily("mac"))
-                    commandLine 'bash', '-c', 'adb shell monkey -p com.vtosters.lite -c android.intent.category.LAUNCHER 1'
+                    commandLine 'bash', '-c', 'adb shell monkey -p com.izivk -c android.intent.category.LAUNCHER 1'
                 else
-                    commandLine 'adb', 'shell', 'monkey', '-p', 'com.vtosters.lite', '-c', 'android.intent.category.LAUNCHER', '1'
+                    commandLine 'adb', 'shell', 'monkey', '-p', 'com.izivk', '-c', 'android.intent.category.LAUNCHER', '1'
             }
         }
     }

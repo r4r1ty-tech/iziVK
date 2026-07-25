@@ -15,6 +15,7 @@ public class EncryptProvider {
     public static List<IMProcessor> processors = new ArrayList<>();
 
     static {
+        processors.add(new EncGcmProcessor());
         processors.add(new VTostersProcessor());
         processors.add(new VTostersAESProcessor());
         processors.add(new DefaultCoffeeProcessor());

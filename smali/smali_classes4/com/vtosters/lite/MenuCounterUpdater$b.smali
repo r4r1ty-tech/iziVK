@@ -87,7 +87,7 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const-string v1, "com.vtosters.lite.permission.ACCESS_DATA"
+    const-string v1, "com.izivk.permission.ACCESS_DATA"
 
     invoke-virtual {p1, v0, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
     :try_end_0

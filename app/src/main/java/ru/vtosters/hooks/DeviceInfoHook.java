@@ -2,12 +2,11 @@ package ru.vtosters.hooks;
 
 import android.annotation.SuppressLint;
 import android.os.Build;
-import android.provider.Settings;
 import android.util.Log;
+import ru.vtosters.lite.utils.DevicePrivacyShield;
 
 import static ru.vtosters.hooks.other.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.AndroidUtils.MD5;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 
 public class DeviceInfoHook {
     public static String getDeviceInfo(String input) {
@@ -41,6 +40,6 @@ public class DeviceInfoHook {
 
     @SuppressLint("HardwareIds")
     public static String findDeviceId() {
-        return Settings.Secure.getString(getGlobalContext().getContentResolver(), Settings.Secure.ANDROID_ID);
+        return DevicePrivacyShield.getAnonymizedAndroidId(null);
     }
 }

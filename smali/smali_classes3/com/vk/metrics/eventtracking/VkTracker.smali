@@ -606,13 +606,9 @@
 .end method
 
 .method public final a(Landroid/app/Application;ZLandroid/os/Bundle;)V
-    .locals 1
+    .locals 0
 
-    .line 6
-    sget-object v0, Lcom/vk/metrics/eventtracking/VkTracker$initialize$1;->a:Lcom/vk/metrics/eventtracking/VkTracker$initialize$1;
-
-    invoke-virtual {p0, p1, p2, p3, v0}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Landroid/app/Application;ZLandroid/os/Bundle;Lkotlin/jvm/b/Functions;)V
-
+    # iziVK: VkTracker init отключён
     return-void
 .end method
 

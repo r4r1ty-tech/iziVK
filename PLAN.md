@@ -17,13 +17,17 @@
 ## 🔒 2. Приватность и Защита Устройства (Shield & Telemetry Purge)
 - [x] **Полный вырез телеметрии и аналитики:**
   - Нейтрализация вызовов `AppCenter`, `Firebase`, `AppMetrica`, `Yandex.Metrica`, `MyTarget`, `analytics.vk.com`.
-  - Заглушка доменов `vtosters.app`, `adlist.vtosters.app` через `CleanInterceptor`.
+  - Заглушка доменов `vtosters.app`, `adlist.vtosters.app` через `CleanInterceptor` (основной `Network` + `VtOkHttpClient`).
+  - Stub init: `FirebaseHelper`, `VkTracker`.
 - [x] **Защита от сканирования установленных приложений:**
-  - Заглушка методов `getInstalledPackages()` и `getInstalledApplications()` в `DevicePrivacyShield.java` (возвращают пустые списки).
+  - Заглушка `getInstalledPackages()` / `getInstalledApplications()` через `DevicePrivacyShield` (SilentAuth, UsersStore, ExternalLinkParser).
 - [x] **Анонимизация аппаратных идентификаторов:**
-  - Смена `Android ID`, `IMEI`, `MAC-адреса` на `0000000000000000`.
+  - `Android ID` → через `DeviceInfoHook` + `DevicePrivacyShield`.
+  - `IMEI` → libverify + `getAnonymizedDeviceId`.
+  - `MAC` → `FAKE_MAC` готов в Shield.
 - [x] **Защита от отслеживания VPN:**
-  - Скрытие флагов `TRANSPORT_VPN` и туннельных интерфейсов (`tun0`, `ppp0`).
+  - `DeviceState.W()` → всегда `false` (скрытие `tun0` / VPN-флага).
+  - `DirectSocketFactory` на `VtOkHttpClient` (обход туннеля для служебных запросов).
 
 ---
 
@@ -49,13 +53,14 @@
 ---
 
 ## 🔐 5. Шифрование Сообщений (E2EE)
-- [x] **Модуль шифрования (`CryptoManager.java`):**
-  - Поддержка сквозного шифрования (E2EE) текстов сообщений.
+- [x] **Модуль шифрования (`CryptoManager.java` + `EncGcmProcessor`):**
+  - AES-256-GCM E2EE, префикс `[ENC]`, процессор `iziVK [AES-GCM]` в меню шифрования чата.
 - [x] **Визуальный индикатор в чате:**
-  - Отображение особого смайлика-индикатора для зашифрованных сообщений в диалогах.
+  - Отображение 🔒 для зашифрованных сообщений в диалогах.
 
 ---
 
 ## 🏷 6. Брендинг и Оформление
 - [x] **Название приложения:** `iziVK`.
-- [x] **Иконка приложения:** Установлена пользовательская иконка из `будующая_иконка.png` на все разрешения (`vt_launcher.png`, `ic_launcher.png`).
+- [x] **Package ID:** `com.izivk`.
+- [x] **Иконка приложения:** `будующая_иконка.png` → все density `vt_launcher` / `ic_launcher` + adaptive foreground.

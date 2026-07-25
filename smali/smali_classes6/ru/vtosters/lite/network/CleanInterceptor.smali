@@ -20,50 +20,103 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 17
+    .locals 2
 
-    const-string v0, "appmetrica.yandex.ru"
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    const-string v1, "appmetrica.yandex.ru"
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     const-string v1, "mobile.yandex.net"
 
-    const-string v2, "mc.yandex.ru"
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    const-string v3, "mc.yandex.net"
+    const-string v1, "mc.yandex.ru"
 
-    const-string v4, "mytarget.com"
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    const-string v5, "ad.mail.ru"
+    const-string v1, "mc.yandex.net"
 
-    const-string v6, "analytics.vk.com"
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    const-string v7, "stats.vk.com"
+    const-string v1, "mytarget.com"
 
-    const-string v8, "vk.com/stat"
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    const-string v9, "firebaseinstallations.googleapis.com"
+    const-string v1, "ad.mail.ru"
 
-    const-string v10, "firebaselogging.googleapis.com"
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    const-string v11, "firebase.googleapis.com"
+    const-string v1, "analytics.vk.com"
 
-    const-string v12, "crashlytics.com"
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    const-string v13, "appcenter.ms"
+    const-string v1, "stats.vk.com"
 
-    const-string v14, "vtosters.app"
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    const-string v15, "adlist.vtosters.app"
+    const-string v1, "vk.com/stat"
 
-    const-string v16, "api.github.com"
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 20
-    filled-new-array/range {v0 .. v16}, [Ljava/lang/String;
+    const-string v1, "firebaseinstallations.googleapis.com"
 
-    move-result-object v0
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    const-string v1, "firebaselogging.googleapis.com"
 
-    move-result-object v0
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "firebase.googleapis.com"
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "firebaseremoteconfig.googleapis.com"
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "crashlytics.com"
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "crashlyticsreports-pa.googleapis.com"
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "appcenter.ms"
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "app-measurement.com"
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "google-analytics.com"
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "vtosters.app"
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "adlist.vtosters.app"
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "api.github.com"
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "sentry.io"
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "bugsnag.com"
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     sput-object v0, Lru/vtosters/lite/network/CleanInterceptor;->BLOCKED_DOMAINS:Ljava/util/List;
 
@@ -145,6 +198,22 @@
     move-result v5
 
     if-eqz v5, :cond_1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v5, "Blocked telemetry host: "
+
+    invoke-direct {v0, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v5, "iziVK-Privacy"
+
+    invoke-static {v5, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 48
     new-instance v0, Lokhttp3/Response$a;

@@ -153,7 +153,7 @@
 
     move-result-object v2
 
-    const-string v3, "com.vtosters.lite.common.VKFileProvider"
+    const-string v3, "com.izivk.common.VKFileProvider"
 
     .line 108
     invoke-static {v2, v3, p1}, Landroidx/core/content/FileProvider;->getUriForFile(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;

@@ -454,7 +454,7 @@
 
     invoke-direct {v3, v4}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    const-string v4, "com.vtosters.lite.permission.ACCESS_DATA"
+    const-string v4, "com.izivk.permission.ACCESS_DATA"
 
     invoke-virtual {v0, v2, v3, v4, v1}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 

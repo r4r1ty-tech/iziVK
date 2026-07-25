@@ -236,7 +236,7 @@
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const-string v2, "com.vtosters.lite.permission.ACCESS_DATA"
+    const-string v2, "com.izivk.permission.ACCESS_DATA"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
@@ -278,7 +278,7 @@
 
     move-result-object p0
 
-    const-string p1, "com.vtosters.lite.permission.ACCESS_DATA"
+    const-string p1, "com.izivk.permission.ACCESS_DATA"
 
     invoke-virtual {v0, p0, p1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
@@ -383,7 +383,7 @@
 
     move-result v0
 
-    const-string v1, "com.vtosters.lite.permission.ACCESS_DATA"
+    const-string v1, "com.izivk.permission.ACCESS_DATA"
 
     const-string v2, "com.vkontakte.android.COUNTERS_UPDATED"
 
@@ -484,7 +484,7 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const-string v1, "com.vtosters.lite.permission.ACCESS_DATA"
+    const-string v1, "com.izivk.permission.ACCESS_DATA"
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
@@ -904,7 +904,7 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const-string v1, "com.vtosters.lite.permission.ACCESS_DATA"
+    const-string v1, "com.izivk.permission.ACCESS_DATA"
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 

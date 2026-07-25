@@ -432,6 +432,10 @@
 
     move-result-object p1
 
+    invoke-static {p1}, Lru/vtosters/lite/utils/DevicePrivacyShield;->sanitizeInstalledPackages(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
     const-string v0, "packageInfos"
 
     .line 14

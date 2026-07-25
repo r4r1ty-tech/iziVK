@@ -26,7 +26,16 @@
 
     sput-object v0, Lru/vtosters/lite/encryption/EncryptProvider;->processors:Ljava/util/List;
 
+    # iziVK AES-GCM E2EE
+    new-instance v1, Lru/vtosters/lite/encryption/processors/EncGcmProcessor;
+
+    invoke-direct {v1}, Lru/vtosters/lite/encryption/processors/EncGcmProcessor;-><init>()V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
     .line 18
+    sget-object v0, Lru/vtosters/lite/encryption/EncryptProvider;->processors:Ljava/util/List;
+
     new-instance v1, Lru/vtosters/lite/encryption/processors/VTostersProcessor;
 
     invoke-direct {v1}, Lru/vtosters/lite/encryption/processors/VTostersProcessor;-><init>()V

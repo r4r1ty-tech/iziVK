@@ -1158,6 +1158,13 @@
 
     invoke-virtual {v0, v1}, Lokhttp3/OkHttpClient$b;->a(Lokhttp3/Interceptor;)Lokhttp3/OkHttpClient$b;
 
+    # iziVK: блокировка телеметрии на основном Network-клиенте
+    new-instance v1, Lru/vtosters/lite/network/CleanInterceptor;
+
+    invoke-direct {v1}, Lru/vtosters/lite/network/CleanInterceptor;-><init>()V
+
+    invoke-virtual {v0, v1}, Lokhttp3/OkHttpClient$b;->a(Lokhttp3/Interceptor;)Lokhttp3/OkHttpClient$b;
+
     .line 21
     sget-object v1, Lcom/vk/core/network/Network;->f:Lcom/vk/core/network/a/PersistentCookieJar;
 

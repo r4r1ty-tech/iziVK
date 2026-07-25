@@ -29,7 +29,7 @@
 
     move-result-object v1
 
-    const-string v2, "com.vtosters.lite"
+    const-string v2, "com.izivk"
 
     invoke-direct {v0, v2, v1}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 

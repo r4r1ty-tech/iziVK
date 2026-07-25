@@ -107,7 +107,7 @@ public class PhotoViewer {
                     var manager = (ClipboardManager) AndroidUtils.getGlobalContext().getSystemService(Context.CLIPBOARD_SERVICE);
                     var uri = FileProvider.getUriForFile(
                             AndroidUtils.getGlobalContext(),
-                            "com.vtosters.lite.common.VKFileProvider",
+                            "com.izivk.common.VKFileProvider",
                             tmpImage);
                     var data = ClipData.newUri(
                             AndroidUtils.getGlobalContext().getContentResolver(),

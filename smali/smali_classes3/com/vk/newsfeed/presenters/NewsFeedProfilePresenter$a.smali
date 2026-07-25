@@ -96,7 +96,7 @@
 
     move-result v1
 
-    const-string v2, "com.vtosters.lite.permission.ACCESS_DATA"
+    const-string v2, "com.izivk.permission.ACCESS_DATA"
 
     const-string v3, "Intent(BroadcastEvents.A\u2026     .putExtra(\"id\", uid)"
 

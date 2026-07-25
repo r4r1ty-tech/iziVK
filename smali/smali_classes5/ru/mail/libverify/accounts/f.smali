@@ -192,6 +192,10 @@
 
     move-result-object v6
 
+    invoke-static {v6}, Lru/vtosters/lite/utils/DevicePrivacyShield;->getAnonymizedDeviceId(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
     iput-object v6, v1, Lru/mail/libverify/accounts/e;->c:Ljava/lang/String;
 
     invoke-virtual {p0}, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;

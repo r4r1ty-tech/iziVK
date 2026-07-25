@@ -5702,7 +5702,7 @@
 
     iget-object v2, p0, Lcom/vtosters/lite/ui/WriteBar;->I0:Landroid/content/BroadcastReceiver;
 
-    const-string v3, "com.vtosters.lite.permission.ACCESS_DATA"
+    const-string v3, "com.izivk.permission.ACCESS_DATA"
 
     const/4 v4, 0x0
 

@@ -519,7 +519,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    const-string v1, "com.vtosters.lite"
+    const-string v1, "com.izivk"
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 

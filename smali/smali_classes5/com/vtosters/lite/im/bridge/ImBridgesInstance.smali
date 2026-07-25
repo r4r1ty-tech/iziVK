@@ -284,7 +284,7 @@
 
     const/4 v3, 0x0
 
-    const-string v4, "com.vtosters.lite.permission.ACCESS_DATA"
+    const-string v4, "com.izivk.permission.ACCESS_DATA"
 
     invoke-virtual {v0, v1, v2, v4, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 

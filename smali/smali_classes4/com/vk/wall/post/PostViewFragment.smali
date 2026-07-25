@@ -1691,7 +1691,7 @@
 
     iget-object v1, p0, Lcom/vk/wall/post/PostViewFragment;->b0:Lcom/vk/wall/post/PostViewFragment$receiver$1;
 
-    const-string v2, "com.vtosters.lite.permission.ACCESS_DATA"
+    const-string v2, "com.izivk.permission.ACCESS_DATA"
 
     invoke-virtual {v0, v1, p1, v2, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 

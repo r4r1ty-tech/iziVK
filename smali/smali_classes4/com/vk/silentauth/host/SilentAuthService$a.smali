@@ -89,6 +89,10 @@
 
     move-result-object v2
 
+    invoke-static {v2}, Lru/vtosters/lite/utils/DevicePrivacyShield;->sanitizeInstalledPackages(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v2
+
     const-string v3, "packageManager.getInstal\u2026geManager.GET_SIGNATURES)"
 
     invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V

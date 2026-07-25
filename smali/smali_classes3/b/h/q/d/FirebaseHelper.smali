@@ -59,24 +59,14 @@
 .end method
 
 .method public static final a(Landroid/content/Context;Ljava/lang/Runnable;)Lb/h/q/d/FirebaseHelper;
-    .locals 1
+    .locals 0
 
-    .line 2
-    sget-object v0, Lb/h/q/MetricPrefs;->b:Lb/h/q/MetricPrefs;
+    # iziVK: Firebase init отключён
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v0, p0}, Lb/h/q/MetricPrefs;->a(Landroid/content/Context;)V
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    .line 3
-    sget-object v0, Lb/h/q/d/FirebaseHelper;->a:Lb/h/q/d/Firebase;
-
-    invoke-virtual {v0, p0}, Lb/h/q/d/Firebase;->a(Landroid/content/Context;)V
-
-    .line 4
-    sget-object p0, Lb/h/q/d/FirebaseHelper;->a:Lb/h/q/d/Firebase;
-
-    invoke-virtual {p0, p1}, Lb/h/q/d/Firebase;->a(Ljava/lang/Runnable;)V
-
-    .line 5
+    :cond_0
     sget-object p0, Lb/h/q/d/FirebaseHelper;->c:Lb/h/q/d/FirebaseHelper;
 
     return-object p0

@@ -30,11 +30,17 @@ public class CleanInterceptor implements Interceptor {
             "firebaseinstallations.googleapis.com",
             "firebaselogging.googleapis.com",
             "firebase.googleapis.com",
+            "firebaseremoteconfig.googleapis.com",
             "crashlytics.com",
+            "crashlyticsreports-pa.googleapis.com",
             "appcenter.ms",
+            "app-measurement.com",
+            "google-analytics.com",
             "vtosters.app",
             "adlist.vtosters.app",
-            "api.github.com"
+            "api.github.com",
+            "sentry.io",
+            "bugsnag.com"
     );
 
     @Override
@@ -45,6 +51,7 @@ public class CleanInterceptor implements Interceptor {
         // 1. Блокировка телеметрии на корню
         for (String domain : BLOCKED_DOMAINS) {
             if (host.contains(domain)) {
+                android.util.Log.d("iziVK-Privacy", "Blocked telemetry host: " + host);
                 return new Response.a()
                         .a(request)
                         .a(Protocol.HTTP_1_1)

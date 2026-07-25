@@ -84,7 +84,7 @@
     .line 29
     sget-object p0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    const-string v1, "com.vtosters.lite.permission.ACCESS_DATA"
+    const-string v1, "com.izivk.permission.ACCESS_DATA"
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
@@ -123,7 +123,7 @@
     .line 25
     sget-object p0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    const-string p1, "com.vtosters.lite.permission.ACCESS_DATA"
+    const-string p1, "com.izivk.permission.ACCESS_DATA"
 
     invoke-virtual {p0, v0, p1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
@@ -160,7 +160,7 @@
     :cond_0
     sget-object p0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    const-string p1, "com.vtosters.lite.permission.ACCESS_DATA"
+    const-string p1, "com.izivk.permission.ACCESS_DATA"
 
     invoke-virtual {p0, v0, p1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
@@ -279,7 +279,7 @@
     :goto_0
     sget-object p0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    const-string p1, "com.vtosters.lite.permission.ACCESS_DATA"
+    const-string p1, "com.izivk.permission.ACCESS_DATA"
 
     invoke-virtual {p0, v0, p1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 

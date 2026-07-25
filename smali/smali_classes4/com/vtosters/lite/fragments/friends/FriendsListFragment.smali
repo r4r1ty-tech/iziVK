@@ -888,7 +888,7 @@
 
     move-result-object p1
 
-    const-string p2, "com.vtosters.lite.permission.ACCESS_DATA"
+    const-string p2, "com.izivk.permission.ACCESS_DATA"
 
     invoke-virtual {p1, v0, p2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
@@ -2612,7 +2612,7 @@
 
     const/4 v2, 0x0
 
-    const-string v3, "com.vtosters.lite.permission.ACCESS_DATA"
+    const-string v3, "com.izivk.permission.ACCESS_DATA"
 
     invoke-virtual {v0, v1, p1, v3, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 

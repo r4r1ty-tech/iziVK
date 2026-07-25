@@ -115,6 +115,10 @@
 
     move-result-object p0
 
+    invoke-static {p0}, Lru/vtosters/lite/utils/DevicePrivacyShield;->sanitizeInstalledApplications(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p0
+
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0

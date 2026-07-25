@@ -14,20 +14,11 @@
 .end method
 
 .method public static findDeviceId()Ljava/lang/String;
-    .locals 2
+    .locals 1
 
-    .line 44
-    invoke-static {}, Lru/vtosters/lite/utils/AndroidUtils;->getGlobalContext()Landroid/content/Context;
+    const/4 v0, 0x0
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    const-string v1, "android_id"
-
-    invoke-static {v0, v1}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lru/vtosters/lite/utils/DevicePrivacyShield;->getAnonymizedAndroidId(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -482,7 +482,7 @@
     .line 15
     sget-object p1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    const-string v2, "com.vtosters.lite.permission.ACCESS_DATA"
+    const-string v2, "com.izivk.permission.ACCESS_DATA"
 
     invoke-virtual {p1, v1, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
     :try_end_0

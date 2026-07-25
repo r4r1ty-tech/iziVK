@@ -62,7 +62,7 @@
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/VKApplication$onCreate$19;->this$0:Lcom/vtosters/lite/VKApplication;
 
-    const-string v1, "com.vtosters.lite"
+    const-string v1, "com.izivk"
 
     const-string v2, "com.vk.audio.service.logs"
 

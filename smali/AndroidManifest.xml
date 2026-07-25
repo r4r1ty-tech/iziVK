@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.vtosters.lite"
+    package="com.izivk"
     platformBuildVersionCode="29"
     platformBuildVersionName="10"
     android:compileSdkVersion="29"
@@ -36,9 +36,9 @@
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="com.vtosters.lite.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.izivk.permission.MAPS_RECEIVE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-    <uses-permission android:name="com.vtosters.lite.permission.ACCESS_DATA" />
+    <uses-permission android:name="com.izivk.permission.ACCESS_DATA" />
     <uses-permission android:name="android.permission.NFC" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
@@ -46,23 +46,23 @@
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
     <uses-permission android:name="com.vk.usersstore.permission.SAVE" />
     <uses-permission android:name="com.vk.usersstore.permission.LOAD" />
-    <uses-permission android:name="com.vtosters.lite.usersstore.permission.SAVE" />
-    <uses-permission android:name="com.vtosters.lite.usersstore.permission.LOAD" />
+    <uses-permission android:name="com.izivk.usersstore.permission.SAVE" />
+    <uses-permission android:name="com.izivk.usersstore.permission.LOAD" />
     <uses-permission android:name="com.vk.im.usersstore.permission.SAVE" />
     <uses-permission android:name="com.vk.im.usersstore.permission.LOAD" />
-    <uses-permission android:name="com.vtosters.lite.usersstore.permission.SAVE" />
-    <uses-permission android:name="com.vtosters.lite.usersstore.permission.LOAD" />
+    <uses-permission android:name="com.izivk.usersstore.permission.SAVE" />
+    <uses-permission android:name="com.izivk.usersstore.permission.LOAD" />
     <uses-permission android:name="android.permission.READ_CALL_LOG" />
     <uses-permission-sdk-23 android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
 
     <permission
-        android:name="com.vtosters.lite.permission.C2D_MESSAGE"
+        android:name="com.izivk.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
     <permission
-        android:name="com.vtosters.lite.permission.MAPS_RECEIVE"
+        android:name="com.izivk.permission.MAPS_RECEIVE"
         android:protectionLevel="signature" />
     <permission
-        android:name="com.vtosters.lite.permission.ACCESS_DATA"
+        android:name="com.izivk.permission.ACCESS_DATA"
         android:protectionLevel="signature" />
 
     <uses-permission android:name="com.vk.audioipc.communication.AUDIO_SERVICE_PERMISSION" />
@@ -99,7 +99,7 @@
         android:required="false" />
 
     <permission
-        android:name="com.vtosters.lite.audioipc.communication.AUDIO_SERVICE_PERMISSION"
+        android:name="com.izivk.audioipc.communication.AUDIO_SERVICE_PERMISSION"
         android:protectionLevel="signature" />
     <uses-permission android:name="com.example.libaudioipc_sensitive_data_provider.AUDIO_SERVICE_SENSITIVE_DATA_PERMISSION" />
     <permission
@@ -113,10 +113,10 @@
     <uses-permission android:name="android.permission.QUICKBOOT_POWERON" />
 
     <permission
-        android:name="com.vtosters.lite.usersstore.permission.SAVE"
+        android:name="com.izivk.usersstore.permission.SAVE"
         android:protectionLevel="signature" />
     <permission
-        android:name="com.vtosters.lite.usersstore.permission.LOAD"
+        android:name="com.izivk.usersstore.permission.LOAD"
         android:protectionLevel="signature" />
 
     <uses-permission android:name="android.provider.Telephony.SMS_RECEIVED" />
@@ -1869,20 +1869,20 @@
         <receiver
             android:name="com.vtosters.lite.im.bridge.broadcasts.ImBroadcastReceiver"
             android:exported="true"
-            android:permission="com.vtosters.lite.permission.ACCESS_DATA" />
+            android:permission="com.izivk.permission.ACCESS_DATA" />
 
         <provider
             android:name="com.vtosters.lite.audio.contentprovider.AudioContentProvider"
-            android:authorities="com.vtosters.lite.providers.audio"
+            android:authorities="com.izivk.providers.audio"
             android:exported="true" />
         <provider
             android:name="com.vtosters.lite.im.bridge.contentprovider.ImContentProvider"
-            android:authorities="com.vtosters.lite.providers.im"
+            android:authorities="com.izivk.providers.im"
             android:exported="true"
-            android:permission="com.vtosters.lite.permission.ACCESS_DATA" />
+            android:permission="com.izivk.permission.ACCESS_DATA" />
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.vtosters.lite.common.VKFileProvider"
+            android:authorities="com.izivk.common.VKFileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -2015,10 +2015,10 @@
 
         <provider
             android:name="com.vk.usersstore.contentprovider.UsersContentProvider"
-            android:authorities="com.vtosters.lite.UsersContentProvider"
+            android:authorities="com.izivk.UsersContentProvider"
             android:exported="true"
-            android:readPermission="com.vtosters.lite.usersstore.permission.LOAD"
-            android:writePermission="com.vtosters.lite.usersstore.permission.SAVE" />
+            android:readPermission="com.izivk.usersstore.permission.LOAD"
+            android:writePermission="com.izivk.usersstore.permission.SAVE" />
 
         <activity
             android:name="com.vk.api.sdk.ui.VKWebViewAuthActivity"
@@ -2032,7 +2032,7 @@
 
         <provider
             android:name="com.vk.api.sdk.internal.VKInitProvider"
-            android:authorities="com.vtosters.lite.VKInitProvider"
+            android:authorities="com.izivk.VKInitProvider"
             android:exported="false" />
 
         <activity
@@ -2337,13 +2337,13 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="com.vtosters.lite.firebaseinitprovider"
+            android:authorities="com.izivk.firebaseinitprovider"
             android:exported="false"
             android:initOrder="100" />
 
         <provider
             android:name="com.facebook.internal.FacebookInitProvider"
-            android:authorities="com.vtosters.lite.FacebookInitProvider"
+            android:authorities="com.izivk.FacebookInitProvider"
             android:exported="false" />
 
         <receiver

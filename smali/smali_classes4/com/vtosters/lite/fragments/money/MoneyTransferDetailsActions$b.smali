@@ -79,7 +79,7 @@
     .line 3
     iget-object v1, p0, Lcom/vtosters/lite/fragments/money/MoneyTransferDetailsActions$b;->b:Landroid/app/Activity;
 
-    const-string v2, "com.vtosters.lite.permission.ACCESS_DATA"
+    const-string v2, "com.izivk.permission.ACCESS_DATA"
 
     invoke-virtual {v1, v0, v2}, Landroid/app/Activity;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 

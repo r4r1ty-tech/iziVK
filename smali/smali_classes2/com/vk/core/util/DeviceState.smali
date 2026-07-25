@@ -608,69 +608,10 @@
 .end method
 
 .method public static final W()Z
-    .locals 4
+    .locals 1
 
-    .line 1
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    .line 2
-    :try_start_0
-    invoke-static {}, Ljava/net/NetworkInterface;->getNetworkInterfaces()Ljava/util/Enumeration;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Collections;->list(Ljava/util/Enumeration;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_0
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/net/NetworkInterface;
-
-    const-string v3, "networkInterface"
-
-    .line 3
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v2}, Ljava/net/NetworkInterface;->isUp()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    .line 4
-    invoke-virtual {v2}, Ljava/net/NetworkInterface;->getName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    :cond_1
-    const-string v1, "tun0"
-
-    .line 5
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+    # iziVK: скрытие VPN (tun0 / TRANSPORT_VPN)
+    invoke-static {}, Lru/vtosters/lite/utils/DevicePrivacyShield;->isVpnActive()Z
 
     move-result v0
 

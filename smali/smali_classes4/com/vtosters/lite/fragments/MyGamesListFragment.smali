@@ -193,7 +193,7 @@
 
     sget-object v1, Lcom/vtosters/lite/fragments/MyGamesListFragment;->A0:Landroid/content/IntentFilter;
 
-    const-string v2, "com.vtosters.lite.permission.ACCESS_DATA"
+    const-string v2, "com.izivk.permission.ACCESS_DATA"
 
     const/4 v3, 0x0
 

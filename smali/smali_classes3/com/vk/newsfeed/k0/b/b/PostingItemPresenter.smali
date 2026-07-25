@@ -1362,7 +1362,7 @@
 
     invoke-direct {v2, v3}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    const-string v3, "com.vtosters.lite.permission.ACCESS_DATA"
+    const-string v3, "com.izivk.permission.ACCESS_DATA"
 
     const/4 v4, 0x0
 

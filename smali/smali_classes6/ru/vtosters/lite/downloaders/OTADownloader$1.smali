@@ -135,7 +135,7 @@
 
     invoke-direct {v0, p2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    const-string p2, "com.vtosters.lite.common.VKFileProvider"
+    const-string p2, "com.izivk.common.VKFileProvider"
 
     .line 39
     invoke-static {p1, p2, v0}, Landroidx/core/content/FileProvider;->getUriForFile(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;

@@ -540,7 +540,7 @@
     .line 43
     iget-object p3, p0, Lcom/vk/stories/view/StoryViewContainer;->s0:Landroid/content/BroadcastReceiver;
 
-    const-string p4, "com.vtosters.lite.permission.ACCESS_DATA"
+    const-string p4, "com.izivk.permission.ACCESS_DATA"
 
     const/4 p5, 0x0
 

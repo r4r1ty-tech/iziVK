@@ -36,7 +36,7 @@ public class OTADownloader {
                 if (status == DownloadManager.STATUS_SUCCESSFUL) {
                     var uriStr = cursor.getString(cursor.getColumnIndex(DownloadManager.COLUMN_LOCAL_URI));
                     var apk = new File(uriStr.replace("file://", ""));
-                    var uri = FileProvider.getUriForFile(context, "com.vtosters.lite.common.VKFileProvider", apk);
+                    var uri = FileProvider.getUriForFile(context, "com.izivk.common.VKFileProvider", apk);
                     APKInstallActivity.installOta(context, uri);
                 } else if (status == DownloadManager.STATUS_FAILED) {
                     AndroidUtils.sendToast(context.getString(R.string.downloaderr));

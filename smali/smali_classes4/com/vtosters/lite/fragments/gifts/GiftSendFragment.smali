@@ -224,7 +224,7 @@
 
     if-eqz p1, :cond_0
 
-    const-string p2, "com.vtosters.lite.permission.ACCESS_DATA"
+    const-string p2, "com.izivk.permission.ACCESS_DATA"
 
     invoke-virtual {p1, v0, p2}, Landroid/app/Activity;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 

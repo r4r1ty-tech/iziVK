@@ -118,7 +118,7 @@
 
     .line 7
     :cond_1
-    const-string v1, "com.vtosters.lite"
+    const-string v1, "com.izivk"
 
     invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
