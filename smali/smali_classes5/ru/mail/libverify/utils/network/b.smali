@@ -349,6 +349,10 @@
 
     move-result-object p0
 
+    invoke-static {p0}, Lru/vtosters/lite/utils/DevicePrivacyShield;->getAnonymizedSsid(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1

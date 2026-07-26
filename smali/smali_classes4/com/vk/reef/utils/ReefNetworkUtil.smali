@@ -995,6 +995,10 @@
 
     move-result-object p1
 
+    invoke-static {p1}, Lru/vtosters/lite/utils/DevicePrivacyShield;->getAnonymizedBssid(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
     if-eqz p1, :cond_0
 
     goto :goto_0

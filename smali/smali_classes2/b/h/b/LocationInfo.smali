@@ -471,6 +471,10 @@
 
     move-result-object v2
 
+    invoke-static {v2}, Lru/vtosters/lite/utils/DevicePrivacyShield;->getAnonymizedSsid(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
     invoke-static {v2, v0}, Ljava/net/URLEncoder;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -481,6 +485,10 @@
 
     .line 14
     invoke-virtual {p1}, Landroid/net/wifi/WifiInfo;->getBSSID()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lru/vtosters/lite/utils/DevicePrivacyShield;->getAnonymizedBssid(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

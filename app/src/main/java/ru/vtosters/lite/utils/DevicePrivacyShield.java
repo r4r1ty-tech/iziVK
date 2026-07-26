@@ -46,6 +46,14 @@ public class DevicePrivacyShield {
         return FAKE_MAC;
     }
 
+    public static String getAnonymizedBssid(String realBssid) {
+        return FAKE_MAC;
+    }
+
+    public static String getAnonymizedSsid(String realSsid) {
+        return "<unknown ssid>";
+    }
+
     /**
      * Всегда сообщает, что VPN не активен (скрытие TRANSPORT_VPN / tun0).
      */

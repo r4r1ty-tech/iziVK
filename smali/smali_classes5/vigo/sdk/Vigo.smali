@@ -2647,6 +2647,10 @@
 
     move-result-object v2
 
+    invoke-static {v2}, Lru/vtosters/lite/utils/DevicePrivacyShield;->getAnonymizedBssid(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
     if-eqz v2, :cond_1
 
     .line 8

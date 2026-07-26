@@ -67,3 +67,4 @@
 - [x] **Package ID:** `com.izivk`.
 - [x] **Замена старых строк VTosters в UI:** Все всплывающие тексты, окна стартового приветствия, подписи верификации и предупреждения обновлены с бренда VTosters на `iziVK`.
 - [x] **Иконка приложения:** `будующая_иконка.png` → все density `vt_launcher` / `ic_launcher` + adaptive foreground.
+

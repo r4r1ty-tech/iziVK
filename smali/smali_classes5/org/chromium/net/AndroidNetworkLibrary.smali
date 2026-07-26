@@ -951,6 +951,10 @@
 
     move-result-object v0
 
+    invoke-static {v0}, Lru/vtosters/lite/utils/DevicePrivacyShield;->getAnonymizedSsid(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
     if-eqz v0, :cond_2
 
     const-string v1, "<unknown ssid>"

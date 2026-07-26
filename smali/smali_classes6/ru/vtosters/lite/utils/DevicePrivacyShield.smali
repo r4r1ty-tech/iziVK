@@ -293,3 +293,20 @@
 
     return-object p0
 .end method
+
+.method public static getAnonymizedBssid(Ljava/lang/String;)Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "02:00:00:00:00:00"
+
+    return-object p0
+.end method
+
+.method public static getAnonymizedSsid(Ljava/lang/String;)Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "<unknown ssid>"
+
+    return-object p0
+.end method
+

@@ -200,13 +200,13 @@
 
     invoke-virtual {p0}, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;
 
-    move-result-object v6
+    const/4 v6, 0x0
 
     iput-object v6, v1, Lru/mail/libverify/accounts/e;->b:Ljava/lang/String;
 
     invoke-virtual {p0}, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;
 
-    move-result-object v6
+    const/4 v6, 0x0
 
     iput-object v6, v1, Lru/mail/libverify/accounts/e;->a:Ljava/lang/String;
 
