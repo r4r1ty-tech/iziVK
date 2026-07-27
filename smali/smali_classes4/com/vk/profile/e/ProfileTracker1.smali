@@ -154,16 +154,7 @@
 
     .line 31
     :cond_0
-    new-instance p0, Lcom/vk/api/stats/StatsTrackEvents;
-
-    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Lcom/vk/api/stats/StatsTrackEvents;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lcom/vk/api/base/ApiRequest;->c()Lio/reactivex/disposables/Disposable;
-
+    # iziVK: отправка stats.trackEvents отключена
     return-void
 .end method
 

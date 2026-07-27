@@ -61,17 +61,7 @@
 .method public onCreate()Z
     .locals 1
 
-    .line 1
-    :try_start_0
-    invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/facebook/FacebookSdk;->c(Landroid/content/Context;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
+    # iziVK: инициализация Facebook SDK (AppEvents/attribution) отключена
     const/4 v0, 0x0
 
     return v0

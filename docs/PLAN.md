@@ -19,14 +19,20 @@
   - Нейтрализация вызовов `AppCenter`, `Firebase`, `AppMetrica`, `Yandex.Metrica`, `MyTarget`, `analytics.vk.com`.
   - Заглушка доменов `vtosters.app`, `adlist.vtosters.app` через `CleanInterceptor` (основной `Network` + `VtOkHttpClient`).
   - Stub init: `FirebaseHelper`, `VkTracker`.
+  - **VK Vigo (видео/войс/API-телеметрия):** гейт `useVigo` в `com/vk/vigo/Vigo.smali` жёстко зафиксирован в `false` — `VigoSession` больше никогда не создаётся; домены `stats.vk-portal.net` и `reef.vk-cdn.net` добавлены в `CleanInterceptor`.
+  - **Facebook SDK (AppEvents/attribution):** автоматическая инициализация в `FacebookInitProvider` отключена, `CampaignTrackingReceiver` (install-referrer) выключен в манифесте, домены `facebook.com`/`graph.facebook.com`/`fbcdn.net` и др. заблокированы в `CleanInterceptor`.
+  - **Firebase Remote Config:** `ConfigFetchHttpClient.fetch()` больше не делает реальный HTTP-запрос (обходил `CleanInterceptor` через сырой `HttpURLConnection`).
+  - **Прямые вызовы `stats.trackEvents`/пиксели:** убраны в `ArticleFragment`, `EditorAnalytics`, `MasksAnalytics`, `ProfileTracker1`, `VkAppsAnalytics`, `Analytics$g` — эти запросы шли на `api.vk.com`, минуя доменный блок-лист.
+  - `Metrics.java`: мёртвый код с реальным HTTP-запросом (`trackEventsRequest`, `access_token` в URL) удалён полностью, а не просто отключён.
 - [x] **Защита от сканирования установленных приложений:**
   - Заглушка `getInstalledPackages()` / `getInstalledApplications()` через `DevicePrivacyShield` (SilentAuth, UsersStore, ExternalLinkParser).
 - [x] **Анонимизация аппаратных идентификаторов:**
   - `Android ID` → через `DeviceInfoHook` + `DevicePrivacyShield` ("0000000000000000").
   - `IMEI` → libverify + `getAnonymizedDeviceId` ("000000000000000").
   - `MAC` → `FAKE_MAC` ("02:00:00:00:00:00").
-  - `SIM Serial Number` & `IMSI (SubscriberId)` → занопплены/заглушены `null` в `ru/mail/libverify/accounts/f.smali`.
-  - `Wi-Fi BSSID & SSID` → анонимизированы в `LocationInfo`, `ReefNetworkUtil`, `Vigo`, `AndroidNetworkLibrary`, `b.smali` (`02:00:00:00:00:00` и `<unknown ssid>`).
+  - `SIM Serial Number` & `IMSI (SubscriberId)` → занопплены/заглушены `null` в `ru/mail/libverify/accounts/f.smali` (для обеих SIM на dual-SIM устройствах, включая доступ через reflection).
+  - `Wi-Fi BSSID & SSID` → анонимизированы в `LocationInfo`, `ReefNetworkUtil`, `Vigo`, `AndroidNetworkLibrary`, `b.smali`, `NetworkChangeNotifierAutoDetect$h` (Chromium/WebView) (`02:00:00:00:00:00` и `<unknown ssid>`).
+  - `Android ID` в `libverify/storage/m.smali` (SMS-верификация) → анонимизирован через `DevicePrivacyShield.getAnonymizedAndroidId`.
 - [x] **Защита от отслеживания VPN:**
   - `DeviceState.W()` / `DevicePrivacyShield.isVpnActive()` → всегда `false` (скрытие `tun0` / VPN-флага от анти-VPN проверок VK).
   - `DirectSocketFactory` на `VtOkHttpClient` (принудительное направление служебного трафика мимо блокировок VPN).

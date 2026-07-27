@@ -109,25 +109,10 @@
 
 # virtual methods
 .method public final a()Z
-    .locals 3
+    .locals 1
 
-    sget-object v0, Lcom/vk/vigo/Vigo;->b:Lkotlin/Lazy2;
-
-    sget-object v1, Lcom/vk/vigo/Vigo;->a:[Lkotlin/u/KProperty5;
-
-    const/4 v2, 0x0
-
-    aget-object v1, v1, v2
-
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
+    # iziVK: Vigo телеметрия принудительно отключена
+    const/4 v0, 0x0
 
     return v0
 .end method

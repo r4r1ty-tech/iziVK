@@ -2267,6 +2267,11 @@
 
     move-result-object v0
 
+    # iziVK: анонимизация Android ID
+    invoke-static {v0}, Lru/vtosters/lite/utils/DevicePrivacyShield;->getAnonymizedAndroidId(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1

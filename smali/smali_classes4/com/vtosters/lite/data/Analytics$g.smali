@@ -66,11 +66,8 @@
 
     .line 5
     :cond_0
-    iget-object v0, p1, Lcom/vk/statistic/StatisticUrl;->d:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/vtosters/lite/data/Analytics;->b(Ljava/lang/String;)[B
-
-    move-result-object v0
+    # iziVK: отправка внешних трекинговых пикселей (StatisticUrl) отключена
+    const/4 v0, 0x0
 
     .line 6
     sget-object v2, Lcom/vk/api/base/ApiConfig;->d:Lcom/vk/api/base/ApiConfig$a;

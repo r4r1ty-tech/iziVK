@@ -207,6 +207,11 @@
 
     move-result-object v1
 
+    # iziVK: анонимизация SSID
+    invoke-static {v1}, Lru/vtosters/lite/utils/DevicePrivacyShield;->getAnonymizedSsid(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
     monitor-exit v0
 
     return-object v1

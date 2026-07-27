@@ -116,16 +116,6 @@
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->clear()V
 
-    .line 8
-    new-instance v1, Lcom/vk/api/stats/StatsTrackEvents;
-
-    invoke-virtual {v0}, Lorg/json/JSONArray;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Lcom/vk/api/stats/StatsTrackEvents;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Lcom/vk/api/base/ApiRequest;->c()Lio/reactivex/disposables/Disposable;
-
+    # iziVK: отправка stats.trackEvents отключена
     return-void
 .end method

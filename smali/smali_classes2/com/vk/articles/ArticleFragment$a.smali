@@ -195,17 +195,7 @@
     .line 22
     invoke-virtual {v0, v1, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 23
-    new-instance p1, Lcom/vk/api/stats/StatsTrackEvents;
-
-    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Lcom/vk/api/stats/StatsTrackEvents;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lcom/vk/api/base/ApiRequest;->c()Lio/reactivex/disposables/Disposable;
-
+    # iziVK: отправка stats.trackEvents отключена
     return-void
 .end method
 

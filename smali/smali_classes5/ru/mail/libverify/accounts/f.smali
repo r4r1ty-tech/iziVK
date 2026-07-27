@@ -339,9 +339,14 @@
 
     iput-object v6, v2, Lru/mail/libverify/accounts/e;->e:Ljava/lang/String;
 
+    # iziVK: анонимизация IMEI/ICCID/IMSI второй SIM-карты
     const-string v6, "getDeviceId"
 
     invoke-static {p0, v6}, Lru/mail/libverify/accounts/f;->a(Landroid/telephony/TelephonyManager;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v6}, Lru/vtosters/lite/utils/DevicePrivacyShield;->getAnonymizedDeviceId(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -351,7 +356,7 @@
 
     invoke-static {p0, v6}, Lru/mail/libverify/accounts/f;->a(Landroid/telephony/TelephonyManager;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v6
+    const/4 v6, 0x0
 
     iput-object v6, v2, Lru/mail/libverify/accounts/e;->b:Ljava/lang/String;
 
@@ -359,7 +364,7 @@
 
     invoke-static {p0, v6}, Lru/mail/libverify/accounts/f;->a(Landroid/telephony/TelephonyManager;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v6
+    const/4 v6, 0x0
 
     iput-object v6, v2, Lru/mail/libverify/accounts/e;->a:Ljava/lang/String;
 

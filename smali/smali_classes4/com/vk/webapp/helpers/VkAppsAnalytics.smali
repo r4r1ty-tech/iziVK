@@ -156,33 +156,12 @@
     move-result-object v0
 
     .line 16
-    new-instance v1, Lcom/vk/api/stats/StatsTrackEvents;
+    # iziVK: отправка VK Apps аналитики (stats.trackEvents) отключена, буфер просто очищается
+    iget-object v0, p0, Lcom/vk/webapp/helpers/VkAppsAnalytics;->c:Ljava/util/List;
 
-    invoke-direct {v1, v0}, Lcom/vk/api/stats/StatsTrackEvents;-><init>(Ljava/lang/String;)V
+    invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    const/4 v0, 0x1
-
-    const/4 v2, 0x0
-
-    .line 17
-    invoke-static {v1, v2, v0, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
-
-    move-result-object v0
-
-    .line 18
-    new-instance v1, Lcom/vk/webapp/helpers/VkAppsAnalytics$h;
-
-    invoke-direct {v1, p0}, Lcom/vk/webapp/helpers/VkAppsAnalytics$h;-><init>(Lcom/vk/webapp/helpers/VkAppsAnalytics;)V
-
-    sget-object v2, Lcom/vk/webapp/helpers/VkAppsAnalytics$i;->a:Lcom/vk/webapp/helpers/VkAppsAnalytics$i;
-
-    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
-
-    move-result-object v0
-
-    const-string v1, "StatsTrackEvents(eventsA\u2026e({ events.clear() }, {})"
-
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    const/4 v0, 0x0
 
     return-object v0
 .end method
