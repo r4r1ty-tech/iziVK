@@ -30,3 +30,4 @@
 * `./gradlew buildAndInstallVTLRelease` — сборка, подпись и автоматическая установка на устройство по ADB.
 
 Собранный APK сохраняется по пути: `scripts/iziVK.apk`.
+
