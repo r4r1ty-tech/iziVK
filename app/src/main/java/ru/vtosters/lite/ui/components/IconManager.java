@@ -16,7 +16,7 @@ public class IconManager {
     );
 
     public static List<String> sIconsNames = Arrays.asList(
-            "VK", "VTLite"
+            "VK", "iziVK"
     );
 
     // available labels list
@@ -25,7 +25,7 @@ public class IconManager {
     );
 
     public static List<String> sLabelsNames = Arrays.asList(
-            "VK", "VTLite", "VKontakte"
+            "VK", "iziVK", "VKontakte"
     );
 
     // available icons list for verified users
@@ -34,7 +34,7 @@ public class IconManager {
     );
 
     public static List<String> sIconsPlusNames = Arrays.asList(
-            "VK", "VTLite", "Navy", "Tiger", "Spring", "Sea", "Sakura", "Party", "Paint", "Flamingo", "Old Logo", "Navy alter", "Tiger alter", "Spring alter", "Sea alter", "Sakura alter", "Party alter", "Paint alter", "Flamingo alter", "Balloon Pink", "Bubble Gum", "Comics", "Flowers", "Metal Dark", "Pin Blue", "Rabbit", "Shine"
+            "VK", "iziVK", "Navy", "Tiger", "Spring", "Sea", "Sakura", "Party", "Paint", "Flamingo", "Old Logo", "Navy alter", "Tiger alter", "Spring alter", "Sea alter", "Sakura alter", "Party alter", "Paint alter", "Flamingo alter", "Balloon Pink", "Bubble Gum", "Comics", "Flowers", "Metal Dark", "Pin Blue", "Rabbit", "Shine"
     );
 
     public static List<String> icons() {

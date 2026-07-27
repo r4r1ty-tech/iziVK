@@ -25,7 +25,7 @@ public class AboutHook {
     }
 
     public static String getCommitLink() {
-        return "https://github.com/vtosters/lite/commit/" + VersionReader.getVersionCommit();
+        return "https://github.com/r4r1ty-tech/iziVK/commit/" + VersionReader.getVersionCommit();
     }
 
     public static String getAppVersion() {

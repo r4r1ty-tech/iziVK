@@ -48,7 +48,7 @@
 
     move-result-object p0
 
-    const-string v0, "VTLite"
+    const-string v0, "iziVK"
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 

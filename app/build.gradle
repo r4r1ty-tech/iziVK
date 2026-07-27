@@ -178,9 +178,9 @@ task generateBuildTasks() {
                 workingDir(scriptsFolder.toString())
                 ignoreExitValue true
                 if (Os.isFamily("unix") || Os.isFamily("mac")) {
-                    commandLine 'bash', '-c', 'adb install VTLite.apk'
+                    commandLine 'bash', '-c', 'adb install iziVK.apk'
                 } else {
-                    commandLine 'adb', 'install', 'VTLite.apk'
+                    commandLine 'adb', 'install', 'iziVK.apk'
                 }
             }
             task "buildAndLaunchVTL$buildType"(type: Exec) {

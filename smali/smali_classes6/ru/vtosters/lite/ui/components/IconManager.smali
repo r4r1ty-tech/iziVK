@@ -86,7 +86,7 @@
 
     const-string v2, "VK"
 
-    const-string v3, "VTLite"
+    const-string v3, "iziVK"
 
     .line 18
     filled-new-array {v2, v3}, [Ljava/lang/String;
@@ -192,7 +192,7 @@
 
     const-string v1, "VK"
 
-    const-string v2, "VTLite"
+    const-string v2, "iziVK"
 
     const-string v3, "Navy"
 

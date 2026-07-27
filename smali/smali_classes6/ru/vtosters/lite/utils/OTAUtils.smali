@@ -12,9 +12,9 @@
 
 
 # static fields
-.field private static final LATEST_RELEASE_COMMIT_URL:Ljava/lang/String; = "https://api.github.com/repositories/473685743/git/ref/tags/%s"
+.field private static final LATEST_RELEASE_COMMIT_URL:Ljava/lang/String; = "https://api.github.com/repos/r4r1ty-tech/iziVK/git/ref/tags/%s"
 
-.field private static final LATEST_RELEASE_URL:Ljava/lang/String; = "https://api.github.com/repositories/473685743/releases/latest"
+.field private static final LATEST_RELEASE_URL:Ljava/lang/String; = "https://api.github.com/repos/r4r1ty-tech/iziVK/releases/latest"
 
 
 # instance fields
@@ -215,7 +215,7 @@
 
     invoke-direct {v0}, Lokhttp3/Request$a;-><init>()V
 
-    const-string v1, "https://api.github.com/repositories/473685743/releases/latest"
+    const-string v1, "https://api.github.com/repos/r4r1ty-tech/iziVK/releases/latest"
 
     .line 28
     invoke-virtual {v0, v1}, Lokhttp3/Request$a;->b(Ljava/lang/String;)Lokhttp3/Request$a;
@@ -292,7 +292,7 @@
 
     aput-object p1, v1, v2
 
-    const-string p1, "https://api.github.com/repositories/473685743/git/ref/tags/%s"
+    const-string p1, "https://api.github.com/repos/r4r1ty-tech/iziVK/git/ref/tags/%s"
 
     .line 56
     invoke-static {p1, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;

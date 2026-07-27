@@ -5344,7 +5344,7 @@ Os filtros não diferenciam maiúsculas e minúsculas!"</string>
     <string name="gms_download_microg">Baixar MicroG</string>
     <string name="gms_what_to_do_next">O que fazer a seguir?</string>
     <string name="gms_what_to_do_after_microg_title">O que fazer após instalar o MicroG?</string>
-    <string name="gms_what_to_do_after_microg_summ">1. Faça login na sua conta do Google nas configurações do MicroG\n2. Habilitar registro do dispositivo\n3. Habilitar o serviço de nuvem de mensagens\n4. Reinstale o VTLite\n5. Permitir-lhe receber notificações</string>
+    <string name="gms_what_to_do_after_microg_summ">1. Faça login na sua conta do Google nas configurações do MicroG\n2. Habilitar registro do dispositivo\n3. Habilitar o serviço de nuvem de mensagens\n4. Reinstale o iziVK\n5. Permitir-lhe receber notificações</string>
     <string name="donate">Doar</string>
     <string name="fulltime">dd MMMM yyyy HH:mm:ss</string>
     <string name="fulltime2">dd MMMM HH:mm:ss</string>
@@ -5633,8 +5633,8 @@ Ver tudo..."</string>
 Pode parecer uma saída falsa do online"</string>
     <string name="vtlofflinesummary">Desativar o online permitirá que você fique offline</string>
     <string name="vtsystem">Configurações internas</string>
-    <string name="vtverify">Verificações VTosters</string>
-    <string name="vtverifyinfo">O que são verificações VTosters?</string>
+    <string name="vtverify">Verificações iziVK</string>
+    <string name="vtverifyinfo">O que são verificações iziVK?</string>
     <string name="vtverifyinfosum">Esta é a nossa gratidão pelo apoio ao projeto</string>
     <string name="vtlota">Atualizações</string>
 
@@ -5690,7 +5690,7 @@ Pode parecer uma saída falsa do online"</string>
 
     <string name="vkx_title" translatable="false">VK X</string>
     <string name="vkx_why">Por que?</string>
-    <string name="vkx_why_summary">A integração permite que você use os recursos do VK X diretamente no VTosters Lite\n\nAlém da reprodução, as faixas em cache também funcionarão no cliente</string>
+    <string name="vkx_why_summary">A integração permite que você use os recursos do VK X diretamente no iziVK\n\nAlém da reprodução, as faixas em cache também funcionarão no cliente</string>
     <string name="vkx_download">Baixar VK X</string>
     <string name="vkx_integration">Integração VK X</string>
     <string name="vk_fix_music_other">Outro</string>
@@ -5705,7 +5705,7 @@ Pode parecer uma saída falsa do online"</string>
     <string name="other_clear_stickers_cache">Limpar cache de adesivos</string>
     <string name="other_clear_stickers_cache_summary">Corrigir o carregamento de adesivos quando eles estão completamente ausentes</string>
     <string name="other_reset_settings">Redefinir configurações</string>
-    <string name="other_reset_settings_summary">Redefine as funções ativadas do VTLite para os padrões</string>
+    <string name="other_reset_settings_summary">Redefine as funções ativadas do iziVK para os padrões</string>
     <string name="other_fix_dynamic_colors">Corrigir cores no Android 12+</string>
 
     <string name="dockbar_editor">Editor da barra de tarefas</string>
@@ -5821,7 +5821,7 @@ Pode parecer uma saída falsa do online"</string>
     <string name="DNR_ON">Ativar Não Ler</string>
     <string name="DNR_OFF">Desativar Não Ler</string>
 
-    <string name="vtl_crashed">Ocorreu um erro no VTLite!</string>
+    <string name="vtl_crashed">Ocorreu um erro no iziVK!</string>
     <string name="vtl_crash_upload">Enviar logs</string>
     <string name="vtl_crash_save">Salvar em arquivo local</string>
 
@@ -5830,11 +5830,11 @@ Pode parecer uma saída falsa do online"</string>
     <string name="batteryissuebtn1">Desativar otimização</string>
     <string name="batteryissuebtn2">Ignorar</string>
 
-    <string name="gmsissuesumm">Não há um componente do Google Play Services (GMS) em seu dispositivo, o que é necessário para que o VTosters Lite funcione corretamente</string>
+    <string name="gmsissuesumm">Não há um componente do Google Play Services (GMS) em seu dispositivo, o que é necessário para que o iziVK funcione corretamente</string>
     <string name="gmsissuebtn1">Continuar sem GMS</string>
     <string name="gmsissuebtn2">Instalar GMS</string>
 
-    <string name="startsumm1">A modificação VTosters Lite não tem nada a ver com o Grupo VK! \nDistribuído totalmente gratuito! \nAo clicar em continuar, você concorda com a coleta de informações básicas sobre o dispositivo e que os desenvolvedores desta modificação não são responsáveis por sua conta</string>
+    <string name="startsumm1">A modificação iziVK não tem nada a ver com o Grupo VK! \nDistribuído totalmente gratuito! \nAo clicar em continuar, você concorda com a coleta de informações básicas sobre o dispositivo e que os desenvolvedores desta modificação não são responsáveis por sua conta</string>
     <string name="startsumm2">\n\nÉ possível que o aplicativo não funcione corretamente devido ao fato de você provavelmente estar usando o shell da lista abaixo. Todos os problemas com a exibição e funcionamento do aplicativo estão relacionados apenas ao seu firmware e somente a ele. Todos os relatórios de bugs enviados devido a problemas neste firmware não são considerados pelos desenvolvedores e não serão corrigidos. \n\nAo pressionar o botão \"Continuar\", você concorda que possíveis bugs do aplicativo podem ocorrer devido às especificidades do seu firmware. Recomendamos usar firmware baseado em AOSP para máxima estabilidade. \n\nFirmware no qual há problemas com aplicativos:\nFlyme, EMUI, MIUI, ColorOS, Samsung Experience ou TouchWiz, Magic UI, ZenUI, Funtouch OS</string>
     <string name="startbtn1">Notícias</string>
     <string name="startbtn2">Continuar</string>
@@ -5907,7 +5907,7 @@ Pode parecer uma saída falsa do online"</string>
     <string name="vkiddisable">Desativar proteção</string>
     <string name="vkidsumm">O VK começou a bloquear o uso de aplicativos de terceiros, portanto, para a operação estável de todas as partes do aplicativo, é necessário desativar a Proteção contra aplicativos suspeitos \n\nID VK -> Segurança e Login -> Proteção contra aplicativos suspeitos</string>
 
-    <string name="telegram_stickers_service">Serviço de adesivos do Telegram no VTLite</string>
+    <string name="telegram_stickers_service">Serviço de adesivos do Telegram no iziVK</string>
     <string name="telegram_stickers_downloading">: baixando</string>
     <string name="telegram_stickers_updating">: atualização</string>
     <string name="telegram_stickers_gettinginfo">Obtendo informações</string>
@@ -6009,7 +6009,7 @@ Pode parecer uma saída falsa do online"</string>
     <string name="proxy_setup">Configurar proxy</string>
     <string name="proxy_disable">Desativar</string>
     <string name="proxy_enable">Ativar</string>
-    <string name="proxy_warning">Zaborona não está associado ao VTosters de forma alguma e não podemos garantir seu funcionamento e segurança</string>
+    <string name="proxy_warning">Zaborona não está associado ao iziVK de forma alguma e não podemos garantir seu funcionamento e segurança</string>
     <string name="proxy_settings">Configurações de proxy</string>
 
     <string name="apk_install_error">Erro ao instalar atualização</string>
@@ -6104,7 +6104,7 @@ Pode parecer uma saída falsa do online"</string>
     <string name="photo_get_error">Falha ao obter o link da foto</string>
 
     <string name="denial_of_responsibility_proxy">Aviso Legal</string>
-    <string name="denial_of_responsibility_proxy_summ">Os desenvolvedores do cliente VTLite não se responsabilizam pela segurança do uso de proxies de terceiros \n\nUse por sua conta e risco</string>
+    <string name="denial_of_responsibility_proxy_summ">Os desenvolvedores do cliente iziVK não se responsabilizam pela segurança do uso de proxies de terceiros \n\nUse por sua conta e risco</string>
 
     <string name="altervika_title">Domínio VikaMobile alternativo</string>
 
@@ -6145,7 +6145,7 @@ Pode parecer uma saída falsa do online"</string>
     <string name="from_lower">de</string>
     <string name="chat_export_error">erro</string>
 
-    <string name="chat_export_title">Exportar do VTLite</string>
+    <string name="chat_export_title">Exportar do iziVK</string>
     <string name="chat_export_header">Exportar histórico de conversas</string>
     <string name="chat_export_avatar_update">Atualizou a foto da conversa</string>
     <string name="chat_export_avatar_remove">Removeu a foto da conversa</string>
@@ -6214,7 +6214,7 @@ Pode parecer uma saída falsa do online"</string>
     <string name="cached_tracks_remove_confirm">Tem certeza de que deseja excluir todas as faixas em cache?</string>
 
     <string name="vkx_integration_title">Habilitar integração VK X!</string>
-    <string name="vkx_integration_desc">Obtenha acesso ao armazenamento de faixas e a capacidade de incluir/armazenar em cache faixas do VTLite para o VK X. \n\nPara obter detalhes, vá para Configurações > Conteúdo de mídia > VK X</string>
+    <string name="vkx_integration_desc">Obtenha acesso ao armazenamento de faixas e a capacidade de incluir/armazenar em cache faixas do iziVK para o VK X. \n\nPara obter detalhes, vá para Configurações > Conteúdo de mídia > VK X</string>
 
     <string name="music_downloading">Baixando música</string>
     <string name="music_downloading_progress">Progresso do download de música</string>
@@ -6371,7 +6371,7 @@ Pode parecer uma saída falsa do online"</string>
     <string name="update_latest">Você possui a versão mais recente do aplicativo instalada</string>
     <string name="update_err">Erro ao verificar atualizações</string>
     <string name="serverFeaturesDisable">Desativar todas as conexões externas</string>
-    <string name="serverFeaturesDisable_summ">Desativa verificações e todas as funções adicionais relacionadas ao recebimento de dados do servidor VTosters</string>
+    <string name="serverFeaturesDisable_summ">Desativa verificações e todas as funções adicionais relacionadas ao recebimento de dados do servidor iziVK</string>
 
     <string name="tgs_token_missing">Token ausente</string>
     <string name="tgs_token_reset_dialog">Redefinir o token do bot?</string>

@@ -16,21 +16,21 @@ check_result() {
 
 echo -e "${BOLD}${UNDERLINE}Сборка apk..${NC}"
 cd smali/
-java -jar ../scripts/apktool.jar b . -o ../scripts/VTLite.apk --use-aapt2 -p ../scripts/framework/
+java -jar ../scripts/apktool.jar b . -o ../scripts/iziVK.apk --use-aapt2 -p ../scripts/framework/
 check_result
 
 echo -e "${BOLD}${UNDERLINE}Zipaligning..${NC}"
 if command -v zipalign &> /dev/null; then
-  zipalign -p -f 4 ../scripts/VTLite.apk ../scripts/VTLite.apk_aligned
+  zipalign -p -f 4 ../scripts/iziVK.apk ../scripts/iziVK.apk_aligned
   check_result
-  mv ../scripts/VTLite.apk_aligned ../scripts/VTLite.apk
+  mv ../scripts/iziVK.apk_aligned ../scripts/iziVK.apk
 else
   echo -e "${RED}Zipalign не найден, выравнивание пропущено${NC}"
 fi
 
 echo -e "${BOLD}${UNDERLINE}Подписывание апк...${NC}"
 cd ../scripts
-./apksigner sign --ks debug.keystore --ks-key-alias androiddebugkey --ks-pass pass:android ../scripts/VTLite.apk
+./apksigner sign --ks debug.keystore --ks-key-alias androiddebugkey --ks-pass pass:android ../scripts/iziVK.apk
 check_result
 
-echo -e "${BOLD}VTosters Lite успешно собран! APK находится в папке scripts${NC}"
+echo -e "${BOLD}iziVK успешно собран! APK находится в папке scripts${NC}"

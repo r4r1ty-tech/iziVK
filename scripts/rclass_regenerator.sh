@@ -6,7 +6,7 @@ BOLD='\033[1m'
 UNDERLINE='\033[4m'
 
 echo -e "${BOLD}${UNDERLINE}Decompile release APK...${NC}\n"
-java -jar ./scripts/apktool.jar d ./scripts/VTLite.apk -f -o ./scripts/tmp -s --use-aapt2 -p ./scripts/framework/
+java -jar ./scripts/apktool.jar d ./scripts/iziVK.apk -f -o ./scripts/tmp -s --use-aapt2 -p ./scripts/framework/
 if [ $? -eq 0 ]; then
 	echo -e "${GREEN}Успех!${NC}\n"
 else

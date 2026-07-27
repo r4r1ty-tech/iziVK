@@ -2400,7 +2400,7 @@
     .line 37
     new-instance p1, Ljava/lang/StringBuilder;
 
-    const-string v0, "<div class=\"vtex-milk-header\"><h4 class=\"vtex-milk-header-txt\">VTLite</h4><h5 class=\"vtex-milk-header-sub\">"
+    const-string v0, "<div class=\"vtex-milk-header\"><h4 class=\"vtex-milk-header-txt\">iziVK</h4><h5 class=\"vtex-milk-header-sub\">"
 
     invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 

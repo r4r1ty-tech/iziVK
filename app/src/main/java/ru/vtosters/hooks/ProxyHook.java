@@ -69,7 +69,7 @@ public class ProxyHook {
     private static boolean areProxyHostsEmpty(String... hosts) {
         for (String host : hosts) {
             if (host.isEmpty()) {
-                Log.d("VTLite", "Proxy is not set: " + host);
+                Log.d("iziVK", "Proxy is not set: " + host);
                 return true;
             }
         }

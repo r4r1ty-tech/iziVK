@@ -55,7 +55,7 @@ public class OTADownloader {
             var request = new DownloadManager.Request(uri);
             request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
             request.setTitle(AndroidUtils.getString("downloading_update"));
-            request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "VTLite-" + commitSHA + ".apk");
+            request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "iziVK-" + commitSHA + ".apk");
 
             var manager = (DownloadManager) AndroidUtils.getGlobalContext().getSystemService(Context.DOWNLOAD_SERVICE);
             manager.enqueue(request);
@@ -71,7 +71,7 @@ public class OTADownloader {
                     .setNeutralButton(R.string.yes,
                             (dialog, which) -> {
                                 var intent = new Intent(Intent.ACTION_VIEW)
-                                        .setData(Uri.parse("https://github.com/vtosters/lite/releases/latest/download/VTLite.apk"));
+                                        .setData(Uri.parse("https://github.com/r4r1ty-tech/iziVK/releases/latest"));
                                 context.startActivity(intent);
                             }
                     )

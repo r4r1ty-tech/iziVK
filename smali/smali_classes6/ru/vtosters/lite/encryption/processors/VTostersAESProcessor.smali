@@ -410,7 +410,7 @@
 .method public getUIName()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "VTosters [AES]"
+    const-string v0, "iziVK [AES]"
 
     return-object v0
 .end method

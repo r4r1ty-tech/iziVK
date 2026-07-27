@@ -34,7 +34,7 @@ public class HtmlDialogDownloaderFormatProvider extends DialogDownloaderFormatPr
 
     @Override
     public String provideHeader(String dialogName, String date) {
-        return "<div class=\"vtex-milk-header\"><h4 class=\"vtex-milk-header-txt\">VTLite</h4><h5 class=\"vtex-milk-header-sub\">"
+        return "<div class=\"vtex-milk-header\"><h4 class=\"vtex-milk-header-txt\">iziVK</h4><h5 class=\"vtex-milk-header-sub\">"
                 + AndroidUtils.getString(R.string.chat_export_header)
                 + " (" + date + ")</h5></div><div class=\"vtex-milk-msgcont\">";
     }

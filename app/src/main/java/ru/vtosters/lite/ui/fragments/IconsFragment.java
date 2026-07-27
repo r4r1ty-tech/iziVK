@@ -44,7 +44,7 @@ public class IconsFragment extends TrackedMaterialPreferenceToolbarFragment {
 
         rg.setPadding(AndroidUtils.dp2px(18f), AndroidUtils.dp2px(12f), AndroidUtils.dp2px(18f), 0);
 
-        rgDefault.setText("VTLite");
+        rgDefault.setText("iziVK");
         rgDefault.setTextColor(ThemesUtils.getTextAttr());
 
         rgVK.setText("VK");

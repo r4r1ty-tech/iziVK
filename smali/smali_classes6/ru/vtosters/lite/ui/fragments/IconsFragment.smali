@@ -140,7 +140,7 @@
 
     invoke-virtual {v1, v7, v9, v5, v8}, Landroid/widget/RadioGroup;->setPadding(IIII)V
 
-    const-string v5, "VTLite"
+    const-string v5, "iziVK"
 
     .line 47
     invoke-virtual {v3, v5}, Landroid/widget/RadioButton;->setText(Ljava/lang/CharSequence;)V

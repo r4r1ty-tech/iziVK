@@ -5,7 +5,7 @@ cd scripts
 echo.
 echo Decompile release APK...
 echo.
-call java -jar apktool.jar d VTLite.apk -f -o tmp -s --use-aapt2 -p ../scripts/framework/
+call java -jar apktool.jar d iziVK.apk -f -o tmp -s --use-aapt2 -p ../scripts/framework/
 if "%ERRORLEVEL%" == "0" (
     echo %ESC%[92mSuccessful%ESC%[0m
 ) else (

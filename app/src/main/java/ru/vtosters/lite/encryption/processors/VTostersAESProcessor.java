@@ -99,7 +99,9 @@ public class VTostersAESProcessor extends IMProcessor {
     @NonNull
     @Override
     public String getUIName() {
-        return "VTosters [AES]";
+        // iziVK: только отображаемое имя, теги сообщений (startTag/endTag) не трогаем
+        // ради совместимости с уже отправленными зашифрованными сообщениями
+        return "iziVK [AES]";
     }
 
     @NonNull

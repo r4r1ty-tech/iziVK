@@ -33,7 +33,9 @@ public class VTostersProcessor extends IMProcessor {
     @NonNull
     @Override
     public String getUIName() {
-        return "VTosters Classique [Base64]";
+        // iziVK: только отображаемое имя, теги сообщений (startTag/endTag) не трогаем
+        // ради совместимости с уже отправленными зашифрованными сообщениями
+        return "iziVK Classique [Base64]";
     }
 
     @NonNull

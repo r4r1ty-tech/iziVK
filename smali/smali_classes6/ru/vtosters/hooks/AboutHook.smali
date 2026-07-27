@@ -60,7 +60,7 @@
     .line 28
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "https://github.com/vtosters/lite/commit/"
+    const-string v1, "https://github.com/r4r1ty-tech/iziVK/commit/"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 

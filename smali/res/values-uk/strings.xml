@@ -5347,7 +5347,7 @@
     <string name="gms_download_microg">Завантажити MicroG</string>
     <string name="gms_what_to_do_next">Що робити далі?</string>
     <string name="gms_what_to_do_after_microg_title">Що робити після встановлення MicroG?</string>
-    <string name="gms_what_to_do_after_microg_summ">"1. Увійдіть у свій обліковий запис Google у налаштуваннях MicroG\n2. Увімкніть реєстрацію пристрою\n3. Увімкніть Хмарний обмін повідомленнями\n4. Перевстановіть VTLite\n5. Дозвольте йому приймати повідомлення"</string>
+    <string name="gms_what_to_do_after_microg_summ">"1. Увійдіть у свій обліковий запис Google у налаштуваннях MicroG\n2. Увімкніть реєстрацію пристрою\n3. Увімкніть Хмарний обмін повідомленнями\n4. Перевстановіть iziVK\n5. Дозвольте йому приймати повідомлення"</string>
     <string name="donate">Допомогти проекту</string>
     <string name="fulltime">dd MMMM yyyy в HH:mm:ss</string>
     <string name="fulltime2">dd MMMM в HH:mm:ss</string>
@@ -5634,8 +5634,8 @@
 Може виглядати як несправжній вихід з мережі"</string>
     <string name="vtlofflinesummary">Відключення онлайн дозволить вам залишатися в офлайні</string>
     <string name="vtsystem">Системне</string>
-    <string name="vtverify">Верифікації VTosters</string>
-    <string name="vtverifyinfo">Що таке верифікація VTosters?</string>
+    <string name="vtverify">Верифікації iziVK</string>
+    <string name="vtverifyinfo">Що таке верифікація iziVK?</string>
     <string name="vtverifyinfosum">Це наша подяка за підтримку проекту</string>
     <string name="vtlota">Оновлення</string>
 
@@ -5689,7 +5689,7 @@
     <string name="messages_other_download_first">Кількість повідомлень, що завантажуються</string>
 
     <string name="vkx_why">Навіщо?</string>
-    <string name="vkx_why_summary">Інтеграція дозволить використовувати можливості VK X прямо в VTosters Lite\n\nКрім відтворення, в клієнті буде працювати і кеш з плеєра</string>
+    <string name="vkx_why_summary">Інтеграція дозволить використовувати можливості VK X прямо в iziVK\n\nКрім відтворення, в клієнті буде працювати і кеш з плеєра</string>
     <string name="vkx_download">Завантажити VKX</string>
     <string name="vkx_integration">Інтеграція з VK X</string>
     <string name="vk_fix_music_other">Інше</string>
@@ -5816,7 +5816,7 @@
     <string name="DNR_ON">Увімкнути нечиталку</string>
     <string name="DNR_OFF">Вимкнути нечиталку</string>
 
-    <string name="vtl_crashed">Сталася помилка в роботі VTLite!</string>
+    <string name="vtl_crashed">Сталася помилка в роботі iziVK!</string>
     <string name="vtl_crash_upload">Завантажити логі</string>
     <string name="vtl_crash_save">Зберегти у файл</string>
 
@@ -5825,11 +5825,11 @@
     <string name="batteryissuebtn1">Вимкнути оптимізацію</string>
     <string name="batteryissuebtn2">Ігнорувати</string>
 
-    <string name="gmsissuesumm">На вашому пристрої відсутній компонент Google Play Services (GMS), який необхідний для коректної роботи VTosters Lite</string>
+    <string name="gmsissuesumm">На вашому пристрої відсутній компонент Google Play Services (GMS), який необхідний для коректної роботи iziVK</string>
     <string name="gmsissuebtn1">Продовжити без GMS</string>
     <string name="gmsissuebtn2">Встановити GMS</string>
 
-    <string name="startsumm1">Модифікація VTosters Lite не має жодного відношення до VK Group!\nПоширюється безкоштовно!\nНатискаючи кнопку продовжити, ви погоджуєтеся зі збором базової інформації про пристрій і тим, що розробники цієї модифікації не несуть відповідальності за ваш акаунт.</string>
+    <string name="startsumm1">Модифікація iziVK не має жодного відношення до VK Group!\nПоширюється безкоштовно!\nНатискаючи кнопку продовжити, ви погоджуєтеся зі збором базової інформації про пристрій і тим, що розробники цієї модифікації не несуть відповідальності за ваш акаунт.</string>
     <string name="startsumm2">"\n\nДодаток може некоректно працювати у зв'язку з тим, що ви, швидше за все, використовуєте оболонку зі списку нижче. Всі проблеми з відображенням та роботою додатка пов'язані тільки з вашою прошивкою і тільки з нею. Всі багрепорти, надіслані через проблеми на цій прошивці, не розглядаються розробниками і не будуть виправлені.\n\nНатискаючи кнопку "Продовжити", ви погоджуєтесь з тим, що можливі баги додатка можуть статися через специфіку вашої прошивки. Рекомендуємо використовувати прошивки на базі AOSP для отримання максимальної стабільності.\n\nПрошивки на яких спостерігаються проблеми з додатками:\nFlyme, EMUI, MIUI, ColorOS, Samsung Experience або TouchWiz, Magic UI, ZenUI, Funtouch OS"</string>
     <string name="startbtn1">Новини</string>
     <string name="startbtn2">Продовжити</string>
@@ -5902,7 +5902,7 @@
 
     <string name="translator">Перекласти</string>
 
-    <string name="telegram_stickers_service">Сервіс стікерів Telegram у VTLite</string>
+    <string name="telegram_stickers_service">Сервіс стікерів Telegram у iziVK</string>
     <string name="telegram_stickers_downloading">: завантаження</string>
     <string name="telegram_stickers_updating">: оновлення</string>
     <string name="telegram_stickers_gettinginfo">Отримання інформації</string>
@@ -6003,7 +6003,7 @@
     <string name="proxy_setup">Налаштувати проксі</string>
     <string name="proxy_disable">Вимкнути</string>
     <string name="proxy_enable">Увімкнути</string>
-    <string name="proxy_warning">"Zaborona ніяк не пов'язана з VTosters і ми не можемо гарантувати її роботу та безпеку"</string>
+    <string name="proxy_warning">"Zaborona ніяк не пов'язана з iziVK і ми не можемо гарантувати її роботу та безпеку"</string>
     <string name="proxy_settings">Налаштування проксі</string>
 
     <string name="apk_install_error">Помилка інсталяції оновлення</string>
@@ -6098,7 +6098,7 @@
     <string name="photo_get_error">Неможливо отримати посилання на фото</string>
 
     <string name="denial_of_responsibility_proxy">Відмова від відповідальності</string>
-    <string name="denial_of_responsibility_proxy_summ">Розробники клієнта VTLite не несуть жодної відповідальності за роботу та безпеку використання сторонніх проксі-серверів \n\nВикористовуйте на свій страх і ризик</string>
+    <string name="denial_of_responsibility_proxy_summ">Розробники клієнта iziVK не несуть жодної відповідальності за роботу та безпеку використання сторонніх проксі-серверів \n\nВикористовуйте на свій страх і ризик</string>
 
     <string name="altervika_title">Альтернативний домен VikaMobile</string>
 
@@ -6139,7 +6139,7 @@
     <string name="from_lower">від</string>
     <string name="chat_export_error">помилка</string>
 
-    <string name="chat_export_title">Експорт з VTLite</string>
+    <string name="chat_export_title">Експорт з iziVK</string>
     <string name="chat_export_header">Експорт історії чату</string>
     <string name="chat_export_avatar_update">Оновив фотографію розмови</string>
     <string name="chat_export_avatar_remove">Видалив фотографію розмови</string>
@@ -6208,7 +6208,7 @@
     <string name="cached_tracks_remove_confirm">Ви дійсно хочете видалити всі треки, що кешуються?</string>
 
     <string name="vkx_integration_title">Увімкніть інтеграцію VK X!</string>
-    <string name="vkx_integration_desc">Отримайте доступ до сховища треків та можливості включати/закешувати треки з VTLite у VK X.\n\nДокладніше - у Налаштування > Медіа контент > VK X</string>
+    <string name="vkx_integration_desc">Отримайте доступ до сховища треків та можливості включати/закешувати треки з iziVK у VK X.\n\nДокладніше - у Налаштування > Медіа контент > VK X</string>
 
     <string name="music_downloading">Завантаження музики</string>
     <string name="music_downloading_progress">Прогрес завантаження музики</string>
@@ -6362,7 +6362,7 @@
     <string name="update_latest">Вас встановлена остання версія програми</string>
     <string name="update_err">Помилка перевірки оновлення</string>
     <string name="serverFeaturesDisable">Відключити всі зовнішні підключення</string>
-    <string name="serverFeaturesDisable_summ">Відключає галочки і всі додаткові функції, пов\'язані з отриманням даних з сервера ВТостерс</string>
+    <string name="serverFeaturesDisable_summ">Відключає галочки і всі додаткові функції, пов\'язані з отриманням даних з сервера iziVK</string>
 
     <string name="tgs_token_missing">Токен відсутній</string>
     <string name="tgs_token_reset_dialog">Відкинути токен бота?</string>

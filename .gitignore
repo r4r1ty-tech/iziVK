@@ -16,23 +16,34 @@
 local.properties
 
 *.apk
+scripts/*.apk
 /smali/build/apk/
-/smali/VTLite.jobf
-/smali/VTLite.apk.idsig
+/smali/iziVK.jobf
+/smali/iziVK.apk.idsig
 .idea/gradle.xml
 .idea/compiler.xml
 smali2/assets/version.properties
 app/src/main/assets/version.properties
 smali2/build/resources.zip
 *.idsig
-/smali/VTLite.apk.cache/
+/smali/iziVK.apk.cache/
 smali/build/resources.zip
 smali/assets/version.properties
 *.keystore
+*.jks
 gradle.properties
 scripts/build.sh
 smali/lib/arm64-v8a/libnative_effects.so
 smali/lib/armeabi-v7a/libnative_effects.so
 *.hprof
+java_pid*.hprof
 tmp_decoded_app/
 
+# Внутренняя документация разработки
+docs/
+PLAN.md
+BRANDING_CLEANUP.md
+dev_docs_backup.tar.gz
+
+# Черновики ассетов в корне
+будующая_иконка.png

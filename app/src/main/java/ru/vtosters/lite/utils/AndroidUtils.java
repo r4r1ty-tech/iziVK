@@ -63,7 +63,7 @@ public class AndroidUtils {
         try {
             return getResources().getIdentifier(name, type, getGlobalContext().getPackageName());
         } catch (Exception e) {
-            Log.d("VTLite", "Not found " + name + "as type " + type);
+            Log.d("iziVK", "Not found " + name + "as type " + type);
             e.printStackTrace();
         }
         return 0;

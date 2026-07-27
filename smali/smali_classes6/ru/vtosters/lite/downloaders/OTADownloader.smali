@@ -33,7 +33,7 @@
 .method public static downloadBuild(Ljava/lang/String;Ljava/lang/String;)V
     .locals 5
 
-    const-string v0, "VTLite-"
+    const-string v0, "iziVK-"
 
     .line 49
     invoke-static {}, Lru/vtosters/lite/utils/AndroidUtils;->getGlobalContext()Landroid/content/Context;
@@ -188,7 +188,7 @@
 
     invoke-direct {p1, p2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const-string p2, "https://github.com/vtosters/lite/releases/latest/download/VTLite.apk"
+    const-string p2, "https://github.com/r4r1ty-tech/iziVK/releases/latest"
 
     .line 74
     invoke-static {p2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;

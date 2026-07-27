@@ -5554,7 +5554,7 @@ Filters are not case-sensitive!"</string>
     <string name="gms_download_microg">Download MicroG</string>
     <string name="gms_what_to_do_next">What to do next?</string>
     <string name="gms_what_to_do_after_microg_title">What to do after installing MicroG?</string>
-    <string name="gms_what_to_do_after_microg_summ">1. Log in to your Google account in the MicroG settings\n2. Enable device registration\n3. Enable cloud messaging\n4. Reinstall VTLite\n5. Allow him to receive notifications</string>
+    <string name="gms_what_to_do_after_microg_summ">1. Log in to your Google account in the MicroG settings\n2. Enable device registration\n3. Enable cloud messaging\n4. Reinstall iziVK\n5. Allow him to receive notifications</string>
     <string name="donate">Donate</string>
     <string name="fulltime">dd MMMM yyyy HH:mm:ss</string>
     <string name="fulltime2">dd MMMM HH:mm:ss</string>
@@ -5840,8 +5840,8 @@ You need to restart the application to apply proxy settings"</string>
 May look like a fake leaving the online"</string>
     <string name="vtlofflinesummary">Disabling online will allow you to stay offline</string>
     <string name="vtsystem">Internal settings</string>
-    <string name="vtverify">VTosters verifications</string>
-    <string name="vtverifyinfo">What are VTosters verifications?</string>
+    <string name="vtverify">iziVK verifications</string>
+    <string name="vtverifyinfo">What are iziVK verifications?</string>
     <string name="vtverifyinfosum">This is our gratitude for the support of the project</string>
     <string name="vtlota">Updates</string>
 
@@ -5897,7 +5897,7 @@ May look like a fake leaving the online"</string>
 
     <string name="vkx_title" translatable="false">VK X</string>
     <string name="vkx_why">Why?</string>
-    <string name="vkx_why_summary">Integration let you use VK X features directly in VTosters Lite\n\nIn addition to playback, cached tracks also will work in client</string>
+    <string name="vkx_why_summary">Integration let you use VK X features directly in iziVK\n\nIn addition to playback, cached tracks also will work in client</string>
     <string name="vkx_download">Download VK X</string>
     <string name="vkx_integration">VK X Integration</string>
     <string name="vk_fix_music_other">Other</string>
@@ -5912,7 +5912,7 @@ May look like a fake leaving the online"</string>
     <string name="other_clear_stickers_cache">Clear stickers cache</string>
     <string name="other_clear_stickers_cache_summary">Fix loading stickers when they are completely absent</string>
     <string name="other_reset_settings">Reset settings</string>
-    <string name="other_reset_settings_summary">Resets turned on functions of VTLite to defaults</string>
+    <string name="other_reset_settings_summary">Resets turned on functions of iziVK to defaults</string>
     <string name="other_fix_dynamic_colors">Fix colors on Android 12+</string>
 
     <string name="dockbar_editor">Dockbar editor</string>
@@ -6028,7 +6028,7 @@ May look like a fake leaving the online"</string>
     <string name="DNR_ON">Enable Do Not Read</string>
     <string name="DNR_OFF">Disable Do Not Read</string>
 
-    <string name="vtl_crashed">An error has occurred in VTLite!</string>
+    <string name="vtl_crashed">An error has occurred in iziVK!</string>
     <string name="vtl_crash_upload">Upload logs</string>
     <string name="vtl_crash_save">Save to local file</string>
 
@@ -6037,11 +6037,11 @@ May look like a fake leaving the online"</string>
     <string name="batteryissuebtn1">Disable optimization</string>
     <string name="batteryissuebtn2">Ignore</string>
 
-    <string name="gmsissuesumm">There is no Google Play Services (GMS) component on your device, which is necessary for VTosters Lite to work correctly</string>
+    <string name="gmsissuesumm">There is no Google Play Services (GMS) component on your device, which is necessary for iziVK to work correctly</string>
     <string name="gmsissuebtn1">Continue without GMS</string>
     <string name="gmsissuebtn2">Install GMS</string>
 
-    <string name="startsumm1">The VTosters Lite modification has nothing with VK Group!\nDistributed completely free of fee!\nBy clicking continue, you agree with the collection of basic information about the device and that the developers of this modification are not responsible for your account</string>
+    <string name="startsumm1">The iziVK modification has nothing with VK Group!\nDistributed completely free of fee!\nBy clicking continue, you agree with the collection of basic information about the device and that the developers of this modification are not responsible for your account</string>
     <string name="startsumm2">\n\nThe application may not work correctly due to the fact that you are most likely using the shell from the list below. All problems with the display and work of the application are related only to your firmware and only with it. All bug reports sent due to problems on this firmware are not considered by the developers and will not be fixed.\n\nPressing the \"Continue\" button, you agree that possible application bugs may occur due to the specifics of your firmware. We recommend using AOSP-based firmware for maximum stability.\n\nFirmware on which there are problems with applications:\nFlyme, EMUI, MIUI, ColorOS, Samsung Experience or TouchWiz, Magic UI, ZenUI, Funtouch OS</string>
     <string name="startbtn1">News</string>
     <string name="startbtn2">Continue</string>
@@ -6114,7 +6114,7 @@ May look like a fake leaving the online"</string>
     <string name="vkiddisable">Disable protection</string>
     <string name="vkidsumm">VK has started blocking the use of third-party applications, so for the stable operation of all parts of the application, it is necessary to disable Protection from suspicious applications \n\nVK ID -> Security and Login -> Protection from suspicious applications</string>
 
-    <string name="telegram_stickers_service">Telegram stickers service in VTLite</string>
+    <string name="telegram_stickers_service">Telegram stickers service in iziVK</string>
     <string name="telegram_stickers_downloading">: downloading</string>
     <string name="telegram_stickers_updating">: update</string>
     <string name="telegram_stickers_gettinginfo">Getting info</string>
@@ -6216,7 +6216,7 @@ May look like a fake leaving the online"</string>
     <string name="proxy_setup">Set up proxy</string>
     <string name="proxy_disable">Disable</string>
     <string name="proxy_enable">Enable</string>
-    <string name="proxy_warning">Zaborona is not associated with VTosters in any way and we cannot guarantee its work and security</string>
+    <string name="proxy_warning">Zaborona is not associated with iziVK in any way and we cannot guarantee its work and security</string>
     <string name="proxy_settings">Proxy settings</string>
 
     <string name="apk_install_error">Error installing update</string>
@@ -6311,7 +6311,7 @@ May look like a fake leaving the online"</string>
     <string name="photo_get_error">Failed to get photo link</string>
 
     <string name="denial_of_responsibility_proxy">Disclaimer</string>
-    <string name="denial_of_responsibility_proxy_summ">The developers of the VTLite client assume no responsibility for the safety of using third-party proxies \n\nUse at your own risk</string>
+    <string name="denial_of_responsibility_proxy_summ">The developers of the iziVK client assume no responsibility for the safety of using third-party proxies \n\nUse at your own risk</string>
 
     <string name="altervika_title">Alternative VikaMobile domain</string>
 
@@ -6352,7 +6352,7 @@ May look like a fake leaving the online"</string>
     <string name="from_lower">from</string>
     <string name="chat_export_error">error</string>
 
-    <string name="chat_export_title">Export from VTLite</string>
+    <string name="chat_export_title">Export from iziVK</string>
     <string name="chat_export_header">Export chat history</string>
     <string name="chat_export_avatar_update">Updated the chat photo</string>
     <string name="chat_export_avatar_remove">Removed the chat photo</string>
@@ -6421,7 +6421,7 @@ May look like a fake leaving the online"</string>
     <string name="cached_tracks_remove_confirm">Are you sure you want to delete all cached tracks?</string>
 
     <string name="vkx_integration_title">Enable VK X integration!</string>
-    <string name="vkx_integration_desc">Get access to the track storage and the ability to include/cache tracks from VTLite to VK X.\n\nFor details, go to Settings > Media Content > VK X</string>
+    <string name="vkx_integration_desc">Get access to the track storage and the ability to include/cache tracks from iziVK to VK X.\n\nFor details, go to Settings > Media Content > VK X</string>
 
     <string name="music_downloading">Downloading music</string>
     <string name="music_downloading_progress">Music download progress</string>
@@ -6574,7 +6574,7 @@ May look like a fake leaving the online"</string>
     <string name="update_latest">You have the latest version of the app installed</string>
     <string name="update_err">Error checking for updates</string>
     <string name="serverFeaturesDisable">Disable all external connections</string>
-    <string name="serverFeaturesDisable_summ">Disables verifications and all additional functions related to receiving data from the VTosters server</string>
+    <string name="serverFeaturesDisable_summ">Disables verifications and all additional functions related to receiving data from the iziVK server</string>
 
     <string name="tgs_token_missing">Token is missing</string>
     <string name="tgs_token_reset_dialog">Reset the bot token?</string>

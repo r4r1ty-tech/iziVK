@@ -5420,7 +5420,7 @@
     <string name="gms_download_microg">Скачать MicroG</string>
     <string name="gms_what_to_do_next">Что делать дальше?</string>
     <string name="gms_what_to_do_after_microg_title">Что делать после установки MicroG?</string>
-    <string name="gms_what_to_do_after_microg_summ">1. Войдите в свой Google аккаунт в настройках MicroG \n2. Включите регистрацию устройства \n3. Включите облачный обмен сообщениями \n4. Переустановите VTLite \n5. Разрешите ему принимать уведомления</string>
+    <string name="gms_what_to_do_after_microg_summ">1. Войдите в свой Google аккаунт в настройках MicroG \n2. Включите регистрацию устройства \n3. Включите облачный обмен сообщениями \n4. Переустановите iziVK \n5. Разрешите ему принимать уведомления</string>
     <string name="donate">Помочь проекту</string>
     <string name="fulltime">dd MMMM yyyy в HH:mm:ss</string>
     <string name="fulltime2">dd MMMM в HH:mm:ss</string>
@@ -5763,7 +5763,7 @@
     <string name="messages_other_download_first">Количество загружаемых сообщений</string>
 
     <string name="vkx_why">Зачем?</string>
-    <string name="vkx_why_summary">Интеграция позволит использовать возможности VK X прямиком в VTosters Lite\n\nКроме воспроизведения, в клиенте будет работать и кеш из плеера</string>
+    <string name="vkx_why_summary">Интеграция позволит использовать возможности VK X прямиком в iziVK\n\nКроме воспроизведения, в клиенте будет работать и кеш из плеера</string>
     <string name="vkx_download">Скачать VKX</string>
     <string name="vkx_integration">Интеграция с VK X</string>
     <string name="vk_fix_music_other">Прочее</string>
@@ -5890,7 +5890,7 @@
     <string name="DNR_ON">Включить нечиталку</string>
     <string name="DNR_OFF">Отключить нечиталку</string>
 
-    <string name="vtl_crashed">Произошла ошибка в работе VTLite!</string>
+    <string name="vtl_crashed">Произошла ошибка в работе iziVK!</string>
     <string name="vtl_crash_upload">Загрузить логи</string>
     <string name="vtl_crash_save">Сохранить в файл</string>
 
@@ -5903,7 +5903,7 @@
     <string name="gmsissuebtn1">Продолжить без GMS</string>
     <string name="gmsissuebtn2">Установить GMS</string>
 
-    <string name="startsumm1">Модификация iziVK (на базе VTosters Lite) не имеет никакого отношения к VK Group!\nРаспространяется полностью бесплатно!\nНажимая кнопку продолжить вы соглашаетесь со сбором базовой информации об устройстве и тем, что разработчики данной модификации не несут ответственность за ваш аккаунт</string>
+    <string name="startsumm1">Модификация iziVK (на базе iziVK) не имеет никакого отношения к VK Group!\nРаспространяется полностью бесплатно!\nНажимая кнопку продолжить вы соглашаетесь со сбором базовой информации об устройстве и тем, что разработчики данной модификации не несут ответственность за ваш аккаунт</string>
     <string name="startsumm2">\n\nПриложение может некорректно работать в связи с тем, что вы, скорее всего, используете оболочку из списка ниже. Все проблемы с отображением и работой приложения связаны только с вашей прошивкой и только с ней. Все багрепорты, присланные из-за проблем на этой прошивке, не рассматриваются разработчиками и не будут исправлены.\n\nНажимая на кнопку \"Продолжить\", вы соглашаетесь с тем, что возможные баги приложения могут произойти из-за специфики вашей прошивки. Рекомендуем использовать прошивки на базе AOSP для получения максимальной стабильности.\n\nПрошивки на которых наблюдаются проблемы с приложениями:\nFlyme, EMUI, MIUI, ColorOS, Samsung Experience или TouchWiz, Magic UI, ZenUI, Funtouch OS</string>
     <string name="startbtn1">Новости</string>
     <string name="startbtn2">Продолжить</string>
@@ -5976,7 +5976,7 @@
 
     <string name="translator">Перевести</string>
 
-    <string name="telegram_stickers_service">Сервис стикеров Telegram в VTLite</string>
+    <string name="telegram_stickers_service">Сервис стикеров Telegram в iziVK</string>
     <string name="telegram_stickers_downloading">: загрузка</string>
     <string name="telegram_stickers_updating">: обновление</string>
     <string name="telegram_stickers_gettinginfo">Получение информации</string>
@@ -6078,7 +6078,7 @@
     <string name="proxy_setup">Настроить прокси</string>
     <string name="proxy_disable">Отключить</string>
     <string name="proxy_enable">Включить</string>
-    <string name="proxy_warning">Zaborona никак не связана с ВТостерс и мы не можем гарантировать её работу и безопасность</string>
+    <string name="proxy_warning">Zaborona никак не связана с iziVK и мы не можем гарантировать её работу и безопасность</string>
     <string name="proxy_settings">Настройки прокси</string>
 
     <string name="apk_install_error">Ошибка установки обновления</string>
@@ -6173,7 +6173,7 @@
     <string name="photo_get_error">Не удалось получить ссылку на фото</string>
 
     <string name="denial_of_responsibility_proxy">Отказ от ответственности</string>
-    <string name="denial_of_responsibility_proxy_summ">Разработчики клиента VTLite не несут никакой ответственности за работу и безопасность использования сторонних прокси-серверов \n\nИспользуйте на свой страх и риск</string>
+    <string name="denial_of_responsibility_proxy_summ">Разработчики клиента iziVK не несут никакой ответственности за работу и безопасность использования сторонних прокси-серверов \n\nИспользуйте на свой страх и риск</string>
 
     <string name="altervika_title">Альтернативный домен VikaMobile</string>
 
@@ -6214,7 +6214,7 @@
     <string name="from_lower">от</string>
     <string name="chat_export_error">ошибка</string>
 
-    <string name="chat_export_title">Экспорт из VTLite</string>
+    <string name="chat_export_title">Экспорт из iziVK</string>
     <string name="chat_export_header">Экспорт истории чата</string>
     <string name="chat_export_avatar_update">Обновил фотографию беседы</string>
     <string name="chat_export_avatar_remove">Удалил фотографию беседы</string>
@@ -6283,7 +6283,7 @@
     <string name="cached_tracks_remove_confirm">Вы действительно хотите удалить все кешированные треки?</string>
 
     <string name="vkx_integration_title">Включите интеграцию VK X!</string>
-    <string name="vkx_integration_desc">Получите доступ к хранилищу треков и возможности включать/кешировать треки из VTLite в VK X.\n\nПодробнее - в Настройки > Медиа контент > VK X</string>
+    <string name="vkx_integration_desc">Получите доступ к хранилищу треков и возможности включать/кешировать треки из iziVK в VK X.\n\nПодробнее - в Настройки > Медиа контент > VK X</string>
 
     <string name="music_downloading">Загрузка музыки</string>
     <string name="music_downloading_progress">Прогресс загрузки музыки</string>
@@ -6437,7 +6437,7 @@
     <string name="update_latest">У вас установлена последняя версия приложения</string>
     <string name="update_err">Ошибка проверки обновления</string>
     <string name="serverFeaturesDisable">Отключить все внешние подключения</string>
-    <string name="serverFeaturesDisable_summ">Отключает галочки и все дополнительные функции связанные с получением данных с сервера ВТостерс.\n\nАктуально для тех у кого безлимитный интернет на ВКонтакте</string>
+    <string name="serverFeaturesDisable_summ">Отключает галочки и все дополнительные функции связанные с получением данных с сервера iziVK.\n\nАктуально для тех у кого безлимитный интернет на ВКонтакте</string>
 
     <string name="tgs_token_missing">Токен отсутствует</string>
     <string name="tgs_token_reset_dialog">Сбросить токен бота?</string>

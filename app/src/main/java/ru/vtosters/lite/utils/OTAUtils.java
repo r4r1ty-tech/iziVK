@@ -11,8 +11,12 @@ import java.io.IOException;
 
 public class OTAUtils {
 
-    private static final String LATEST_RELEASE_URL = "https://api.github.com/repositories/473685743/releases/latest";
-    private static final String LATEST_RELEASE_COMMIT_URL = "https://api.github.com/repositories/473685743/git/ref/tags/%s";
+    // iziVK: обновлено на наш форк (было repositories/473685743 == vtosters/lite).
+    // Примечание: сам api.github.com уже в BLOCKED_DOMAINS CleanInterceptor (приватность),
+    // поэтому фактическая проверка обновлений сейчас не выполняется — это отдельное решение,
+    // не связанное с брендингом. См. docs/BRANDING_CLEANUP.md.
+    private static final String LATEST_RELEASE_URL = "https://api.github.com/repos/r4r1ty-tech/iziVK/releases/latest";
+    private static final String LATEST_RELEASE_COMMIT_URL = "https://api.github.com/repos/r4r1ty-tech/iziVK/git/ref/tags/%s";
     private final OkHttpClient mClient = VtOkHttpClient.getInstance();
     private final OTAListener mListener;
     private JSONObject mReleaseJson;

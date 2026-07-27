@@ -29,4 +29,4 @@
 * `./gradlew buildAndInstallVTLRelease` — сборка, подпись и автоматическая установка на устройство по ADB.
 * `./gradlew buildAndLaunchVTLRelease` — сборка, подпись, установка и запуск приложения на устройстве.
 
-Собранный APK сохраняется по пути: `scripts/VTLite.apk`.
+Собранный APK сохраняется по пути: `scripts/iziVK.apk`.

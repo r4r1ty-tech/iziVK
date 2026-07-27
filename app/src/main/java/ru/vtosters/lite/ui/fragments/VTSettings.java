@@ -695,7 +695,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                 requireContext().getString(R.string.reportbugsumm),
                 R.drawable.ic_bug_outline_28,
                 preference -> {
-                    requireContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://github.com/vtosters/lite/issues")));
+                    requireContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://github.com/r4r1ty-tech/iziVK/issues")));
                     return false;
                 }
         );

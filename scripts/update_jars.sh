@@ -7,7 +7,7 @@ UNDERLINE='\033[4m'
 
 echo -e "${BOLD}${UNDERLINE}Сборка apk..${NC}"
 cd ../smali/
-java -jar ../scripts/apktool.jar b . -o VTLite.apk --use-aapt2 -p ../scripts/framework/
+java -jar ../scripts/apktool.jar b . -o iziVK.apk --use-aapt2 -p ../scripts/framework/
 if [ $? -eq 0 ]; then
 	echo -e "${GREEN}Успех!${NC}\n"
 else
@@ -16,7 +16,7 @@ else
 fi
 
 echo -e "${BOLD}${UNDERLINE}Распаковка dex'ов..${NC}"
-unzip -j VTLite.apk classes.dex classes2.dex classes3.dex classes4.dex classes5.dex -d ../app/libs
+unzip -j iziVK.apk classes.dex classes2.dex classes3.dex classes4.dex classes5.dex -d ../app/libs
 
 cd ../app/libs
 echo -e "${BOLD}${UNDERLINE}Удаление старых библиотек..${NC}"

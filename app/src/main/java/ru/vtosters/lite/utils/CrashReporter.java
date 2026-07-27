@@ -71,7 +71,7 @@ public class CrashReporter {
         }
 
         ((NotificationManager) getGlobalContext().getSystemService(Context.NOTIFICATION_SERVICE)).notify(-2147483548, builder.build());
-        Log.e("VTLite", "crashed: " + th.getLocalizedMessage());
+        Log.e("iziVK", "crashed: " + th.getLocalizedMessage());
         uncaughtExceptionHandler.uncaughtException(thread, th);
     }
 

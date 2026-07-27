@@ -1193,7 +1193,7 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const-string v1, "https://github.com/vtosters/lite/issues"
+    const-string v1, "https://github.com/r4r1ty-tech/iziVK/issues"
 
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 

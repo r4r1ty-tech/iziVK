@@ -68,7 +68,7 @@
 .method public getUIName()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "VTosters Classique [Base64]"
+    const-string v0, "iziVK Classique [Base64]"
 
     return-object v0
 .end method
