@@ -74,20 +74,20 @@
 .end method
 
 .method public static setEncryptionEnabled(IZ)V
-    .locals 0
+    .locals 1
 
     invoke-static {}, Lru/vtosters/hooks/CryptImHook;->getGcmProcessor()Lru/vtosters/lite/encryption/base/IMProcessor;
 
-    move-result-object p2
+    move-result-object v0
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p2, p0}, Lru/vtosters/lite/encryption/base/IMProcessor;->enableEncryptFor(I)V
+    invoke-virtual {v0, p0}, Lru/vtosters/lite/encryption/base/IMProcessor;->enableEncryptFor(I)V
 
     return-void
 
     :cond_0
-    invoke-virtual {p2, p0}, Lru/vtosters/lite/encryption/base/IMProcessor;->disableEncryptFor(I)V
+    invoke-virtual {v0, p0}, Lru/vtosters/lite/encryption/base/IMProcessor;->disableEncryptFor(I)V
 
     return-void
 .end method

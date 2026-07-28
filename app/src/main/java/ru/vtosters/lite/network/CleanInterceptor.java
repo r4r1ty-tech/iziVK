@@ -44,9 +44,8 @@ public class CleanInterceptor implements Interceptor {
             "graph-video.facebook.com",
             "connect.facebook.net",
             "fbcdn.net",
-            "vtosters.app",
-            "adlist.vtosters.app",
-            "api.github.com",
+            // НЕ блокируем vtosters.app / adlist / github — это фичи (SSFS, SponsorPost, OTA),
+            // а не телеметрия; подмена ответа {} ломает парсинг и тормозит старт.
             "sentry.io",
             "bugsnag.com"
     );
