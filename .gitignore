@@ -33,8 +33,6 @@ smali/assets/version.properties
 *.jks
 gradle.properties
 scripts/build.sh
-smali/lib/arm64-v8a/libnative_effects.so
-smali/lib/armeabi-v7a/libnative_effects.so
 *.hprof
 java_pid*.hprof
 tmp_decoded_app/
