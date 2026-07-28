@@ -2533,51 +2533,6 @@
     .line 487
     invoke-static/range {v7 .. v12}, Lru/vtosters/lite/ui/PreferenceFragmentUtils;->addPreference(Landroidx/preference/PreferenceScreen;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILandroidx/preference/Preference$OnPreferenceClickListener;)Landroidx/preference/Preference;
 
-    .line 502
-
-
-    .line 514
-    invoke-virtual/range {p0 .. p0}, Lru/vtosters/lite/ui/fragments/VTSettings;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
-
-    move-result-object v7
-
-    const-string v8, ""
-
-    .line 516
-    invoke-virtual/range {p0 .. p0}, Lru/vtosters/lite/ui/fragments/VTSettings;->requireContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    const v2, 0x7f121812
-
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v9
-
-    .line 517
-    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->isMilkshake()Z
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    const v2, 0x7f1216b2
-
-    invoke-static {v2, v1}, Lru/vtosters/lite/ui/fragments/VTSettings;->getValAsString(ILjava/lang/Boolean;)Ljava/lang/String;
-
-    move-result-object v10
-
-    const v11, 0x7f0808a1
-
-    new-instance v12, Lru/vtosters/lite/ui/fragments/VTSettings$$ExternalSyntheticLambda10;
-
-    invoke-direct {v12, v0}, Lru/vtosters/lite/ui/fragments/VTSettings$$ExternalSyntheticLambda10;-><init>(Lru/vtosters/lite/ui/fragments/VTSettings;)V
-
-    .line 513
-    invoke-static/range {v7 .. v12}, Lru/vtosters/lite/ui/PreferenceFragmentUtils;->addPreference(Landroidx/preference/PreferenceScreen;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILandroidx/preference/Preference$OnPreferenceClickListener;)Landroidx/preference/Preference;
-
     .line 526
     invoke-virtual/range {p0 .. p0}, Lru/vtosters/lite/ui/fragments/VTSettings;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 

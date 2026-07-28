@@ -1099,20 +1099,9 @@
 .end method
 
 .method public static isAmoledTheme()Z
-    .locals 2
+    .locals 1
 
     const/4 v0, 0x0
-
-    .line 95
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    const-string v1, "amoledtheme"
-
-    invoke-static {v1, v0}, Lru/vtosters/hooks/other/Preferences;->getBoolValue(Ljava/lang/String;Ljava/lang/Boolean;)Z
-
-    move-result v0
 
     return v0
 .end method
@@ -1140,20 +1129,9 @@
 .end method
 
 .method public static isMonetTheme()Z
-    .locals 2
+    .locals 1
 
     const/4 v0, 0x0
-
-    .line 91
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    const-string v1, "monettheme"
-
-    invoke-static {v1, v0}, Lru/vtosters/hooks/other/Preferences;->getBoolValue(Ljava/lang/String;Ljava/lang/Boolean;)Z
-
-    move-result v0
 
     return v0
 .end method
