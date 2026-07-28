@@ -207,44 +207,6 @@ public class VideoDownloader {
         } else if (url.startsWith("vk.com"))
             url = "https://" + url;
 
-        if (url.contains("vk.com/story")) {
-            String storyId = url.substring(url.startsWith("https") ? 20 : 19) + "_story";
-
-            ProgressDialog progressDialog = new ProgressDialog(ctx);
-            progressDialog.setMessage(ctx.getString(R.string.video_dl_progress));
-            progressDialog.show();
-
-            var req = new Request.a()
-                    .b("https://" + getApi() + "/method/stories.getById?stories=" + storyId + "&v=5.99&access_token=" + getUserToken())
-                    .a("Accept-Encoding", "gzip")
-                    .a();
-            
-            Network.b(CLIENT_API).a(req).a(new Callback() {
-
-                @Override
-                public void a(Call call, IOException e) {
-                    e.fillInStackTrace();
-                    Toast.makeText(ctx, ctx.getString(R.string.video_dl_error), Toast.LENGTH_SHORT).show();
-                }
-
-                @Override
-                public void a(Call call, Response response) throws IOException {
-                    progressDialog.cancel();
-
-                    try {
-                        JSONObject mainJson = new JSONObject(GzipDecompressor.decompressResponse(response));
-                        JSONObject responseJson = mainJson.getJSONObject("response").optJSONArray("items").optJSONObject(0);
-                        StoryEntry story = new StoryEntry(responseJson);
-                        StoryDownloader.downloadStory(story);
-                    } catch (JSONException e) {
-                        e.fillInStackTrace();
-                        Toast.makeText(ctx, ctx.getString(R.string.video_dl_error), Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
-            
-            return;
-        }
 
         if (!url.contains("vk.com/video")) {
             ToastUtils.a(ctx.getString(R.string.video_dl_wrong_link));

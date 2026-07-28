@@ -13,17 +13,6 @@
     return-void
 .end method
 
-.method public static injectActionStory(Lcom/vk/dto/stories/model/StoryEntry;)Ljava/lang/Runnable;
-    .locals 1
-
-    .line 34
-    new-instance v0, Lru/vtosters/hooks/DownloadersHook$$ExternalSyntheticLambda0;
-
-    invoke-direct {v0, p0}, Lru/vtosters/hooks/DownloadersHook$$ExternalSyntheticLambda0;-><init>(Lcom/vk/dto/stories/model/StoryEntry;)V
-
-    return-object v0
-.end method
-
 .method public static injectActionVideo(Ljava/util/ArrayList;Lcom/vk/dto/common/VideoFile;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
@@ -111,14 +100,6 @@
     return-void
 .end method
 
-.method static synthetic lambda$injectActionStory$0(Lcom/vk/dto/stories/model/StoryEntry;)V
-    .locals 0
-
-    .line 34
-    invoke-static {p0}, Lru/vtosters/lite/downloaders/StoryDownloader;->downloadStory(Lcom/vk/dto/stories/model/StoryEntry;)V
-
-    return-void
-.end method
 
 .method public static onClickVideo(ILcom/vk/dto/common/VideoFile;Landroid/content/Context;)Z
     .locals 2

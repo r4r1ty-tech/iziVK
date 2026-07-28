@@ -5846,14 +5846,6 @@
 
     move-result-object v1
 
-    const v4, 0x7f12032e
-
-    .line 8
-    invoke-static {v0}, Lru/vtosters/hooks/DownloadersHook;->injectActionStory(Lcom/vk/dto/stories/model/StoryEntry;)Ljava/lang/Runnable;
-
-    move-result-object v5
-
-    invoke-virtual {v1, v4, v5}, Lcom/vk/core/util/AlertDialogs$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/AlertDialogs$b;
 
     .line 3
     iget v2, v0, Lcom/vk/dto/stories/model/StoryEntry;->c:I
