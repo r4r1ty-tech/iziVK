@@ -271,11 +271,16 @@ public class HtmlDialogDownloaderFormatProvider extends DialogDownloaderFormatPr
             switch (type) { // market_album is not supported
                 case "photo" -> {
                     var sizes = item.getJSONArray("sizes");
+                    var photoUrl = sizes.getJSONObject(sizes.length() - 1).getString("url");
                     rs.append("<a href=\"")
-                            .append(sizes.getJSONObject(sizes.length() - 1).getString("url"))
+                            .append(photoUrl)
                             .append("\" class=\"msg-attach-link\">")
                             .append(AndroidUtils.getString(R.string.chat_export_type_photo))
-                            .append("</a>");
+                            .append("</a><br><a href=\"")
+                            .append(photoUrl)
+                            .append("\"><img src=\"")
+                            .append(photoUrl)
+                            .append("\" style=\"max-width:400px;max-height:400px;border-radius:8px;margin-top:4px;\"/></a>");
                 }
                 case "doc" -> rs.append("<a href=\"")
                         .append(item.getString("url"))
@@ -298,21 +303,61 @@ public class HtmlDialogDownloaderFormatProvider extends DialogDownloaderFormatPr
                                 .getJSONObject(1)
                                 .getString("url"))
                         .append("\"/>");
-                case "audio_message" -> rs.append("<a href=\"")
-                        .append(item.optString("link_mp3"))
-                        .append("\" class=\"msg-attach-link\">")
-                        .append(AndroidUtils.getString(R.string.chat_export_type_audiomsg))
-                        .append("</a>");
+                case "audio_message" -> {
+                    var linkMp3 = item.optString("link_mp3");
+                    var linkOgg = item.optString("link_ogg");
+                    var audioUrl = !linkMp3.isEmpty() ? linkMp3 : linkOgg;
+                    rs.append("<a href=\"")
+                            .append(audioUrl)
+                            .append("\" class=\"msg-attach-link\">")
+                            .append(AndroidUtils.getString(R.string.chat_export_type_audiomsg))
+                            .append("</a><br><audio controls style=\"margin-top:4px;\" src=\"")
+                            .append(audioUrl)
+                            .append("\"></audio>");
+                }
                 case "audio" -> rs.append(AndroidUtils.getString(R.string.chat_export_type_audio))
                         .append(" (")
                         .append(item.optString("artist"))
                         .append(" — ")
                         .append(item.optString("title"))
                         .append(")");
-                case "video" -> rs.append(AndroidUtils.getString(R.string.chat_export_type_video))
-                        .append(" (")
-                        .append(MessagesDownloader.getVideoHtml(item.optJSONObject("files")))
-                        .append(")");
+                case "video", "video_message" -> {
+                    boolean isCircle = item.optBoolean("is_video_message") || item.optInt("is_video_message") == 1 || "video_message".equals(type);
+                    JSONObject files = item.optJSONObject("files");
+                    String videoUrl = null;
+                    if (files != null) {
+                        for (int videoQuality : new int[]{720, 480, 1080, 360, 240, 144, 1440, 2160}) {
+                            String key = "mp4_" + videoQuality;
+                            if (files.has(key)) {
+                                videoUrl = files.optString(key);
+                                break;
+                            }
+                        }
+                    }
+                    if (videoUrl == null || videoUrl.isEmpty()) {
+                        videoUrl = item.optString("src");
+                    }
+                    if (videoUrl == null || videoUrl.isEmpty()) {
+                        videoUrl = item.optString("link_mp4");
+                    }
+
+                    rs.append(AndroidUtils.getString(R.string.chat_export_type_video))
+                            .append(" (")
+                            .append(MessagesDownloader.getVideoHtml(files))
+                            .append(")");
+
+                    if (videoUrl != null && !videoUrl.isEmpty()) {
+                        if (isCircle) {
+                            rs.append("<br><video controls style=\"width:200px;height:200px;border-radius:50%;object-fit:cover;margin-top:4px;\" src=\"")
+                                    .append(videoUrl)
+                                    .append("\"></video>");
+                        } else {
+                            rs.append("<br><video controls style=\"max-width:400px;max-height:400px;border-radius:8px;margin-top:4px;\" src=\"")
+                                    .append(videoUrl)
+                                    .append("\"></video>");
+                        }
+                    }
+                }
                 case "wall_reply" -> {
                     var link = String.format("https://" + Constants.VK_DOMAIN + "/wall%s_%s?reply=%s",
                             item.optString("owner_id"),
