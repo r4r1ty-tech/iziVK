@@ -5800,53 +5800,7 @@
 
     .line 187
     :cond_233
-    new-instance v12, Lkotlin/text/Regex;
-
-    const-string v11, "/vt/tgs?.*"
-
-    invoke-direct {v12, v11}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
-
-    const/4 v13, 0x0
-
-    const/4 v14, 0x0
-
-    const/4 v15, 0x0
-
-    const/16 v16, 0xe
-
-    const/16 v17, 0x0
-
-    move-object v11, v0
-
-    invoke-static/range {v11 .. v17}, Lcom/vk/common/links/UriWrapper;->a(Lcom/vk/common/links/UriWrapper;Lkotlin/text/Regex;Lkotlin/text/Regex;Lkotlin/text/Regex;IILjava/lang/Object;)Z
-
-    move-result v11
-
-    if-eqz v11, :cond_234
-
-    invoke-static {}, Lru/vtosters/lite/utils/AndroidUtils;->getGlobalContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    new-instance v8, Lcom/vk/navigation/Navigator;
-
-    const-class v0, Lru/vtosters/lite/ui/fragments/tgstickers/StickersFragment;
-
-    invoke-direct {v8, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
-
-    invoke-virtual {v8, v1}, Lcom/vk/navigation/Navigator;->b(Landroid/content/Context;)Landroid/content/Intent;
-
-    move-result-object v8
-
-    const/high16 v0, 0x10000000
-
-    .line 15
-    invoke-virtual {v8, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    .line 16
-    invoke-virtual {v1, v8}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-
-    goto/16 :goto_d
+    goto :cond_234
 
     .line 187
     :cond_234
@@ -5930,7 +5884,7 @@
 
     new-instance v8, Lcom/vk/navigation/Navigator;
 
-    const-class v0, Lru/vtosters/lite/ui/fragments/ThemesFragment;
+    const-class v0, Lru/vtosters/lite/ui/fragments/VTSettings;
 
     invoke-direct {v8, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
 
@@ -5980,7 +5934,7 @@
 
     new-instance v8, Lcom/vk/navigation/Navigator;
 
-    const-class v0, Lru/vtosters/lite/ui/fragments/ThemesFragment;
+    const-class v0, Lru/vtosters/lite/ui/fragments/VTSettings;
 
     invoke-direct {v8, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
 

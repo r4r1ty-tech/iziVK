@@ -58,33 +58,6 @@
 
     .line 50
     :cond_1
-    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->isNewBuild()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 51
-    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->isMonetTheme()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    .line 52
-    invoke-static {}, Lru/vtosters/lite/themes/ThemesManager;->canApplyCustomAccent()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 53
-    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->updateBuildNumber()V
-
-    .line 54
-    invoke-static {p0}, Lru/vtosters/hooks/MainActivityInjector;->updateBinsAndTmpArchive(Landroid/app/Activity;)V
-
-    .line 57
     :cond_2
     invoke-static {}, Lru/vtosters/lite/concurrent/VTExecutors;->getIoScheduler()Lio/reactivex/Scheduler;
 
@@ -134,9 +107,6 @@
 
     .line 65
     invoke-static {p0}, Lru/vtosters/lite/ui/dialogs/InstallGMS;->alert(Landroid/app/Activity;)V
-
-    .line 68
-    invoke-static {p0}, Lcom/aefyr/tsg/g2/TelegramStickersService;->getInstance(Landroid/content/Context;)Lcom/aefyr/tsg/g2/TelegramStickersService;
 
     .line 70
     invoke-static {}, Lru/vtosters/lite/utils/AccountManagerUtils;->isLogin()Z
@@ -261,75 +231,4 @@
     return-void
 .end method
 
-.method static synthetic lambda$updateBinsAndTmpArchive$2(Landroid/app/Activity;Lb/h/g/k/VKProgressDialog;)V
-    .locals 2
 
-    .line 83
-    :try_start_0
-    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->getReservedAccent()I
-
-    move-result v0
-
-    invoke-static {v0}, Lru/vtosters/lite/themes/ThemesManager;->generateModApk(I)V
-
-    .line 84
-    new-instance v0, Lru/vtosters/hooks/MainActivityInjector$$ExternalSyntheticLambda3;
-
-    invoke-direct {v0}, Lru/vtosters/hooks/MainActivityInjector$$ExternalSyntheticLambda3;-><init>()V
-
-    invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    .line 86
-    invoke-virtual {v0}, Ljava/lang/Throwable;->fillInStackTrace()Ljava/lang/Throwable;
-
-    .line 87
-    new-instance v1, Lru/vtosters/hooks/MainActivityInjector$$ExternalSyntheticLambda4;
-
-    invoke-direct {v1, p1, p0, v0}, Lru/vtosters/hooks/MainActivityInjector$$ExternalSyntheticLambda4;-><init>(Lb/h/g/k/VKProgressDialog;Landroid/app/Activity;Ljava/lang/Throwable;)V
-
-    invoke-virtual {p0, v1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
-
-    :goto_0
-    return-void
-.end method
-
-.method private static updateBinsAndTmpArchive(Landroid/app/Activity;)V
-    .locals 3
-
-    .line 76
-    new-instance v0, Lb/h/g/k/VKProgressDialog;
-
-    invoke-direct {v0, p0}, Lb/h/g/k/VKProgressDialog;-><init>(Landroid/content/Context;)V
-
-    const-string v1, "applying_accent"
-
-    .line 78
-    invoke-static {v1}, Lru/vtosters/lite/utils/AndroidUtils;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lb/h/g/k/VKProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
-
-    .line 79
-    invoke-virtual {v0}, Lb/h/g/k/VKProgressDialog;->show()V
-
-    .line 81
-    invoke-static {}, Lru/vtosters/lite/concurrent/VTExecutors;->getIoExecutor()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v1
-
-    new-instance v2, Lru/vtosters/hooks/MainActivityInjector$$ExternalSyntheticLambda2;
-
-    invoke-direct {v2, p0, v0}, Lru/vtosters/hooks/MainActivityInjector$$ExternalSyntheticLambda2;-><init>(Landroid/app/Activity;Lb/h/g/k/VKProgressDialog;)V
-
-    invoke-interface {v1, v2}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-.end method

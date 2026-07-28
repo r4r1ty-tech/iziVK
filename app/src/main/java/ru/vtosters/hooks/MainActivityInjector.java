@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
 import b.h.g.k.VKProgressDialog;
-import com.aefyr.tsg.g2.TelegramStickersService;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.medianative.NativeLibLoader;
 import com.vtosters.lite.R;
@@ -14,7 +13,6 @@ import ru.vtosters.hooks.ui.SystemThemeChangerHook;
 import ru.vtosters.lite.concurrent.VTExecutors;
 import ru.vtosters.lite.downloaders.notifications.NotificationChannels;
 import ru.vtosters.lite.ssfs.UsersList;
-import ru.vtosters.lite.themes.ThemesManager;
 import ru.vtosters.lite.ui.dialogs.InstallGMS;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.dialogs.Start;
@@ -47,13 +45,6 @@ public class MainActivityInjector {
             NotificationChannels.createChannels();
         }
 
-        if (Preferences.isNewBuild()
-                && !ThemesUtils.isMonetTheme()
-                && ThemesManager.canApplyCustomAccent()) {
-            Preferences.updateBuildNumber();
-            updateBinsAndTmpArchive(activity);
-        }
-
         VTExecutors.getIoScheduler().a(DeletedMessagesHook::reloadMessagesList); // ioScheduler
 
         if (activity.getIntent().getAction() != null && Intent.ACTION_APPLICATION_PREFERENCES.equals(activity.getIntent().getAction())) {
@@ -64,35 +55,9 @@ public class MainActivityInjector {
         Start.alert(activity);
         InstallGMS.alert(activity);
         // VKIDProtection.alert(activity);
-        //needs to show selected tgs pack count in settings after cold launch
-        TelegramStickersService.getInstance(activity);
 
         if (AccountManagerUtils.isLogin() && !Preferences.serverFeaturesDisable() && Preferences.isValidSignature()) {
             Native.canVote = NativeLibLoader.loadLibrary("sponsorpost");
         }
-    }
-
-    private static void updateBinsAndTmpArchive(Activity activity) {
-        final VKProgressDialog dialog = new VKProgressDialog(activity);
-
-        dialog.setMessage(AndroidUtils.getString("applying_accent"));
-        dialog.show();
-
-        VTExecutors.getIoExecutor().execute(() -> {
-            try {
-                ThemesManager.generateModApk(ThemesUtils.getReservedAccent());
-                activity.runOnUiThread(LifecycleUtils::restartApplication);
-            } catch (Throwable e) {
-                e.fillInStackTrace();
-                activity.runOnUiThread(() -> {
-                    dialog.cancel();
-                    new VkAlertDialog.Builder(activity)
-                            .setTitle(activity.getString(R.string.error))
-                            .setMessage(AndroidUtils.getString("error_applying_accent") + ":\n" + e)
-                            .setPositiveButton(R.string.ok, null)
-                            .show();
-                });
-            }
-        });
     }
 }
