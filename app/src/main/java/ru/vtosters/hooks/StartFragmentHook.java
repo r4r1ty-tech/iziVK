@@ -24,7 +24,6 @@ import com.vtosters.lite.general.fragments.GamesFragment;
 import com.vtosters.lite.general.fragments.PhotosFragment;
 
 import static ru.vtosters.hooks.other.Preferences.*;
-import static ru.vtosters.lite.ui.components.DockBarEditorManager.getInstance;
 
 public class StartFragmentHook {
     public static Class getStartFragment() {
@@ -52,7 +51,7 @@ public class StartFragmentHook {
             case "lives" -> LivesTabsFragment.class;
             case "docs" -> DocumentsViewFragment.class;
             case "brtd" -> BirthdaysFragment.class;
-            default -> getInstance().getSelectedTabs().get(0).fragmentClass;
+            default -> milkshake() ? HomeFragment.class : NewsfeedFragment.class;
         };
     }
 }

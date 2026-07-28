@@ -356,21 +356,18 @@
     packed-switch v3, :pswitch_data_0
 
     .line 55
-    invoke-static {}, Lru/vtosters/lite/ui/components/DockBarEditorManager;->getInstance()Lru/vtosters/lite/ui/components/DockBarEditorManager;
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->milkshake()Z
 
-    move-result-object v0
+    move-result v0
 
-    invoke-virtual {v0}, Lru/vtosters/lite/ui/components/DockBarEditorManager;->getSelectedTabs()Ljava/util/List;
+    if-eqz v0, :cond_18
 
-    move-result-object v0
+    const-class v0, Lcom/vk/newsfeed/HomeFragment;
 
-    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    goto/16 :goto_1
 
-    move-result-object v0
-
-    check-cast v0, Lru/vtosters/lite/ui/items/DockBarTab;
-
-    iget-object v0, v0, Lru/vtosters/lite/ui/items/DockBarTab;->fragmentClass:Ljava/lang/Class;
+    :cond_18
+    const-class v0, Lcom/vk/newsfeed/NewsfeedFragment;
 
     goto/16 :goto_1
 
