@@ -59,8 +59,8 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
         this.mItemPos = -1;
 
         this.mMargin = getResources().getDimensionPixelSize(R.dimen.design_bottom_navigation_margin);
-        this.mSmallScale = 10.0f;
-        float mLargeScale = 10.0f;
+        this.mSmallScale = 1.0f;
+        float mLargeScale = 1.0f;
 
         LayoutInflater.from(context).inflate(R.layout.design_bottom_navigation_item, this, true);
         this.setBackgroundResource(R.drawable.design_bottom_navigation_item_background);
@@ -70,9 +70,15 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
 
         this.mSmallLabel = this.findViewById(R.id.smallLabel);
         mSmallLabel.setTextColor(getCSTDock(this.getContext()));
+        mSmallLabel.setSingleLine(true);
+        mSmallLabel.setEllipsize(TextUtils.TruncateAt.END);
+        mSmallLabel.setGravity(Gravity.CENTER_HORIZONTAL);
 
         this.mLargeLabel = this.findViewById(R.id.largeLabel);
         mLargeLabel.setTextColor(getCSTDock(this.getContext()));
+        mLargeLabel.setSingleLine(true);
+        mLargeLabel.setEllipsize(TextUtils.TruncateAt.END);
+        mLargeLabel.setGravity(Gravity.CENTER_HORIZONTAL);
 
         LayoutInflater.from(this.getContext()).inflate(R.layout.navigation_bottom_counter, this, true);
         this.mCounterContainer = this.findViewById(R.id.counter_container);
@@ -216,39 +222,31 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
                 }
                 mSmallLabel.setVisibility(INVISIBLE);
             } else {
-//                ViewCompat.setScaleX(mLargeLabel, !mStaticModeEnabled && !checked ? mLargeScale : 1.0f);
-//                ViewCompat.setScaleY(mLargeLabel, !mStaticModeEnabled && !checked ? mLargeScale : 1.0f);
-                ViewCompat.setScaleX(mSmallLabel, !mStaticModeEnabled && checked ? mSmallScale : 1.0f);
-                ViewCompat.setScaleY(mSmallLabel, !mStaticModeEnabled && checked ? mSmallScale : 1.0f);
-                mLargeLabel.setTypeface(null, Typeface.BOLD);
-                mSmallLabel.setTypeface(null, Typeface.BOLD);
+                ViewCompat.setScaleX(mSmallLabel, 1.0f);
+                ViewCompat.setScaleY(mSmallLabel, 1.0f);
+                mLargeLabel.setTypeface(null, checked ? Typeface.BOLD : Typeface.NORMAL);
+                mSmallLabel.setTypeface(null, checked ? Typeface.BOLD : Typeface.NORMAL);
 
-                int textsize;
-
-                if (vkme()) {
-                    textsize = 11;
-                } else {
-                    textsize = 10;
-                }
+                int textsize = vkme() ? 11 : 10;
 
                 mLargeLabel.setTextSize(TypedValue.COMPLEX_UNIT_SP, textsize);
                 mSmallLabel.setTextSize(TypedValue.COMPLEX_UNIT_SP, textsize);
 
-                mLargeLabel.setVisibility(/*checked ? VISIBLE :*/ INVISIBLE);
-                mSmallLabel.setVisibility(VISIBLE);//checked ? INVISIBLE : VISIBLE);
+                mLargeLabel.setVisibility(INVISIBLE);
+                mSmallLabel.setVisibility(VISIBLE);
 
                 var iconParams = (LayoutParams) this.mIcon.getLayoutParams();
-                iconParams.gravity = Gravity.CENTER;
-                iconParams.topMargin = 0;
-                iconParams.bottomMargin = V.a(6);
+                iconParams.gravity = Gravity.CENTER_HORIZONTAL | Gravity.TOP;
+                iconParams.topMargin = V.a(2.0F);
+                iconParams.bottomMargin = 0;
                 this.mIcon.setLayoutParams(iconParams);
 
                 var counterContainerParams = (LayoutParams) this.mCounterContainer.getLayoutParams();
-                counterContainerParams.gravity = Gravity.CENTER;
-                counterContainerParams.topMargin = 0;
-                counterContainerParams.bottomMargin = V.a(8);
+                counterContainerParams.gravity = Gravity.CENTER_HORIZONTAL | Gravity.TOP;
+                counterContainerParams.topMargin = V.a(1.0F);
+                counterContainerParams.bottomMargin = 0;
                 this.mCounterContainer.setLayoutParams(counterContainerParams);
-                this.mCounterContainer.setTranslationY(-V.a(5.5F));
+                this.mCounterContainer.setTranslationY(V.a(2.0F));
             }
         }
 

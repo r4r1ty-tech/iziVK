@@ -157,9 +157,9 @@
 
     sget-object v1, Lcom/vk/im/ui/components/common/DialogAction;->ENCRYPT_SETT:Lcom/vk/im/ui/components/common/DialogAction;
 
-    const v2, 0x7f0402ca
+    const v2, 0x7f0402c7
 
-    const v3, 0x7f12161e
+    const v3, 0x7f12161b
 
     invoke-direct {p0, v1, v4, v2, v3}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b$a;-><init>(Lcom/vk/im/ui/components/common/DialogAction;III)V
 
@@ -261,31 +261,25 @@
 
     .line 99
     :goto_1
+    invoke-static {p1}, Lru/vtosters/hooks/CryptImHook;->isEncryptionEnabled(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    sget-object v0, Lcom/vk/im/ui/components/common/DialogAction;->ENCRYPT_SETT:Lcom/vk/im/ui/components/common/DialogAction;
+
+    invoke-interface {p0, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_2
+
+    :cond_2
     sget-object v0, Lcom/vk/im/ui/components/common/DialogAction;->ENCRYPT:Lcom/vk/im/ui/components/common/DialogAction;
 
     invoke-interface {p0, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 101
-    invoke-static {p1}, Lru/vtosters/lite/encryption/EncryptProvider;->getProcessorFor(I)Lru/vtosters/lite/encryption/base/IMProcessor;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    .line 102
-    invoke-virtual {p1}, Lru/vtosters/lite/encryption/base/IMProcessor;->isPublic()Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    .line 103
-    sget-object p1, Lcom/vk/im/ui/components/common/DialogAction;->ENCRYPT_SETT:Lcom/vk/im/ui/components/common/DialogAction;
-
-    invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
     .line 106
-    :cond_2
+    :goto_2
     sget-object p1, Lcom/vk/im/ui/components/common/DialogAction;->MARK_AS_READ:Lcom/vk/im/ui/components/common/DialogAction;
 
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -390,13 +384,21 @@
 
     .line 52
     :pswitch_2
-    invoke-static {v1, p1}, Lru/vtosters/hooks/CryptImHook;->hook(ILcom/vk/im/engine/models/dialogs/Dialog;)V
+    const/4 p0, 0x1
+
+    invoke-static {v1, p0}, Lru/vtosters/hooks/CryptImHook;->setEncryptionEnabled(IZ)V
+
+    invoke-static {p1}, Lru/vtosters/hooks/DialogHeaderInjector;->forceInvalidateDialogActions(Lcom/vk/im/engine/models/dialogs/Dialog;)V
 
     return v0
 
     .line 48
     :pswitch_3
-    invoke-static {v1}, Lru/vtosters/hooks/CryptImHook;->hookPref(I)V
+    const/4 p0, 0x0
+
+    invoke-static {v1, p0}, Lru/vtosters/hooks/CryptImHook;->setEncryptionEnabled(IZ)V
+
+    invoke-static {p1}, Lru/vtosters/hooks/DialogHeaderInjector;->forceInvalidateDialogActions(Lcom/vk/im/engine/models/dialogs/Dialog;)V
 
     return v0
 

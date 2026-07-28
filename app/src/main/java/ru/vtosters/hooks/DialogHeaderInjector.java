@@ -11,8 +11,6 @@ import com.vk.im.ui.views.dialog_actions.DialogActionsListView;
 import ru.vtosters.lite.dialogs.Requests;
 import ru.vtosters.lite.downloaders.messages.HtmlDialogDownloaderFormatProvider;
 import ru.vtosters.lite.downloaders.messages.MessagesDownloader;
-import ru.vtosters.lite.encryption.EncryptProvider;
-import ru.vtosters.lite.encryption.base.IMProcessor;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 import java.io.File;
@@ -45,11 +43,13 @@ public class DialogHeaderInjector {
                 return true;
             }
             case ENCRYPT_SETT -> {
-                CryptImHook.hookPref(peerId);
+                CryptImHook.setEncryptionEnabled(peerId, false);
+                forceInvalidateDialogActions(dialog);
                 return true;
             }
             case ENCRYPT -> {
-                CryptImHook.hook(peerId, dialog);
+                CryptImHook.setEncryptionEnabled(peerId, true);
+                forceInvalidateDialogActions(dialog);
                 return true;
             }
             case DOWNLOAD -> {
@@ -96,11 +96,10 @@ public class DialogHeaderInjector {
             actions.add(DialogAction.DNT_ON);
         }
 
-        actions.add(DialogAction.ENCRYPT);
-
-        IMProcessor prov = EncryptProvider.getProcessorFor(peerId);
-        if (prov != null && !prov.isPublic()) {
+        if (CryptImHook.isEncryptionEnabled(peerId)) {
             actions.add(DialogAction.ENCRYPT_SETT);
+        } else {
+            actions.add(DialogAction.ENCRYPT);
         }
 
         actions.add(DialogAction.MARK_AS_READ);
@@ -121,8 +120,8 @@ public class DialogHeaderInjector {
         list.add(new DialogActionsListView.b.a(DialogAction.DNT_OFF, 2, com.vtosters.lite.R.attr.im_ic_edit_msg, com.vtosters.lite.R.string.DNT_OFF)); // DialogAction, Int, Icon, String
 
         if (!AndroidUtils.isTablet()) {
-            list.add(new DialogActionsListView.b.a(DialogAction.ENCRYPT, 3, com.vtosters.lite.R.attr.im_ic_keyboard, com.vtosters.lite.R.string.encryption)); // DialogAction, Int, Icon, String
-            list.add(new DialogActionsListView.b.a(DialogAction.ENCRYPT_SETT, 3, com.vtosters.lite.R.attr.im_ic_more_vertical, com.vtosters.lite.R.string.encryption_sett)); // DialogAction, Int, Icon, String
+            list.add(new DialogActionsListView.b.a(DialogAction.ENCRYPT, 3, com.vtosters.lite.R.attr.im_ic_keyboard, com.vtosters.lite.R.string.encryption));
+            list.add(new DialogActionsListView.b.a(DialogAction.ENCRYPT_SETT, 3, com.vtosters.lite.R.attr.im_ic_keyboard, com.vtosters.lite.R.string.encryption_disable));
         }
 
         list.add(new DialogActionsListView.b.a(DialogAction.MARK_AS_READ, 4, com.vtosters.lite.R.attr.im_ic_done, com.vtosters.lite.R.string.vkim_dialogs_list_option_mark_as_read)); // DialogAction, Int, Icon, String

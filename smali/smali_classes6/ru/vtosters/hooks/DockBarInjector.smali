@@ -739,7 +739,7 @@
 
     const v4, 0x7f1207e6
 
-    const v5, 0x7f0804db
+    const v5, 0x7f0805ab
 
     invoke-static {}, Lru/vtosters/hooks/other/Preferences;->milkshake()Z
 
@@ -768,7 +768,7 @@
 
     const v4, 0x7f120786
 
-    const v5, 0x7f080517
+    const v5, 0x7f08066f
 
     const-class v6, Lcom/vk/music/fragment/MusicCatalogFragment1;
 
@@ -785,7 +785,7 @@
 
     const v4, 0x7f1206f3
 
-    const v5, 0x7f0804cb
+    const v5, 0x7f0803f5
 
     const-class v6, Lcom/vtosters/lite/fragments/t2/c/DialogsFragment;
 
@@ -802,7 +802,7 @@
 
     const v4, 0x7f120aa2
 
-    const v5, 0x7f080648
+    const v5, 0x7f080833
 
     const-class v6, Lcom/vtosters/lite/fragments/ProfileFragment;
 
@@ -811,7 +811,7 @@
     :cond_1
     const v4, 0x7f1206eb
 
-    const v5, 0x7f0804d9
+    const v5, 0x7f0805a4
 
     const-class v6, Lcom/vk/menu/MenuFragment;
 

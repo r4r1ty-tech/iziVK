@@ -7,9 +7,6 @@ import com.vtosters.lite.R;
 import ru.vtosters.lite.dialogs.Requests;
 import ru.vtosters.lite.downloaders.messages.HtmlDialogDownloaderFormatProvider;
 import ru.vtosters.lite.downloaders.messages.MessagesDownloader;
-import ru.vtosters.lite.encryption.EncryptProvider;
-import ru.vtosters.lite.encryption.base.IMProcessor;
-
 import java.io.File;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -34,11 +31,11 @@ public class DialogMenuInjectors {
 
         list.add(MessagesActivityHook.isDntEnabledFor(peerId) ? DialogAction.DNT_OFF : DialogAction.DNT_ON);
 
-        list.add(DialogAction.ENCRYPT);
-
-        IMProcessor prov = EncryptProvider.getProcessorFor(peerId);
-        if (prov != null && !prov.isPublic())
+        if (CryptImHook.isEncryptionEnabled(peerId)) {
             list.add(DialogAction.ENCRYPT_SETT);
+        } else {
+            list.add(DialogAction.ENCRYPT);
+        }
     }
 
     public static LinkedHashMap<DialogAction, Integer> injectToHashMap(LinkedHashMap<DialogAction, Integer> hashMap) {
@@ -51,7 +48,7 @@ public class DialogMenuInjectors {
         hashMap.put(DialogAction.DNT_OFF, R.string.DNT_OFF);
 
         hashMap.put(DialogAction.ENCRYPT, R.string.encryption);
-        hashMap.put(DialogAction.ENCRYPT_SETT, R.string.encryption_sett);
+        hashMap.put(DialogAction.ENCRYPT_SETT, R.string.encryption_disable);
 
 //        hashMap.put(DialogAction.pinmsg, getIdentifier("pinmsg", "string"));
 //        hashMap.put(DialogAction.unpinmsg, getIdentifier("unpinmsg", "string"));
@@ -99,11 +96,11 @@ public class DialogMenuInjectors {
                 return true;
             }
             case ENCRYPT_SETT -> {
-                CryptImHook.hookPref(peerId);
+                CryptImHook.setEncryptionEnabled(peerId, false);
                 return true;
             }
             case ENCRYPT -> {
-                CryptImHook.hook(peerId, dialog);
+                CryptImHook.setEncryptionEnabled(peerId, true);
                 return true;
             }
         }

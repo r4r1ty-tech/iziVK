@@ -6090,7 +6090,7 @@ Pode parecer uma saída falsa do online"</string>
     <string name="filter_flea">Filtro de pulgas</string>
     <string name="filter_snow">Efeito neve</string>
 
-    <string name="encryption">Método de criptografia</string>
+    <string name="encryption">Ativar criptografia</string>
     <string name="encryption_sett">Configurações de criptografia</string>
     <string name="encryption_disable">Desativar criptografia</string>
     <string name="encryption_settings_title">Configurações de criptografia</string>

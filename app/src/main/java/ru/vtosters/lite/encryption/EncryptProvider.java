@@ -4,7 +4,7 @@ import android.util.Pair;
 import com.vk.im.engine.models.messages.Msg;
 import com.vk.im.engine.models.messages.MsgFromUser;
 import ru.vtosters.lite.encryption.base.IMProcessor;
-import ru.vtosters.lite.encryption.processors.*;
+import ru.vtosters.lite.encryption.processors.EncGcmProcessor;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -15,13 +15,8 @@ public class EncryptProvider {
     public static List<IMProcessor> processors = new ArrayList<>();
 
     static {
+        // iziVK: единственный алгоритм — AES-256-GCM (prefKey "izigcm")
         processors.add(new EncGcmProcessor());
-        processors.add(new VTostersProcessor());
-        processors.add(new VTostersAESProcessor());
-        processors.add(new DefaultCoffeeProcessor());
-        processors.add(new DonateCoffeeProcessor());
-        processors.add(new BeeCryptProcessor());
-        processors.add(new MP3InvisibleProcessor());
     }
 
     public static IMProcessor getProcessorFor(int peerId) {

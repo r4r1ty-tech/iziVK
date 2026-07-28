@@ -88,31 +88,23 @@
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 37
+    invoke-static {p0}, Lru/vtosters/hooks/CryptImHook;->isEncryptionEnabled(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    sget-object v0, Lcom/vk/im/ui/components/common/DialogAction;->ENCRYPT_SETT:Lcom/vk/im/ui/components/common/DialogAction;
+
+    goto :goto_2
+
+    :cond_2
     sget-object v0, Lcom/vk/im/ui/components/common/DialogAction;->ENCRYPT:Lcom/vk/im/ui/components/common/DialogAction;
 
+    :goto_2
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 39
-    invoke-static {p0}, Lru/vtosters/lite/encryption/EncryptProvider;->getProcessorFor(I)Lru/vtosters/lite/encryption/base/IMProcessor;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_2
-
-    .line 40
-    invoke-virtual {p0}, Lru/vtosters/lite/encryption/base/IMProcessor;->isPublic()Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    .line 41
-    sget-object p0, Lcom/vk/im/ui/components/common/DialogAction;->ENCRYPT_SETT:Lcom/vk/im/ui/components/common/DialogAction;
-
-    invoke-interface {p1, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
     :catch_0
-    :cond_2
     return-void
 .end method
 
@@ -201,7 +193,7 @@
     .line 54
     sget-object v0, Lcom/vk/im/ui/components/common/DialogAction;->ENCRYPT_SETT:Lcom/vk/im/ui/components/common/DialogAction;
 
-    const v1, 0x7f12161e
+    const v1, 0x7f12161b
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -242,13 +234,15 @@
 
     .line 106
     :pswitch_0
-    invoke-static {v1, p0}, Lru/vtosters/hooks/CryptImHook;->hook(ILcom/vk/im/engine/models/dialogs/Dialog;)V
+    const/4 p0, 0x1
+
+    invoke-static {v1, p0}, Lru/vtosters/hooks/CryptImHook;->setEncryptionEnabled(IZ)V
 
     return v0
 
     .line 102
     :pswitch_1
-    invoke-static {v1}, Lru/vtosters/hooks/CryptImHook;->hookPref(I)V
+    invoke-static {v1, v2}, Lru/vtosters/hooks/CryptImHook;->setEncryptionEnabled(IZ)V
 
     return v0
 

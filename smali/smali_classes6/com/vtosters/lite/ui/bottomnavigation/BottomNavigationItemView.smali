@@ -85,7 +85,7 @@
 
     iput p2, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationItemView;->mMargin:I
 
-    const/high16 p2, 0x41200000    # 10.0f
+    const/high16 p2, 0x3f800000    # 1.0f
 
     .line 62
     iput p2, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationItemView;->mSmallScale:F

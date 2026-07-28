@@ -6159,7 +6159,7 @@
     <string name="filter_flea">Flea фильтр</string>
     <string name="filter_snow">Эффект снега</string>
 
-    <string name="encryption">Метод шифрования</string>
+    <string name="encryption">Включить шифрование</string>
     <string name="encryption_sett">Настройки шифрования</string>
     <string name="encryption_disable">Отключить шифрование</string>
     <string name="encryption_settings_title">Настройки шифрования</string>

@@ -109,7 +109,7 @@
     <dimen name="bottom_navigation_counter_padding">4.0dip</dimen>
     <dimen name="bottom_navigation_dot_corner">3.0dip</dimen>
     <dimen name="bottom_navigation_dot_height">6.0dip</dimen>
-    <dimen name="bottom_navigation_height">48.0dip</dimen>
+    <dimen name="bottom_navigation_height">52.0dip</dimen>
     <dimen name="bottom_navigation_height_iconsMode">48.0dip</dimen>
     <dimen name="bottom_navigation_item_max_width">96.0dip</dimen>
     <dimen name="bottom_navigation_item_min_width">56.0dip</dimen>

@@ -62,14 +62,14 @@ public class DockBarInjector {
                 "tab_audios",
                 menu_audios,
                 com.vtosters.lite.R.string.music,
-                com.vtosters.lite.R.drawable.ic_music_outline_28,
+                com.vtosters.lite.R.drawable.ic_note_24,
                 MusicCatalogFragment1.class
         ));
         tabs.add(new TabInfo(
                 "tab_messages",
                 tab_messages,
                 com.vtosters.lite.R.string.messages,
-                com.vtosters.lite.R.drawable.ic_message_outline_28,
+                com.vtosters.lite.R.drawable.ic_comment_outline_28,
                 DialogsFragment.class
         ));
         tabs.add(new TabInfo(

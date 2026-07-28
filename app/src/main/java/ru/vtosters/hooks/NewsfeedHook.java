@@ -61,7 +61,7 @@ public class NewsfeedHook {
     }
 
     public static String[] feedParams() {
-        List<String> params = List.of("post", "photo", "photo_tag", "friends_recomm", "app_widget", "promo_button", "authors_rec");
+        List<String> params = Arrays.asList("post", "photo", "photo_tag", "friends_recomm", "app_widget", "promo_button", "authors_rec");
 
         HashSet<String> filteredParams = new HashSet<>();
 

@@ -6297,7 +6297,7 @@ May look like a fake leaving the online"</string>
     <string name="filter_flea">Flea filter</string>
     <string name="filter_snow">Snow effect</string>
 
-    <string name="encryption">Encryption method</string>
+    <string name="encryption">Enable encryption</string>
     <string name="encryption_sett">Encryption settings</string>
     <string name="encryption_disable">Disable encryption</string>
     <string name="encryption_settings_title">Encryption settings</string>

@@ -26,64 +26,10 @@
 
     sput-object v0, Lru/vtosters/lite/encryption/EncryptProvider;->processors:Ljava/util/List;
 
-    # iziVK AES-GCM E2EE
+    # iziVK: единственный алгоритм — AES-256-GCM (prefKey "izigcm")
     new-instance v1, Lru/vtosters/lite/encryption/processors/EncGcmProcessor;
 
     invoke-direct {v1}, Lru/vtosters/lite/encryption/processors/EncGcmProcessor;-><init>()V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 18
-    sget-object v0, Lru/vtosters/lite/encryption/EncryptProvider;->processors:Ljava/util/List;
-
-    new-instance v1, Lru/vtosters/lite/encryption/processors/VTostersProcessor;
-
-    invoke-direct {v1}, Lru/vtosters/lite/encryption/processors/VTostersProcessor;-><init>()V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 19
-    sget-object v0, Lru/vtosters/lite/encryption/EncryptProvider;->processors:Ljava/util/List;
-
-    new-instance v1, Lru/vtosters/lite/encryption/processors/VTostersAESProcessor;
-
-    invoke-direct {v1}, Lru/vtosters/lite/encryption/processors/VTostersAESProcessor;-><init>()V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 20
-    sget-object v0, Lru/vtosters/lite/encryption/EncryptProvider;->processors:Ljava/util/List;
-
-    new-instance v1, Lru/vtosters/lite/encryption/processors/DefaultCoffeeProcessor;
-
-    invoke-direct {v1}, Lru/vtosters/lite/encryption/processors/DefaultCoffeeProcessor;-><init>()V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 21
-    sget-object v0, Lru/vtosters/lite/encryption/EncryptProvider;->processors:Ljava/util/List;
-
-    new-instance v1, Lru/vtosters/lite/encryption/processors/DonateCoffeeProcessor;
-
-    invoke-direct {v1}, Lru/vtosters/lite/encryption/processors/DonateCoffeeProcessor;-><init>()V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 22
-    sget-object v0, Lru/vtosters/lite/encryption/EncryptProvider;->processors:Ljava/util/List;
-
-    new-instance v1, Lru/vtosters/lite/encryption/processors/BeeCryptProcessor;
-
-    invoke-direct {v1}, Lru/vtosters/lite/encryption/processors/BeeCryptProcessor;-><init>()V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 23
-    sget-object v0, Lru/vtosters/lite/encryption/EncryptProvider;->processors:Ljava/util/List;
-
-    new-instance v1, Lru/vtosters/lite/encryption/processors/MP3InvisibleProcessor;
-
-    invoke-direct {v1}, Lru/vtosters/lite/encryption/processors/MP3InvisibleProcessor;-><init>()V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
