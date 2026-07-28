@@ -3,7 +3,6 @@ package ru.vtosters.hooks;
 import android.annotation.SuppressLint;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.ViewGroup;
 import com.vk.apps.AppsFragment;
 import com.vk.core.drawable.RecoloredDrawable;
 import com.vk.core.fragments.FragmentImpl;
@@ -18,7 +17,6 @@ import com.vtosters.lite.fragments.ProfileFragment;
 import com.vtosters.lite.fragments.t2.c.DialogsFragment;
 import com.vtosters.lite.ui.bottomnavigation.BottomNavigationMenuView;
 import com.vtosters.lite.ui.bottomnavigation.BottomNavigationView;
-import org.json.JSONArray;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -131,22 +129,12 @@ public class DockBarInjector {
         }
     }
 
-    private static void removeAllChildren(ViewGroup view) {
-        for (int i = 0; i < view.getChildCount(); i++) {
-            removeAllChildren((ViewGroup) view.getChildAt(i));
-            view.removeAllViews();
-        }
-    }
-
     public static int injectId(String tag) {
         for (TabInfo tab : getTabs()) {
             if (tag.equals(tab.tag))
                 return tab.id;
         }
         return 0;
-    }
-
-    public static void injectMenuFragment(Menu menu) {
     }
 
     public static void setCounter(int tabId, BottomNavigationView navigationView) {
@@ -167,10 +155,6 @@ public class DockBarInjector {
         }
 
         return val > 0 ? StringUtils.a(val) : null;
-    }
-
-    public static JSONArray injectMenuJSON(JSONArray arr) {
-        return arr;
     }
 
     public static int getItemCount() {

@@ -493,18 +493,6 @@
     return-object v0
 .end method
 
-.method public static injectMenuFragment(Landroid/view/Menu;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public static injectMenuJSON(Lorg/json/JSONArray;)Lorg/json/JSONArray;
-    .locals 0
-
-    return-object p0
-.end method
-
 .method public static interceptClick(ILcom/vk/navigation/right/RightMenu;)Ljava/lang/Class;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
@@ -666,39 +654,6 @@
     const/4 p0, 0x1
 
     return p0
-.end method
-
-.method private static removeAllChildren(Landroid/view/ViewGroup;)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    .line 85
-    :goto_0
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result v1
-
-    if-ge v0, v1, :cond_0
-
-    .line 86
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/view/ViewGroup;
-
-    invoke-static {v1}, Lru/vtosters/hooks/DockBarInjector;->removeAllChildren(Landroid/view/ViewGroup;)V
-
-    .line 87
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->removeAllViews()V
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
 .end method
 
 .method public static setCounter(ILcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;)V
