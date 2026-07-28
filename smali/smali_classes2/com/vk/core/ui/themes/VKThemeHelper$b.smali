@@ -180,13 +180,9 @@
     return-object v0
 
     :cond_7
-    new-instance v0, Lru/vtosters/lite/themes/VTLResources;
-
     invoke-static {}, Lru/vtosters/lite/utils/AndroidUtils;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v1
-
-    invoke-direct {v0, p0, v1}, Lru/vtosters/lite/themes/VTLResources;-><init>(Landroid/content/Context;Landroid/content/res/Resources;)V
+    move-result-object v0
 
     iput-object v0, p0, Lcom/vk/core/ui/themes/VKThemeHelper$b;->resources:Landroid/content/res/Resources;
 

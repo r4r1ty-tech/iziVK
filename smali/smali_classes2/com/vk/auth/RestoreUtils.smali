@@ -46,11 +46,6 @@
     move-result-object v0
 
     const-string v1, "static.vk.com/restore"
-
-    invoke-static {v1}, Lru/vtosters/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
     .line 21
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 

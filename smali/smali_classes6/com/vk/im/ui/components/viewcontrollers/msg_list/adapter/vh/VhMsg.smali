@@ -899,7 +899,7 @@
 
     const v7, 0x7f060138
 
-    invoke-static {v1, v7}, Lru/vtosters/lite/themes/ThemesHacks;->getColors(Landroid/content/Context;I)I
+    invoke-static {v1, v7}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result v7
 

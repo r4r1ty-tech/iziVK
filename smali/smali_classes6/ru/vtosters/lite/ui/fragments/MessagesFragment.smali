@@ -150,20 +150,6 @@
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setVisible(Z)V
 
     :cond_0
-    const-string v0, "wallpapers"
-
-    .line 70
-    invoke-virtual {p0, v0}, Lru/vtosters/lite/ui/fragments/MessagesFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
-
-    move-result-object v0
-
-    .line 71
-    new-instance v1, Lru/vtosters/lite/ui/fragments/MessagesFragment$$ExternalSyntheticLambda3;
-
-    invoke-direct {v1, p0}, Lru/vtosters/lite/ui/fragments/MessagesFragment$$ExternalSyntheticLambda3;-><init>(Lru/vtosters/lite/ui/fragments/MessagesFragment;)V
-
-    invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
-
     return-void
 .end method
 
@@ -279,23 +265,6 @@
     invoke-virtual {p1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->show()Landroidx/appcompat/app/AlertDialog;
 
     return v2
-.end method
-
-.method synthetic lambda$prefs$4$ru-vtosters-lite-ui-fragments-MessagesFragment(Landroidx/preference/Preference;)Z
-    .locals 1
-
-    .line 72
-    invoke-virtual {p0}, Lru/vtosters/lite/ui/fragments/MessagesFragment;->requireContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    const-class v0, Lru/vtosters/lite/ui/wallpapers/WallpaperMenuFragment;
-
-    invoke-static {p1, v0}, Lru/vtosters/lite/utils/NavigatorUtils;->switchFragment(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const/4 p1, 0x1
-
-    return p1
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V

@@ -86,11 +86,6 @@
     invoke-virtual {v4}, Landroid/webkit/WebView;->getUrl()Ljava/lang/String;
 
     move-result-object v4
-
-    invoke-static {v4}, Lru/vtosters/hooks/ProxyHook;->staticFix(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
     goto :goto_0
 
     :cond_0

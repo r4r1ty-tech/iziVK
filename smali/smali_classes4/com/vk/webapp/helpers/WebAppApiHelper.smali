@@ -182,10 +182,6 @@
 
     .line 16
     :goto_0
-    invoke-static {v0}, Lru/vtosters/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V

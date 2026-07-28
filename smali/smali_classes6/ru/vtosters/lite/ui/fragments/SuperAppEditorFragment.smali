@@ -279,13 +279,6 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 71
-    new-instance v6, Lru/vtosters/lite/themes/hooks/TextViewHook;
-
-    invoke-direct {v6}, Lru/vtosters/lite/themes/hooks/TextViewHook;-><init>()V
-
-    invoke-virtual {v6, v5, v7, v7}, Lru/vtosters/lite/themes/hooks/TextViewHook;->inject(Landroid/view/View;IZ)V
-
     .line 73
     invoke-static {v7, v4}, Lru/vtosters/lite/utils/LayoutUtils;->createLinear(II)Landroid/widget/LinearLayout$LayoutParams;
 

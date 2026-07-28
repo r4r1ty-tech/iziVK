@@ -5154,15 +5154,6 @@
     .line 67
     invoke-direct {v0, v1}, Lcom/vk/im/ui/fragments/ChatFragment;->M(Ljava/lang/String;)V
 
-    .line 68
-    sget v1, Lcom/vk/im/ui/h;->dialog_background:I
-
-    invoke-virtual {v5, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lru/vtosters/hooks/WallpapersHooks;->setBg(Landroid/view/View;)V
-
     .line 69
     sget v1, Lcom/vk/im/ui/h;->sticker_bar_container_stub:I
 

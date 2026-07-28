@@ -75,8 +75,6 @@
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/vtosters/lite/im/AppAttachToImAttachConverter;->a(ILcom/vk/dto/stickers/StickerItem;Ljava/lang/String;)Lcom/vk/im/engine/models/attaches/AttachSticker;
 
-    invoke-static {p1, p2, p3}, Lru/vtosters/hooks/TelegramStickersHook;->modifyStickerIM(ILcom/vk/dto/stickers/StickerItem;Ljava/lang/String;)Lcom/vk/im/engine/models/attaches/Attach;
-    
     move-result-object p1
 
     .line 8

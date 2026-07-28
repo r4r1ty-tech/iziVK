@@ -206,11 +206,6 @@
     const-string v2, "redirect_uri"
 
     const-string v4, "https://oauth.vk.com/blank.html"
-
-    invoke-static {v4}, Lru/vtosters/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
     .line 14
     invoke-virtual {v3, v2, v4}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -295,11 +290,6 @@
     move-result-object v0
 
     const-string v1, "oauth.vk.com"
-
-    invoke-static {v1}, Lru/vtosters/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0

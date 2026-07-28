@@ -325,11 +325,6 @@
     move-result-object v1
 
     const-string v3, "oauth.vk.com"
-
-    invoke-static {v3}, Lru/vtosters/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1

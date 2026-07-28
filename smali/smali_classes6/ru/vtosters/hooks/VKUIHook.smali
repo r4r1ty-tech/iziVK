@@ -115,14 +115,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 35
-    invoke-static {}, Lru/vtosters/lite/themes/ThemesCore;->isCachedAccents()Z
-
-    move-result v1
-
     const-string v2, "\n\n"
-
-    if-eqz v1, :cond_0
 
     .line 36
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -132,24 +125,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 40
-    :cond_0
-    invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->isAmoledTheme()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 41
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 42
-    sget-object v1, Lru/vtosters/lite/utils/WebViewColoringUtils;->loadedCSSAmoled:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 45
-    :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0

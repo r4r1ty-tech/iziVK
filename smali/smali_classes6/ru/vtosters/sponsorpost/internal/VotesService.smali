@@ -1105,9 +1105,9 @@
 
     move-result-object v1
 
-    new-instance v3, Lru/vtosters/lite/themes/palettes/PalettesManager$$ExternalSyntheticLambda0;
+    new-instance v3, Lru/vtosters/sponsorpost/internal/VotesService$$ExternalSyntheticLambda0;
 
-    invoke-direct {v3}, Lru/vtosters/lite/themes/palettes/PalettesManager$$ExternalSyntheticLambda0;-><init>()V
+    invoke-direct {v3}, Lru/vtosters/sponsorpost/internal/VotesService$$ExternalSyntheticLambda0;-><init>()V
 
     .line 60
     invoke-interface {v1, v3}, Lj$/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Lj$/util/stream/Stream;
@@ -1145,9 +1145,9 @@
 
     move-result-object p0
 
-    new-instance v3, Lru/vtosters/lite/themes/palettes/PalettesManager$$ExternalSyntheticLambda0;
+    new-instance v3, Lru/vtosters/sponsorpost/internal/VotesService$$ExternalSyntheticLambda0;
 
-    invoke-direct {v3}, Lru/vtosters/lite/themes/palettes/PalettesManager$$ExternalSyntheticLambda0;-><init>()V
+    invoke-direct {v3}, Lru/vtosters/sponsorpost/internal/VotesService$$ExternalSyntheticLambda0;-><init>()V
 
     .line 65
     invoke-interface {p0, v3}, Lj$/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Lj$/util/stream/Stream;

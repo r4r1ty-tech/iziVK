@@ -131,12 +131,7 @@
     const/4 v1, 0x2
 
     aput-object p1, v0, v1
-
-    invoke-static {p3}, Lru/vtosters/hooks/ProxyHook;->staticFix(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p3
-
-    const-string p1, "source_url"
+const-string p1, "source_url"
 
     .line 5
     invoke-static {p1, p3}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
@@ -243,12 +238,7 @@
     invoke-interface {p3, p6, p4}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p3
-
-    invoke-static {p3}, Lru/vtosters/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p3
-
-    if-eqz p3, :cond_2
+if-eqz p3, :cond_2
 
     goto :goto_0
 

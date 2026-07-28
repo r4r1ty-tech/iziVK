@@ -55,11 +55,6 @@
     const-string v3, "chats"
 
     const-string v4, "static.vk.com"
-
-    invoke-static {v4}, Lru/vtosters/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
     const/4 v5, 0x2
 
     const/4 v6, 0x0

@@ -4954,7 +4954,6 @@
     <public type="drawable" name="ic_yandex_translate_icon" id="0x7f080bd1" />
     <public type="drawable" name="$splash__0" id="0x7f080bd2" />
     <public type="drawable" name="roundmsg" id="0x7f080bd3" />
-    <public type="drawable" name="tgs_entry_background" id="0x7f080bd4" />
     <public type="drawable" name="yandex" id="0x7f080bd7" />
     <public type="drawable" name="$splash__1" id="0x7f080bd8" />
     <public type="drawable" name="$splash__10" id="0x7f080bd9" />
@@ -12840,7 +12839,6 @@
     <public type="layout" name="write_bar_audio" id="0x7f0d06db" />
     <public type="layout" name="write_bar_waveform" id="0x7f0d06dc" />
     <public type="layout" name="year_label_text_view" id="0x7f0d06dd" />
-    <public type="layout" name="tgs_entry" id="0x7f0d06de" />
     <public type="layout" name="wppreview" id="0x7f0d06df" />
     <public type="layout" name="write_bar_i" id="0x7f0d06e0" />
     <public type="layout" name="color_picker_item" id="0x7f0d06e1" />
@@ -12919,67 +12917,14 @@
     <public type="mipmap" name="adaptive_launcher_background" id="0x7f0f0000" />
     <public type="mipmap" name="adaptive_launcher_foreground" id="0x7f0f0001" />
     <public type="mipmap" name="ic_launcher_round" id="0x7f0f0002" />
-    <public type="mipmap" name="mp_launcher" id="0x7f0f000c" />
     <public type="mipmap" name="adaptive_launcher_background_old" id="0x7f0f000d" />
     <public type="mipmap" name="adaptive_launcher_foreground_old" id="0x7f0f000e" />
     <public type="mipmap" name="ic_launcher" id="0x7f0f000f" />
     <public type="mipmap" name="ic_launcher_background" id="0x7f0f0010" />
     <public type="mipmap" name="ic_launcher_changeable_foreground" id="0x7f0f0011" />
-    <public type="mipmap" name="ic_launcher_flamingo" id="0x7f0f0012" />
-    <public type="mipmap" name="ic_launcher_flamingo_background" id="0x7f0f0013" />
     <public type="mipmap" name="ic_launcher_foreground" id="0x7f0f0014" />
-    <public type="mipmap" name="ic_launcher_fresh_background" id="0x7f0f0016" />
-    <public type="mipmap" name="ic_launcher_navy" id="0x7f0f0017" />
-    <public type="mipmap" name="ic_launcher_navy_background" id="0x7f0f0018" />
-    <public type="mipmap" name="ic_launcher_old" id="0x7f0f0019" />
-    <public type="mipmap" name="ic_launcher_paint" id="0x7f0f001a" />
-    <public type="mipmap" name="ic_launcher_paint_background" id="0x7f0f001b" />
-    <public type="mipmap" name="ic_launcher_party" id="0x7f0f001c" />
-    <public type="mipmap" name="ic_launcher_party_background" id="0x7f0f001d" />
-    <public type="mipmap" name="ic_launcher_party_foreground" id="0x7f0f001e" />
-    <public type="mipmap" name="ic_launcher_sakura" id="0x7f0f001f" />
-    <public type="mipmap" name="ic_launcher_sakura_background" id="0x7f0f0020" />
-    <public type="mipmap" name="ic_launcher_sea" id="0x7f0f0021" />
-    <public type="mipmap" name="ic_launcher_sea_background" id="0x7f0f0022" />
-    <public type="mipmap" name="ic_launcher_spring" id="0x7f0f0023" />
-    <public type="mipmap" name="ic_launcher_spring_background" id="0x7f0f0024" />
-    <public type="mipmap" name="ic_launcher_tiger" id="0x7f0f0025" />
-    <public type="mipmap" name="ic_launcher_tiger_background" id="0x7f0f0026" />
-    <public type="mipmap" name="ic_launcher_vt_flamingo" id="0x7f0f0027" />
-    <public type="mipmap" name="ic_launcher_vt_navy" id="0x7f0f0029" />
-    <public type="mipmap" name="ic_launcher_vt_paint" id="0x7f0f002a" />
-    <public type="mipmap" name="ic_launcher_vt_party" id="0x7f0f002b" />
-    <public type="mipmap" name="ic_launcher_vt_sakura" id="0x7f0f002c" />
-    <public type="mipmap" name="ic_launcher_vt_sea" id="0x7f0f002d" />
-    <public type="mipmap" name="ic_launcher_vt_spring" id="0x7f0f002e" />
-    <public type="mipmap" name="ic_launcher_vt_tiger" id="0x7f0f002f" />
     <public type="mipmap" name="vt_changeable_foreground" id="0x7f0f0044" />
     <public type="mipmap" name="vt_launcher" id="0x7f0f0045" />
-    <public type="mipmap" name="vt_party_foreground" id="0x7f0f0047" />
-    <public type="mipmap" name="ic_launcher_balloon_pink" id="0x7f0f0048" />
-    <public type="mipmap" name="ic_launcher_balloon_pink_background" id="0x7f0f0049" />
-    <public type="mipmap" name="ic_launcher_balloon_pink_foreground" id="0x7f0f004a" />
-    <public type="mipmap" name="ic_launcher_bubble_gum" id="0x7f0f004b" />
-    <public type="mipmap" name="ic_launcher_bubble_gum_background" id="0x7f0f004c" />
-    <public type="mipmap" name="ic_launcher_bubble_gum_foreground" id="0x7f0f004d" />
-    <public type="mipmap" name="ic_launcher_comics" id="0x7f0f004e" />
-    <public type="mipmap" name="ic_launcher_comics_background" id="0x7f0f004f" />
-    <public type="mipmap" name="ic_launcher_comics_foreground" id="0x7f0f0050" />
-    <public type="mipmap" name="ic_launcher_flowers" id="0x7f0f0051" />
-    <public type="mipmap" name="ic_launcher_flowers_background" id="0x7f0f0052" />
-    <public type="mipmap" name="ic_launcher_flowers_foreground" id="0x7f0f0053" />
-    <public type="mipmap" name="ic_launcher_metal_dark" id="0x7f0f0054" />
-    <public type="mipmap" name="ic_launcher_metal_dark_background" id="0x7f0f0055" />
-    <public type="mipmap" name="ic_launcher_metal_dark_foreground" id="0x7f0f0056" />
-    <public type="mipmap" name="ic_launcher_pin_blue" id="0x7f0f0057" />
-    <public type="mipmap" name="ic_launcher_pin_blue_background" id="0x7f0f0058" />
-    <public type="mipmap" name="ic_launcher_pin_blue_foreground" id="0x7f0f0059" />
-    <public type="mipmap" name="ic_launcher_rabbit" id="0x7f0f005a" />
-    <public type="mipmap" name="ic_launcher_rabbit_background" id="0x7f0f005b" />
-    <public type="mipmap" name="ic_launcher_rabbit_foreground" id="0x7f0f005c" />
-    <public type="mipmap" name="ic_launcher_shine" id="0x7f0f005d" />
-    <public type="mipmap" name="ic_launcher_shine_background" id="0x7f0f005e" />
-    <public type="mipmap" name="ic_launcher_shine_foreground" id="0x7f0f005f" />
     <public type="mipmap" name="vt_adaptive_launcher_foreground" id="0x7f0f0043" />
     <public type="mipmap" name="vt_launcher_round" id="0x7f0f0046" />
     <public type="mipmap" name="ic_logo_facebook_28" id="0x7f0f0003" />
@@ -12991,27 +12936,6 @@
     <public type="mipmap" name="ic_play_next_24" id="0x7f0f0009" />
     <public type="mipmap" name="ic_skip_next_alpha_40_28" id="0x7f0f000a" />
     <public type="mipmap" name="ic_skip_previous_alpha_40_28" id="0x7f0f000b" />
-    <public type="mipmap" name="ic_launcher_fresh" id="0x7f0f0015" />
-    <public type="mipmap" name="ic_launcher_vt_fresh" id="0x7f0f0028" />
-    <public type="mipmap" name="mp_launcher_flamingo" id="0x7f0f0030" />
-    <public type="mipmap" name="mp_launcher_fresh" id="0x7f0f0031" />
-    <public type="mipmap" name="mp_launcher_navy" id="0x7f0f0032" />
-    <public type="mipmap" name="mp_launcher_old" id="0x7f0f0033" />
-    <public type="mipmap" name="mp_launcher_paint" id="0x7f0f0034" />
-    <public type="mipmap" name="mp_launcher_party" id="0x7f0f0035" />
-    <public type="mipmap" name="mp_launcher_sakura" id="0x7f0f0036" />
-    <public type="mipmap" name="mp_launcher_sea" id="0x7f0f0037" />
-    <public type="mipmap" name="mp_launcher_spring" id="0x7f0f0038" />
-    <public type="mipmap" name="mp_launcher_tiger" id="0x7f0f0039" />
-    <public type="mipmap" name="mp_launcher_vt_flamingo" id="0x7f0f003a" />
-    <public type="mipmap" name="mp_launcher_vt_fresh" id="0x7f0f003b" />
-    <public type="mipmap" name="mp_launcher_vt_navy" id="0x7f0f003c" />
-    <public type="mipmap" name="mp_launcher_vt_paint" id="0x7f0f003d" />
-    <public type="mipmap" name="mp_launcher_vt_party" id="0x7f0f003e" />
-    <public type="mipmap" name="mp_launcher_vt_sakura" id="0x7f0f003f" />
-    <public type="mipmap" name="mp_launcher_vt_sea" id="0x7f0f0040" />
-    <public type="mipmap" name="mp_launcher_vt_spring" id="0x7f0f0041" />
-    <public type="mipmap" name="mp_launcher_vt_tiger" id="0x7f0f0042" />
     <public type="plurals" name="accessibility_comments" id="0x7f100000" />
     <public type="plurals" name="accessibility_likes" id="0x7f100001" />
     <public type="plurals" name="accessibility_reposts" id="0x7f100002" />
@@ -20791,8 +20715,6 @@
     <public type="xml" name="preferences_media" id="0x7f150019" />
     <public type="xml" name="preferences_messages" id="0x7f15001a" />
     <public type="xml" name="preferences_other" id="0x7f15001b" />
-    <public type="xml" name="preferences_proxy" id="0x7f15001c" />
-    <public type="xml" name="preferences_tgs" id="0x7f15001d" />
-    <public type="xml" name="preferences_themes" id="0x7f15001e" />
+
     <public type="xml" name="locales_config" id="0x7f15001f" />
 </resources>

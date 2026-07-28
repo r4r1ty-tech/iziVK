@@ -165,11 +165,6 @@
     const/4 v1, 0x0
 
     const-string v2, "https://static.vk.com/promo_codes/"
-
-    invoke-static {v2}, Lru/vtosters/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
     const/4 v3, 0x2
 
     invoke-direct {v0, v2, v1, v3, v1}, Lcom/vk/webapp/VkUiFragment$a;-><init>(Ljava/lang/String;Ljava/lang/Class;ILkotlin/jvm/internal/DefaultConstructorMarker;)V

@@ -7,10 +7,8 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.R;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
-import ru.vtosters.lite.ui.wallpapers.WallpaperMenuFragment;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
-import ru.vtosters.lite.utils.NavigatorUtils;
 
 import java.util.Arrays;
 import java.util.List;
@@ -66,12 +64,6 @@ public class MessagesFragment extends TrackedMaterialPreferenceToolbarFragment {
         if (AndroidUtils.isTablet()) {
             findPreference("vkmesett").setVisible(false);
         }
-
-        var wp = findPreference("wallpapers");
-        wp.setOnPreferenceClickListener(preference -> {
-            NavigatorUtils.switchFragment(requireContext(), WallpaperMenuFragment.class);
-            return true;
-        });
     }
 
     @Override

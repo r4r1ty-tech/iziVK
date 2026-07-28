@@ -201,11 +201,6 @@
 
     :cond_0
     const-string v0, "https://oauth.vk.com/authorize"
-
-    invoke-static {v0}, Lru/vtosters/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
     .line 3
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 

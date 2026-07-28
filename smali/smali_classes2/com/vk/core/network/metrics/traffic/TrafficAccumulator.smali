@@ -186,11 +186,6 @@
     const/4 v2, 0x0
 
     const-string v3, "https://api.vk.com/method/execute"
-
-    invoke-static {v3}, Lru/vtosters/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
     invoke-static {p1, v3, v1, v0, v2}, Lkotlin/text/l;->c(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
 
     move-result p1

@@ -97,9 +97,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lru/vtosters/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v1
 
     const-string v2, "api_host"
 

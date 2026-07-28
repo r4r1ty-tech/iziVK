@@ -113,11 +113,6 @@
     const-string v1, "vk_app_redirect_url"
 
     const-string v3, "https://oauth.vk.com/blank.html"
-
-    invoke-static {v3}, Lru/vtosters/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
     .line 7
     invoke-virtual {p1, v1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 

@@ -547,11 +547,6 @@
     move-result-object v2
 
     const-string v3, "https://oauth.vk.com/blank.html"
-
-    invoke-static {v3}, Lru/vtosters/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
     invoke-virtual {p0, v2, v1, v3}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -1542,12 +1537,7 @@
     invoke-virtual {p1}, Landroid/webkit/WebView;->getUrl()Ljava/lang/String;
 
     move-result-object p1
-
-    invoke-static {p1}, Lru/vtosters/hooks/ProxyHook;->staticFix(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    goto :goto_0
+goto :goto_0
 
     :cond_0
     const/4 p1, 0x0
@@ -1636,12 +1626,7 @@
     move-result-object p1
 
     const-string p3, "https://oauth.vk.com/authorize"
-
-    invoke-static {p3}, Lru/vtosters/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p3
-
-    .line 43
+.line 43
     invoke-static {p3}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p3
@@ -2192,11 +2177,6 @@
     const-string v2, "redirect_url"
 
     const-string v3, "https://oauth.vk.com/blank.html"
-
-    invoke-static {v3}, Lru/vtosters/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
     .line 5
     invoke-virtual {p1, v2, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 

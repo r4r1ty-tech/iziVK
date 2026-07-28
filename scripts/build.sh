@@ -16,7 +16,7 @@ check_result() {
 
 echo -e "${BOLD}${UNDERLINE}Сборка apk..${NC}"
 cd smali/
-java -jar ../scripts/apktool.jar b . -o ../scripts/iziVK.apk --use-aapt2 -p ../scripts/framework/
+java -jar ../scripts/apktool.jar b . -f -o ../scripts/iziVK.apk --use-aapt2 -p ../scripts/framework/
 check_result
 
 echo -e "${BOLD}${UNDERLINE}Zipaligning..${NC}"
