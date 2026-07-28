@@ -282,62 +282,6 @@
 
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    const-string v0, "updateverifdata"
-
-    .line 122
-    invoke-virtual {p0, v0}, Lru/vtosters/lite/ui/fragments/OtherFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
-
-    move-result-object v1
-
-    new-instance v2, Lru/vtosters/lite/ui/fragments/OtherFragment$$ExternalSyntheticLambda7;
-
-    invoke-direct {v2, p0}, Lru/vtosters/lite/ui/fragments/OtherFragment$$ExternalSyntheticLambda7;-><init>(Lru/vtosters/lite/ui/fragments/OtherFragment;)V
-
-    invoke-virtual {v1, v2}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
-
-    const-string v1, "VT_Verification"
-
-    .line 130
-    invoke-virtual {p0, v1}, Lru/vtosters/lite/ui/fragments/OtherFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
-
-    move-result-object v1
-
-    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->serverFeaturesDisable()Z
-
-    move-result v2
-
-    xor-int/2addr v2, v4
-
-    invoke-virtual {v1, v2}, Landroidx/preference/Preference;->setVisible(Z)V
-
-    const-string v1, "VT_Fire"
-
-    .line 131
-    invoke-virtual {p0, v1}, Lru/vtosters/lite/ui/fragments/OtherFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
-
-    move-result-object v1
-
-    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->serverFeaturesDisable()Z
-
-    move-result v2
-
-    xor-int/2addr v2, v4
-
-    invoke-virtual {v1, v2}, Landroidx/preference/Preference;->setVisible(Z)V
-
-    .line 132
-    invoke-virtual {p0, v0}, Lru/vtosters/lite/ui/fragments/OtherFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
-
-    move-result-object v0
-
-    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->serverFeaturesDisable()Z
-
-    move-result v1
-
-    xor-int/2addr v1, v4
-
-    invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setVisible(Z)V
-
     const-string v0, "vk_admin_token"
 
     .line 134
@@ -541,38 +485,6 @@
     const-class v0, Lru/vtosters/lite/ui/fragments/SystemInfo;
 
     invoke-static {p1, v0}, Lru/vtosters/lite/utils/NavigatorUtils;->switchFragment(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method synthetic lambda$prefs$12$ru-vtosters-lite-ui-fragments-OtherFragment(Landroidx/preference/Preference;)Z
-    .locals 0
-
-    .line 123
-    invoke-static {}, Lru/vtosters/lite/ssfs/UsersList;->getUsersList()V
-
-    const/4 p1, 0x0
-
-    .line 124
-    sput-boolean p1, Lru/vtosters/lite/utils/VTVerifications;->isLoaded:Z
-
-    .line 125
-    invoke-virtual {p0}, Lru/vtosters/lite/ui/fragments/OtherFragment;->requireContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lru/vtosters/lite/utils/VTVerifications;->load(Landroid/content/Context;)V
-
-    const-string p1, "data_updated"
-
-    .line 126
-    invoke-static {p1}, Lru/vtosters/lite/utils/AndroidUtils;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lru/vtosters/lite/utils/AndroidUtils;->sendToast(Ljava/lang/String;)V
 
     const/4 p1, 0x1
 

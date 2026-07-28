@@ -218,14 +218,14 @@ public class MusicFragment extends TrackedMaterialPreferenceToolbarFragment {
                 }
         );
 
-        PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Рекомендации музыки");
+        PreferenceFragmentUtils.addPreferenceCategory(getPreferenceScreen(), "Музыкальный каталог");
         PreferenceFragmentUtils.addMaterialSwitchPreference(
                 getPreferenceScreen(),
                 "sendMusicMetrics",
-                "Отправлять статистику",
-                "Статистика прослушиваний необходима для работы рекомендаций и истории прослушивания музыки",
+                "История прослушиваний",
+                "Включает локальную историю прослушиваний в музыкальном разделе (без отправки статистики)",
                 null,
-                true,
+                false,
                 (preference, o) -> {
                     Preferences.getPreferences().edit().putBoolean("sendMusicMetrics", (boolean) o).apply();
                     return true;

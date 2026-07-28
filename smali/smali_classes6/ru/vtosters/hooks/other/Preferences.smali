@@ -1286,7 +1286,7 @@
 .method public static sendMusicMetrics()Z
     .locals 2
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     .line 296
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;

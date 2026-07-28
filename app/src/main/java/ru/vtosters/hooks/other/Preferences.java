@@ -293,7 +293,7 @@ public class Preferences {
     }
 
     public static boolean sendMusicMetrics() {
-        return getBoolValue("sendMusicMetrics", true);
+        return getBoolValue("sendMusicMetrics", false);
     }
 
     public static boolean screenshotdetect() {

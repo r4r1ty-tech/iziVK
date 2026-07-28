@@ -90,11 +90,6 @@
                 android:title="@string/vtllinkfilter"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
-                android:key="cringerepost"
-                android:summary="@string/cringerepost_summ"
-                android:title="@string/cringerepost_title"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="false"
                 android:key="copyright_post"
                 android:summary="@string/feed_ads_sources_summary"
                 android:title="@string/feed_ads_sources"/>

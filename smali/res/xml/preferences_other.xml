@@ -26,20 +26,8 @@
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtverify">
         <Preference
-                android:key="updateverifdata"
-                android:summary="@string/updateverifdata_summ"
-                android:title="@string/updateverifdata_title"/>
-        <Preference
                 android:key="copyownlink"
                 android:title="@string/copyownlink_title"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="true"
-                android:key="VT_Verification"
-                android:title="@string/showvtverify"/>
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-                android:defaultValue="true"
-                android:key="VT_Fire"
-                android:title="@string/showvtfire"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
                 android:defaultValue="false"
                 android:key="dialogrecomm"

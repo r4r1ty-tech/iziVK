@@ -12,7 +12,6 @@ import com.vtosters.lite.auth.VKAccountManager;
 import ru.vtosters.hooks.GmsHook;
 import ru.vtosters.hooks.other.Preferences;
 import ru.vtosters.lite.deviceinfo.DeviceInfoCollector;
-import ru.vtosters.lite.ssfs.UsersList;
 import ru.vtosters.lite.ui.activities.VKAdminTokenActivity;
 import ru.vtosters.lite.utils.*;
 
@@ -118,18 +117,6 @@ public class OtherFragment extends TrackedMaterialPreferenceToolbarFragment {
             NavigatorUtils.switchFragment(requireContext(), SystemInfo.class);
             return true;
         });
-
-        findPreference("updateverifdata").setOnPreferenceClickListener(preference -> {
-            UsersList.getUsersList();
-            VTVerifications.isLoaded = false;
-            VTVerifications.load(requireContext());
-            AndroidUtils.sendToast(AndroidUtils.getString("data_updated"));
-            return true;
-        });
-
-        findPreference("VT_Verification").setVisible(!Preferences.serverFeaturesDisable());
-        findPreference("VT_Fire").setVisible(!Preferences.serverFeaturesDisable());
-        findPreference("updateverifdata").setVisible(!Preferences.serverFeaturesDisable());
 
         var vkAdminTokenPref = findPreference("vk_admin_token");
         vkAdminTokenPref.setVisible(Preferences.getPreferences().getBoolean("new_music_downloading_way", false));
