@@ -737,7 +737,7 @@
 
     const v3, 0x7f0a0d15
 
-    const v4, 0x7f1207e6
+    const v4, 0x7f1208f7
 
     const v5, 0x7f0805ab
 
@@ -766,9 +766,9 @@
 
     const v3, 0x7f0a07d6
 
-    const v4, 0x7f120786
+    const v4, 0x7f12077d
 
-    const v5, 0x7f08066f
+    const v5, 0x7f0805f5
 
     const-class v6, Lcom/vk/music/fragment/MusicCatalogFragment1;
 
@@ -783,9 +783,9 @@
 
     const v3, 0x7f0a0d14
 
-    const v4, 0x7f1206f3
+    const v4, 0x7f1206fc
 
-    const v5, 0x7f0803f5
+    const v5, 0x7f0805b9
 
     const-class v6, Lcom/vtosters/lite/fragments/t2/c/DialogsFragment;
 
@@ -800,7 +800,7 @@
 
     if-eqz v1, :cond_1
 
-    const v4, 0x7f120aa2
+    const v4, 0x7f120b89
 
     const v5, 0x7f080833
 
@@ -809,7 +809,7 @@
     goto :goto_1
 
     :cond_1
-    const v4, 0x7f1206eb
+    const v4, 0x7f1206f0
 
     const v5, 0x7f0805a4
 
