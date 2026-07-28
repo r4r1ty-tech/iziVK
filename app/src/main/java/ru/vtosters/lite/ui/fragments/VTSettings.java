@@ -11,17 +11,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.provider.Settings;
-import androidx.annotation.StringRes;
-import androidx.appcompat.app.AlertDialog;
-import androidx.fragment.app.DialogFragment;
 import androidx.preference.Preference;
-import com.aefyr.tsg.g2.TelegramStickersService;
-import com.vk.about.AboutAppFragment;
-import com.vk.balance.BalanceFragment;
 import com.vk.core.dialogs.alert.VkAlertDialog;
-import com.vk.identity.fragments.IdentityListFragment;
-import com.vk.medianative.MediaImageEncoder;
-import com.vk.notifications.settings.NotificationsSettingsFragment;
 import com.vk.webapp.fragments.PrivacyFragment;
 import com.vtosters.lite.MainActivity;
 import com.vtosters.lite.R;
@@ -46,25 +37,12 @@ import ru.vtosters.lite.proxy.ProxyUtils;
 import ru.vtosters.lite.ssfs.Utils;
 import ru.vtosters.lite.themes.utils.RecolorUtils;
 import ru.vtosters.lite.ui.PreferenceFragmentUtils;
-import ru.vtosters.lite.ui.components.DockBarEditorManager;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
-import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
 import ru.vtosters.lite.utils.*;
 
 import java.util.Locale;
 
 public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
-    public static String ACTION_INVALIDATE_TGS_COUNT = "com.vtosters.lite.intent.action.INVALIDATE_TGS_COUNT";
-
-    BroadcastReceiver mTgsReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            if (ACTION_INVALIDATE_TGS_COUNT.equals(intent.getAction())) {
-                findPreference("tgs_stickers").setSummary(getTGSsumm());
-            }
-        }
-    };
-
     public static String getValAsString(@StringRes int strRes, Boolean value) {
         if (value) {
             return AndroidUtils.getString(strRes) + ": " + AndroidUtils.getString(R.string.vtlsettenabled);
@@ -73,22 +51,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
         return AndroidUtils.getString(strRes) + ": " + AndroidUtils.getString(R.string.vtlsettdisabled);
     }
 
-    public static String getTGSsumm() {
-        return AndroidUtils.getString(R.string.vtltgssumm) + ": " + TelegramStickersService.getInstance(AndroidUtils.getGlobalContext()).getActivePacksListReference().size();
-    }
 
-    public static String getProxysumm() {
-        String type = Preferences.getString("proxy");
-        boolean isVKProxy = ProxyUtils.isVKProxyEnabled();
-
-        if (isVKProxy) {
-            type = "Встроенный";
-        } else if (type.equals("noproxy") || type.isEmpty()) {
-            type = AndroidUtils.getString(R.string.vtlsettdisabled);
-        }
-
-        return AndroidUtils.getString(R.string.vtlproxysumm) + ": " + type;
-    }
 
     private void switchTheme(boolean isDarkTheme) {
         ThemesUtils.setTheme(isDarkTheme ? ThemesUtils.getDarkTheme() : ThemesUtils.getLightTheme(), requireActivity(), true);
@@ -99,8 +62,6 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-
-        requireContext().registerReceiver(mTgsReceiver, new IntentFilter(ACTION_INVALIDATE_TGS_COUNT));
 
         this.addPreferencesFromResource(R.xml.empty);
 
@@ -498,29 +459,6 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                 }
         );
 
-        PreferenceFragmentUtils.addPreference(
-                getPreferenceScreen(),
-                "tgs_stickers",
-                requireContext().getString(R.string.vtltgs),
-                getTGSsumm(),
-                R.drawable.ic_telegram_outline_28,
-                preference -> {
-                    NavigatorUtils.switchFragment(requireContext(), StickersFragment.class);
-                    return false;
-                }
-        );
-
-        PreferenceFragmentUtils.addPreference(
-                getPreferenceScreen(),
-                "",
-                requireContext().getString(R.string.vtlthemes),
-                getValAsString(R.string.milkshake_title, ThemesUtils.isMilkshake()),
-                R.drawable.ic_write_outline_28,
-                preference -> {
-                    NavigatorUtils.switchFragment(requireContext(), ThemesFragment.class);
-                    return false;
-                }
-        );
 
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
@@ -534,19 +472,6 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                 }
         );
 
-        if (!Preferences.vkme() && !AndroidUtils.isTablet()) {
-            PreferenceFragmentUtils.addPreference(
-                    getPreferenceScreen(),
-                    "",
-                    requireContext().getString(R.string.dockbar_editor),
-                    requireContext().getString(R.string.vtldocksumm) + ": " + DockBarEditorManager.getInstance().getSelectedTabs().size(),
-                    R.drawable.ic_pin_outline_28,
-                    preference -> {
-                        NavigatorUtils.switchFragment(requireContext(), DockBarEditorFragment.class);
-                        return false;
-                    }
-            );
-        }
 
         PreferenceFragmentUtils.addPreference(
                 getPreferenceScreen(),
@@ -572,17 +497,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
                 }
         );
 
-        PreferenceFragmentUtils.addPreference(
-                getPreferenceScreen(),
-                "",
-                requireContext().getString(R.string.vtlproxy),
-                getProxysumm(),
-                R.drawable.ic_linked_outline_28,
-                preference -> {
-                    NavigatorUtils.switchFragment(requireContext(), ProxySettingsFragment.class);
-                    return false;
-                }
-        );
+
 
         if (Build.VERSION.SDK_INT >= 33 && (!OEMDetector.isMIUI() || OEMDetector.isHyperOs())) {
             PreferenceFragmentUtils.addPreference(
@@ -730,11 +645,7 @@ public class VTSettings extends TrackedMaterialPreferenceToolbarFragment {
         }
     }
 
-    @Override
-    public void onDestroy() {
-        requireContext().unregisterReceiver(mTgsReceiver);
-        super.onDestroy();
-    }
+
 
     @Override
     public void onResume() {

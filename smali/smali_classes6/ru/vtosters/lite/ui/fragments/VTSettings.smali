@@ -11,12 +11,7 @@
 .end annotation
 
 
-# static fields
-.field public static ACTION_INVALIDATE_TGS_COUNT:Ljava/lang/String; = "com.vtosters.lite.intent.action.INVALIDATE_TGS_COUNT"
 
-
-# instance fields
-.field mTgsReceiver:Landroid/content/BroadcastReceiver;
 
 
 # direct methods
@@ -32,137 +27,10 @@
     .line 56
     invoke-direct {p0}, Lru/vtosters/lite/ui/fragments/TrackedMaterialPreferenceToolbarFragment;-><init>()V
 
-    .line 59
-    new-instance v0, Lru/vtosters/lite/ui/fragments/VTSettings$1;
-
-    invoke-direct {v0, p0}, Lru/vtosters/lite/ui/fragments/VTSettings$1;-><init>(Lru/vtosters/lite/ui/fragments/VTSettings;)V
-
-    iput-object v0, p0, Lru/vtosters/lite/ui/fragments/VTSettings;->mTgsReceiver:Landroid/content/BroadcastReceiver;
-
     return-void
 .end method
 
-.method public static getProxysumm()Ljava/lang/String;
-    .locals 3
 
-    const-string v0, "proxy"
-
-    .line 81
-    invoke-static {v0}, Lru/vtosters/hooks/other/Preferences;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 82
-    invoke-static {}, Lru/vtosters/lite/proxy/ProxyUtils;->isVKProxyEnabled()Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const-string v0, "\u0412\u0441\u0442\u0440\u043e\u0435\u043d\u043d\u044b\u0439"
-
-    goto :goto_0
-
-    :cond_0
-    const-string v1, "noproxy"
-
-    .line 86
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    :cond_1
-    const v0, 0x7f121804
-
-    .line 87
-    invoke-static {v0}, Lru/vtosters/lite/utils/AndroidUtils;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 90
-    :cond_2
-    :goto_0
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const v2, 0x7f1217fd
-
-    invoke-static {v2}, Lru/vtosters/lite/utils/AndroidUtils;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ": "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static getTGSsumm()Ljava/lang/String;
-    .locals 2
-
-    .line 77
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const v1, 0x7f121811
-
-    invoke-static {v1}, Lru/vtosters/lite/utils/AndroidUtils;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ": "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {}, Lru/vtosters/lite/utils/AndroidUtils;->getGlobalContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/aefyr/tsg/g2/TelegramStickersService;->getInstance(Landroid/content/Context;)Lcom/aefyr/tsg/g2/TelegramStickersService;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/aefyr/tsg/g2/TelegramStickersService;->getActivePacksListReference()Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
 
 .method public static getValAsString(ILjava/lang/Boolean;)Ljava/lang/String;
     .locals 1
@@ -771,39 +639,9 @@
     return p1
 .end method
 
-.method synthetic lambda$onCreate$27$ru-vtosters-lite-ui-fragments-VTSettings(Landroidx/preference/Preference;)Z
-    .locals 1
 
-    .line 508
-    invoke-virtual {p0}, Lru/vtosters/lite/ui/fragments/VTSettings;->requireContext()Landroid/content/Context;
 
-    move-result-object p1
 
-    const-class v0, Lru/vtosters/lite/ui/fragments/tgstickers/StickersFragment;
-
-    invoke-static {p1, v0}, Lru/vtosters/lite/utils/NavigatorUtils;->switchFragment(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method synthetic lambda$onCreate$28$ru-vtosters-lite-ui-fragments-VTSettings(Landroidx/preference/Preference;)Z
-    .locals 1
-
-    .line 520
-    invoke-virtual {p0}, Lru/vtosters/lite/ui/fragments/VTSettings;->requireContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    const-class v0, Lru/vtosters/lite/ui/fragments/ThemesFragment;
-
-    invoke-static {p1, v0}, Lru/vtosters/lite/utils/NavigatorUtils;->switchFragment(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
 
 .method synthetic lambda$onCreate$29$ru-vtosters-lite-ui-fragments-VTSettings(Landroidx/preference/Preference;)Z
     .locals 1
@@ -846,22 +684,7 @@
     return p1
 .end method
 
-.method synthetic lambda$onCreate$30$ru-vtosters-lite-ui-fragments-VTSettings(Landroidx/preference/Preference;)Z
-    .locals 1
 
-    .line 545
-    invoke-virtual {p0}, Lru/vtosters/lite/ui/fragments/VTSettings;->requireContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    const-class v0, Lru/vtosters/lite/ui/fragments/DockBarEditorFragment;
-
-    invoke-static {p1, v0}, Lru/vtosters/lite/utils/NavigatorUtils;->switchFragment(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
 
 .method synthetic lambda$onCreate$31$ru-vtosters-lite-ui-fragments-VTSettings(Landroidx/preference/Preference;)Z
     .locals 1
@@ -1476,20 +1299,6 @@
     invoke-super/range {p0 .. p1}, Lru/vtosters/lite/ui/fragments/TrackedMaterialPreferenceToolbarFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 103
-    invoke-virtual/range {p0 .. p0}, Lru/vtosters/lite/ui/fragments/VTSettings;->requireContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    iget-object v2, v0, Lru/vtosters/lite/ui/fragments/VTSettings;->mTgsReceiver:Landroid/content/BroadcastReceiver;
-
-    new-instance v3, Landroid/content/IntentFilter;
-
-    sget-object v4, Lru/vtosters/lite/ui/fragments/VTSettings;->ACTION_INVALIDATE_TGS_COUNT:Ljava/lang/String;
-
-    invoke-direct {v3, v4}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v2, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
-
     const v1, 0x7f150013
 
     .line 105
@@ -2725,36 +2534,7 @@
     invoke-static/range {v7 .. v12}, Lru/vtosters/lite/ui/PreferenceFragmentUtils;->addPreference(Landroidx/preference/PreferenceScreen;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILandroidx/preference/Preference$OnPreferenceClickListener;)Landroidx/preference/Preference;
 
     .line 502
-    invoke-virtual/range {p0 .. p0}, Lru/vtosters/lite/ui/fragments/VTSettings;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 
-    move-result-object v1
-
-    const-string v2, "tgs_stickers"
-
-    .line 504
-    invoke-virtual/range {p0 .. p0}, Lru/vtosters/lite/ui/fragments/VTSettings;->requireContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    const v4, 0x7f121810
-
-    invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 505
-    invoke-static {}, Lru/vtosters/lite/ui/fragments/VTSettings;->getTGSsumm()Ljava/lang/String;
-
-    move-result-object v4
-
-    const v5, 0x7f080bd0
-
-    new-instance v6, Lru/vtosters/lite/ui/fragments/VTSettings$$ExternalSyntheticLambda9;
-
-    invoke-direct {v6, v0}, Lru/vtosters/lite/ui/fragments/VTSettings$$ExternalSyntheticLambda9;-><init>(Lru/vtosters/lite/ui/fragments/VTSettings;)V
-
-    .line 501
-    invoke-static/range {v1 .. v6}, Lru/vtosters/lite/ui/PreferenceFragmentUtils;->addPreference(Landroidx/preference/PreferenceScreen;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILandroidx/preference/Preference$OnPreferenceClickListener;)Landroidx/preference/Preference;
 
     .line 514
     invoke-virtual/range {p0 .. p0}, Lru/vtosters/lite/ui/fragments/VTSettings;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
@@ -2847,80 +2627,7 @@
 
     const-string v2, ": "
 
-    if-nez v1, :cond_11
 
-    invoke-static {}, Lru/vtosters/lite/utils/AndroidUtils;->isTablet()Z
-
-    move-result v1
-
-    if-nez v1, :cond_11
-
-    .line 539
-    invoke-virtual/range {p0 .. p0}, Lru/vtosters/lite/ui/fragments/VTSettings;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
-
-    move-result-object v3
-
-    const-string v4, ""
-
-    .line 541
-    invoke-virtual/range {p0 .. p0}, Lru/vtosters/lite/ui/fragments/VTSettings;->requireContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    const v5, 0x7f121607
-
-    invoke-virtual {v1, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    .line 542
-    invoke-virtual/range {p0 .. p0}, Lru/vtosters/lite/ui/fragments/VTSettings;->requireContext()Landroid/content/Context;
-
-    move-result-object v6
-
-    const v7, 0x7f1217dd
-
-    invoke-virtual {v6, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {}, Lru/vtosters/lite/ui/components/DockBarEditorManager;->getInstance()Lru/vtosters/lite/ui/components/DockBarEditorManager;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Lru/vtosters/lite/ui/components/DockBarEditorManager;->getSelectedTabs()Ljava/util/List;
-
-    move-result-object v6
-
-    invoke-interface {v6}, Ljava/util/List;->size()I
-
-    move-result v6
-
-    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    const v7, 0x7f0806b8
-
-    new-instance v8, Lru/vtosters/lite/ui/fragments/VTSettings$$ExternalSyntheticLambda13;
-
-    invoke-direct {v8, v0}, Lru/vtosters/lite/ui/fragments/VTSettings$$ExternalSyntheticLambda13;-><init>(Lru/vtosters/lite/ui/fragments/VTSettings;)V
-
-    .line 538
-    invoke-static/range {v3 .. v8}, Lru/vtosters/lite/ui/PreferenceFragmentUtils;->addPreference(Landroidx/preference/PreferenceScreen;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILandroidx/preference/Preference$OnPreferenceClickListener;)Landroidx/preference/Preference;
-
-    .line 552
-    :cond_11
     invoke-virtual/range {p0 .. p0}, Lru/vtosters/lite/ui/fragments/VTSettings;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 
     move-result-object v9
@@ -3023,36 +2730,6 @@
     invoke-static/range {v1 .. v6}, Lru/vtosters/lite/ui/PreferenceFragmentUtils;->addPreference(Landroidx/preference/PreferenceScreen;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILandroidx/preference/Preference$OnPreferenceClickListener;)Landroidx/preference/Preference;
 
     .line 576
-    invoke-virtual/range {p0 .. p0}, Lru/vtosters/lite/ui/fragments/VTSettings;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
-
-    move-result-object v7
-
-    const-string v8, ""
-
-    .line 578
-    invoke-virtual/range {p0 .. p0}, Lru/vtosters/lite/ui/fragments/VTSettings;->requireContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    const v2, 0x7f1217fc
-
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v9
-
-    .line 579
-    invoke-static {}, Lru/vtosters/lite/ui/fragments/VTSettings;->getProxysumm()Ljava/lang/String;
-
-    move-result-object v10
-
-    const v11, 0x7f080528
-
-    new-instance v12, Lru/vtosters/lite/ui/fragments/VTSettings$$ExternalSyntheticLambda17;
-
-    invoke-direct {v12, v0}, Lru/vtosters/lite/ui/fragments/VTSettings$$ExternalSyntheticLambda17;-><init>(Lru/vtosters/lite/ui/fragments/VTSettings;)V
-
-    .line 575
-    invoke-static/range {v7 .. v12}, Lru/vtosters/lite/ui/PreferenceFragmentUtils;->addPreference(Landroidx/preference/PreferenceScreen;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILandroidx/preference/Preference$OnPreferenceClickListener;)Landroidx/preference/Preference;
 
     .line 587
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -3445,23 +3122,7 @@
     return-void
 .end method
 
-.method public onDestroy()V
-    .locals 2
 
-    .line 735
-    invoke-virtual {p0}, Lru/vtosters/lite/ui/fragments/VTSettings;->requireContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lru/vtosters/lite/ui/fragments/VTSettings;->mTgsReceiver:Landroid/content/BroadcastReceiver;
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
-
-    .line 736
-    invoke-super {p0}, Lru/vtosters/lite/ui/fragments/TrackedMaterialPreferenceToolbarFragment;->onDestroy()V
-
-    return-void
-.end method
 
 .method public onResume()V
     .locals 0
