@@ -29,10 +29,6 @@ import com.vk.im.ui.themes.DefaultThemeProvider;
 import com.vtosters.lite.R;
 import com.vtosters.lite.data.ThemeTracker;
 import ru.vtosters.lite.deviceinfo.OEMDetector;
-import ru.vtosters.lite.themes.ThemesCore;
-import ru.vtosters.lite.themes.ThemesHacks;
-import ru.vtosters.lite.themes.ThemesManager;
-import ru.vtosters.lite.ui.wallpapers.WallpapersHooks;
 import ru.vtosters.lite.utils.LifecycleUtils;
 
 import java.lang.reflect.Field;
@@ -62,11 +58,6 @@ public class ThemesUtils {
             activity = LifecycleUtils.getCurrentActivity();
         }
         VKThemeHelper.theme(theme, activity, fl);
-        if (isMonetTheme() || ThemesManager.canApplyCustomAccent()) {
-            ThemesCore.clear();
-            ThemesCore.init();
-            DialogTheme.d.a(new DefaultThemeProvider(VKThemeHelper.k).b()); // reset dialog attrs cache
-        }
         ThemeTracker.a();
         if (restartActivity) {
             activity.recreate();
@@ -76,11 +67,7 @@ public class ThemesUtils {
     }
 
     public static DialogTheme getDialogTheme() {
-        if (isMonetTheme()) {
-            return new DefaultThemeProvider(VKThemeHelper.k).b(); // get directly from theme cuz monet issue
-        } else {
-            return DialogTheme.d.a(); // get cached theme
-        }
+        return DialogTheme.d.a(); // get cached theme
     }
 
     public static boolean isDarkTheme() {
@@ -88,11 +75,11 @@ public class ThemesUtils {
     }
 
     public static boolean isMonetTheme() {
-        return getBoolValue("monettheme", false);
+        return false;
     }
 
     public static boolean isAmoledTheme() {
-        return getBoolValue("amoledtheme", false);
+        return false;
     }
 
     public static int getAccentColor() {
@@ -261,27 +248,11 @@ public class ThemesUtils {
     }
 
     public static int getDarkThemeRes() {
-        if (isMonetTheme()) {
-            if (isAmoledTheme()) {
-                return getIdentifier(isMilkshake() ? "VkMilkAmoledMonetStyle" : "VkAmoledMonetStyle", "style");
-            } else {
-                return getIdentifier(isMilkshake() ? "VkMilkDarkMonetStyle" : "VkDarkMonetStyle", "style");
-            }
-        } else {
-            if (isAmoledTheme()) {
-                return isMilkshake() ? R.style.VkMilkAmoledStyle : R.style.VkAmoledStyle;
-            } else {
-                return isMilkshake() ? R.style.VkMilkDarkStyle : R.style.VkDarkStyle;
-            }
-        }
+        return isMilkshake() ? R.style.VkMilkDarkStyle : R.style.VkDarkStyle;
     } // Return needed res theme
 
     public static int getLightThemeRes() {
-        if (isMonetTheme()) {
-            return getIdentifier(isMilkshake() ? "VkMilkLightMonetStyle" : "VkLightMonetStyle", "style");
-        } else {
-            return isMilkshake() ? R.style.VkMilkLightStyle : R.style.VkLightStyle;
-        }
+        return isMilkshake() ? R.style.VkMilkLightStyle : R.style.VkLightStyle;
     } // Return needed res theme
 
     public static VKTheme getDarkTheme() {
@@ -314,7 +285,6 @@ public class ThemesUtils {
     } // Recolor drawable to accent color
 
     public static Drawable recolorToolbarDrawable(Drawable drawable) {
-        if (!ThemesUtils.isMonetTheme()) return drawable;
         if (drawable == null) return null;
         return new RecoloredDrawable(drawable, (ThemesUtils.isMilkshake() && !ThemesUtils.isDarkTheme()) ? ThemesUtils.getAccentColor() : ThemesUtils.getHeaderText());
     }
@@ -336,11 +306,7 @@ public class ThemesUtils {
     }
 
     public static int fixSeparator(float f) {
-        if (isMonetTheme()) {
-            return 0;
-        } else {
-            return (int) Math.floor(f * Resources.getSystem().getDisplayMetrics().density);
-        }
+        return (int) Math.floor(f * Resources.getSystem().getDisplayMetrics().density);
     }
 
     public static int lighten(int color, float factor) {
@@ -355,15 +321,15 @@ public class ThemesUtils {
     }
 
     public static int getColor(int i) {
-        return ThemesHacks.getHackedColor(getGlobalContext(), i);
-    } // Android Support color injector + accent color checker
+        return ContextCompat.getColor(getGlobalContext(), i);
+    } // Android Support color injector
 
     public static int getAlertStyle() {
         return getIdentifier(isDarkTheme() ? "VkAlertDialogThemeDark" : "VkAlertDialogTheme", "style");
     }
 
     public static String getBackgroundStickers() {
-        return WallpapersHooks.hasWallpapers() ? "images_with_background" : "images";
+        return "images";
     }
 
     public static VKTheme getCurrentTheme() {
@@ -413,7 +379,7 @@ public class ThemesUtils {
                         new int[]{-android.R.attr.state_checked}
                 },
                 new int[]{
-                        dockbar_accent() ? getAccentColor() : (isDarkTheme() ? ThemesHacks.getColors(ctx, R.color.white) : ThemesHacks.getColors(ctx, R.color.gray_700)),
+                        dockbar_accent() ? getAccentColor() : ContextCompat.getColor(ctx, isDarkTheme() ? R.color.white : R.color.gray_700),
                         getColorFromAttr(R.attr.tabbar_inactive_icon)
                 }
         );

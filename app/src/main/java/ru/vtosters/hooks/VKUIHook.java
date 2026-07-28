@@ -2,8 +2,6 @@ package ru.vtosters.hooks;
 
 import android.webkit.WebView;
 import ru.vtosters.hooks.other.Preferences;
-import ru.vtosters.hooks.other.ThemesUtils;
-import ru.vtosters.lite.themes.ThemesCore;
 import ru.vtosters.lite.utils.WebViewColoringUtils;
 
 import static android.util.Base64.encodeToString;
@@ -32,15 +30,8 @@ public class VKUIHook {
     private static void loadAndApplyCSS(WebView webView) {
         StringBuilder sb = new StringBuilder();
 
-        if (ThemesCore.isCachedAccents()) {
-            sb.append("\n\n");
-            sb.append(WebViewColoringUtils.loadedCSS);
-        }
-
-        if (ThemesUtils.isAmoledTheme()) {
-            sb.append("\n\n");
-            sb.append(WebViewColoringUtils.loadedCSSAmoled);
-        }
+        sb.append("\n\n");
+        sb.append(WebViewColoringUtils.loadedCSS);
 
         WebViewColoringUtils.inject(webView, encodeToString(sb.toString().getBytes(), 2));
     }

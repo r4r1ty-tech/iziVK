@@ -49,7 +49,7 @@ import com.vk.im.ui.views.msg.bubble.MsgBubbleView;
 import com.vk.im.ui.views.sticker.StickerAnimationState;
 import kotlin.Unit;
 import kotlin.jvm.b.Functions;
-import ru.vtosters.lite.themes.ThemesHacks;
+import androidx.core.content.ContextCompat;
 
 public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
     public static final int h0 = Screen.a(124);
@@ -134,7 +134,7 @@ public class VhMsg extends VhBase implements SwipeToReplyItemTouchCallback.b {
         this.h = itemView.findViewById(com.vk.im.ui.h.status_space);
         this.P = itemView.findViewById(com.vk.im.ui.h.bomb);
         this.B = vhBase;
-        this.H = new ColorDrawable(ThemesHacks.getColors(context, com.vk.im.ui.d.msg_search_selection));
+        this.H = new ColorDrawable(ContextCompat.getColor(context, com.vk.im.ui.d.msg_search_selection));
         this.I = ContextExtKt.b(context, com.vk.im.ui.e.msg_bubble_max_width);
         this.J = ContextExtKt.b(context, com.vk.im.ui.e.msg_reply_max_width);
         this.K = ContextExtKt.b(context, com.vk.im.ui.e.msg_sticker_max_width);

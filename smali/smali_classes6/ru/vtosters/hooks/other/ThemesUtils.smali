@@ -465,20 +465,8 @@
     .locals 1
 
     .line 366
-    invoke-static {}, Lru/vtosters/lite/ui/wallpapers/WallpapersHooks;->hasWallpapers()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "images_with_background"
-
-    goto :goto_0
-
-    :cond_0
     const-string v0, "images"
 
-    :goto_0
     return-object v0
 .end method
 
@@ -542,7 +530,7 @@
     const v4, 0x7f0600ea
 
     :goto_0
-    invoke-static {p0, v4}, Lru/vtosters/lite/themes/ThemesHacks;->getColors(Landroid/content/Context;I)I
+    invoke-static {p0, v4}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p0
 
@@ -571,7 +559,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p0}, Lru/vtosters/lite/themes/ThemesHacks;->getHackedColor(Landroid/content/Context;I)I
+    invoke-static {v0, p0}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p0
 
@@ -1719,36 +1707,6 @@
     invoke-static {}, Lru/vtosters/hooks/other/ThemesUtils;->isMonetTheme()Z
 
     move-result p0
-
-    if-nez p0, :cond_1
-
-    invoke-static {}, Lru/vtosters/lite/themes/ThemesManager;->canApplyCustomAccent()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    .line 66
-    :cond_1
-    invoke-static {}, Lru/vtosters/lite/themes/ThemesCore;->clear()V
-
-    .line 67
-    invoke-static {}, Lru/vtosters/lite/themes/ThemesCore;->init()V
-
-    .line 68
-    sget-object p0, Lcom/vk/im/engine/models/dialogs/DialogTheme;->d:Lcom/vk/im/engine/models/dialogs/DialogTheme$b;
-
-    new-instance p2, Lcom/vk/im/ui/themes/DefaultThemeProvider;
-
-    sget-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->k:Lcom/vk/core/ui/themes/VKThemeHelper;
-
-    invoke-direct {p2, v0}, Lcom/vk/im/ui/themes/DefaultThemeProvider;-><init>(Lcom/vk/core/ui/themes/VKThemeHelper;)V
-
-    invoke-virtual {p2}, Lcom/vk/im/ui/themes/DefaultThemeProvider;->b()Lcom/vk/im/engine/models/dialogs/DialogTheme;
-
-    move-result-object p2
-
-    invoke-virtual {p0, p2}, Lcom/vk/im/engine/models/dialogs/DialogTheme$b;->a(Lcom/vk/im/engine/models/dialogs/DialogTheme;)V
 
     .line 70
     :cond_2
