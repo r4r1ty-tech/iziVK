@@ -12,30 +12,68 @@
 
 .field private static final VPN_IFACES:[Ljava/lang/String;
 
+.field private static sRandomAndroidId:Ljava/lang/String;
+
+.field private static sRandomDeviceId:Ljava/lang/String;
+
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 7
 
-    const-string v0, "tun0"
+    const/4 v0, 0x7
 
-    const-string v1, "tun1"
+    new-array v0, v0, [Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    const-string v2, "tun0"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x1
+
+    const-string v2, "tun1"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x2
 
     const-string v2, "ppp0"
 
-    const-string v3, "pptp0"
+    aput-object v2, v0, v1
 
-    const-string v4, "wg0"
+    const/4 v1, 0x3
 
-    const-string v5, "ipsec0"
+    const-string v2, "pptp0"
 
-    const-string v6, "ccmni"
+    aput-object v2, v0, v1
 
-    filled-new-array/range {v0 .. v6}, [Ljava/lang/String;
+    const/4 v1, 0x4
 
-    move-result-object v0
+    const-string v2, "wg0"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x5
+
+    const-string v2, "ipsec0"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x6
+
+    const-string v2, "ccmni"
+
+    aput-object v2, v0, v1
 
     sput-object v0, Lru/vtosters/lite/utils/DevicePrivacyShield;->VPN_IFACES:[Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    sput-object v0, Lru/vtosters/lite/utils/DevicePrivacyShield;->sRandomAndroidId:Ljava/lang/String;
+
+    sput-object v0, Lru/vtosters/lite/utils/DevicePrivacyShield;->sRandomDeviceId:Ljava/lang/String;
 
     return-void
 .end method
@@ -49,31 +87,81 @@
 .end method
 
 .method public static getAnonymizedAndroidId(Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
+    .locals 3
 
-    const-string p0, "iziVK-Privacy"
+    sget-object v0, Lru/vtosters/lite/utils/DevicePrivacyShield;->sRandomAndroidId:Ljava/lang/String;
 
-    const-string v0, "Android ID anonymized"
+    if-nez v0, :cond_0
 
-    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
-    const-string p0, "0000000000000000"
+    move-result-object v0
 
-    return-object p0
+    invoke-virtual {v0}, Ljava/util/UUID;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "-"
+
+    const-string v2, ""
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x10
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lru/vtosters/lite/utils/DevicePrivacyShield;->sRandomAndroidId:Ljava/lang/String;
+
+    :cond_0
+    sget-object v0, Lru/vtosters/lite/utils/DevicePrivacyShield;->sRandomAndroidId:Ljava/lang/String;
+
+    return-object v0
 .end method
 
 .method public static getAnonymizedDeviceId(Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
+    .locals 3
 
-    const-string p0, "iziVK-Privacy"
+    sget-object v0, Lru/vtosters/lite/utils/DevicePrivacyShield;->sRandomDeviceId:Ljava/lang/String;
 
-    const-string v0, "IMEI/DeviceId anonymized"
+    if-nez v0, :cond_0
 
-    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
-    const-string p0, "000000000000000"
+    move-result-object v0
 
-    return-object p0
+    invoke-virtual {v0}, Ljava/util/UUID;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "-"
+
+    const-string v2, "0"
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0xf
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lru/vtosters/lite/utils/DevicePrivacyShield;->sRandomDeviceId:Ljava/lang/String;
+
+    :cond_0
+    sget-object v0, Lru/vtosters/lite/utils/DevicePrivacyShield;->sRandomDeviceId:Ljava/lang/String;
+
+    return-object v0
 .end method
 
 .method public static getAnonymizedMac(Ljava/lang/String;)Ljava/lang/String;

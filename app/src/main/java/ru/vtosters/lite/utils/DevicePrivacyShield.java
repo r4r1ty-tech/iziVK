@@ -32,14 +32,21 @@ public class DevicePrivacyShield {
         return Collections.emptyList();
     }
 
+    private static String sRandomAndroidId = null;
+    private static String sRandomDeviceId = null;
+
     public static String getAnonymizedAndroidId(String realId) {
-        android.util.Log.d("iziVK-Privacy", "Android ID anonymized");
-        return FAKE_ANDROID_ID;
+        if (sRandomAndroidId == null) {
+            sRandomAndroidId = java.util.UUID.randomUUID().toString().replace("-", "").substring(0, 16);
+        }
+        return sRandomAndroidId;
     }
 
     public static String getAnonymizedDeviceId(String realId) {
-        android.util.Log.d("iziVK-Privacy", "IMEI/DeviceId anonymized");
-        return FAKE_IMEI;
+        if (sRandomDeviceId == null) {
+            sRandomDeviceId = "86" + java.util.UUID.randomUUID().toString().replaceAll("[^0-9]", "0").substring(0, 13);
+        }
+        return sRandomDeviceId;
     }
 
     public static String getAnonymizedMac(String realMac) {
