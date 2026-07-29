@@ -37,7 +37,13 @@ public class DevicePrivacyShield {
 
     public static String getAnonymizedAndroidId(String realId) {
         if (sRandomAndroidId == null) {
-            sRandomAndroidId = java.util.UUID.randomUUID().toString().replace("-", "").substring(0, 16);
+            String saved = ru.vtosters.hooks.other.Preferences.getString("anon_android_id");
+            if (saved != null && saved.length() == 16) {
+                sRandomAndroidId = saved;
+            } else {
+                sRandomAndroidId = java.util.UUID.randomUUID().toString().replace("-", "").substring(0, 16);
+                ru.vtosters.hooks.other.Preferences.getPreferences().edit().putString("anon_android_id", sRandomAndroidId).apply();
+            }
         }
         return sRandomAndroidId;
     }

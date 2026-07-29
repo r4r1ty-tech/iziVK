@@ -93,6 +93,27 @@
 
     if-nez v0, :cond_0
 
+    const-string v0, "anon_android_id"
+
+    invoke-static {v0}, Lru/vtosters/hooks/other/Preferences;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    const/16 v2, 0x10
+
+    if-ne v1, v2, :cond_1
+
+    sput-object v0, Lru/vtosters/lite/utils/DevicePrivacyShield;->sRandomAndroidId:Ljava/lang/String;
+
+    goto :cond_0
+
+    :cond_1
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
     move-result-object v0
@@ -118,6 +139,22 @@
     move-result-object v0
 
     sput-object v0, Lru/vtosters/lite/utils/DevicePrivacyShield;->sRandomAndroidId:Ljava/lang/String;
+
+    invoke-static {}, Lru/vtosters/hooks/other/Preferences;->getPreferences()Landroid/content/SharedPreferences;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    const-string v2, "anon_android_id"
+
+    invoke-interface {v1, v2, v0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     :cond_0
     sget-object v0, Lru/vtosters/lite/utils/DevicePrivacyShield;->sRandomAndroidId:Ljava/lang/String;
