@@ -5659,6 +5659,13 @@ View all..."</string>
     <string name="sett_compress_video_summ">Disabling will significantly improve the quality of uploaded videos</string>
     <string name="lastfm_auth_title">Account</string>
     <string name="auth_error_vtl">Login failed</string>
+    <string name="izivk_auth_anonymous_button">Анонимный вход</string>
+    <string name="izivk_auth_full_button">Полный вход</string>
+    <string name="izivk_auth_anonymous_title">Повышенная анонимность</string>
+    <string name="izivk_auth_anonymous_warning">Вход через WebView не передаёт Android ID и libverify. Часть функций может не работать: музыка, скачивание аудио, некоторые сообщения. Для полного доступа используйте «Полную авторизацию».</string>
+    <string name="izivk_auth_continue">Продолжить</string>
+    <string name="izivk_music_auth_required_title">Музыка недоступна</string>
+    <string name="izivk_music_auth_required_message">При повышенной анонимности музыка недоступна из-за ограничений web-токена. Войдите через «Полную авторизацию», чтобы слушать музыку.</string>
     <string name="lastfm_auth_summ">You are not logged in</string>
     <string name="lastfm_logout_success">You have successfully logged out</string>
     <string name="lastfm_enabled_title">Enable scrobbling</string>

@@ -250,6 +250,12 @@
 .method protected onActivityResult(IILandroid/content/Intent;)V
     .locals 2
 
+    invoke-static {p1, p2, p3, p0}, Lru/vtosters/hooks/AuthMethodInjector;->handleAuthActivityResult(IILandroid/content/Intent;Landroid/app/Activity;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_done
+
     .line 1
     invoke-virtual {p0}, Lcom/vk/auth/DefaultAuthActivity;->v1()Lcom/vk/auth/main/SignUpConfig;
 
@@ -315,6 +321,9 @@
     invoke-interface {v1, p1, p2, p3}, Lcom/vk/navigation/ActivityResulter;->onActivityResult(IILandroid/content/Intent;)V
 
     goto :goto_0
+
+    :cond_done
+    return-void
 
     :cond_1
     return-void

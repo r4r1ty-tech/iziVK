@@ -185,7 +185,7 @@
     invoke-virtual {p2, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 5
-    sget p2, Lcom/vk/auth/r/e;->login_button:I
+    sget p2, Lcom/vk/auth/r/e;->login_full_button:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -227,6 +227,8 @@
     check-cast p1, Lcom/vk/auth/w/a/ChooseAuthMethodPresenter;
 
     invoke-virtual {p1, p0}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lcom/vk/auth/base/AuthView;)V
+
+    invoke-static {p1, p0}, Lru/vtosters/hooks/AuthMethodInjector;->inject(Landroid/view/View;Landroidx/fragment/app/Fragment;)V
 
     return-void
 .end method

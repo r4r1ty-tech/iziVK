@@ -8857,6 +8857,8 @@ public final class R {
         public static final int locations_list = 0x7f0a0787; // 2131363719
         public static final int lock = 0x7f0a0788; // 2131363720
         public static final int login_button = 0x7f0a0789; // 2131363721
+        public static final int login_anonymous_button = 0x7f0a1027; // 2131363879
+        public static final int login_full_button = 0x7f0a1028; // 2131363880
         public static final int login_pass_separator = 0x7f0a078a; // 2131363722
         public static final int login_via_button = 0x7f0a078b; // 2131363723
         public static final int login_via_fb_button = 0x7f0a078c; // 2131363724
@@ -18795,6 +18797,13 @@ public final class R {
         public static final int audio_download_title = 0x7f12152b; // 2131891499
         public static final int audio_downloading = 0x7f12152c; // 2131891500
         public static final int auth_error_vtl = 0x7f12152d; // 2131891501
+        public static final int izivk_auth_anonymous_button = 0x7f12152e; // 2131891502
+        public static final int izivk_auth_full_button = 0x7f12152f; // 2131891503
+        public static final int izivk_auth_anonymous_title = 0x7f121530; // 2131891504
+        public static final int izivk_auth_anonymous_warning = 0x7f121531; // 2131891505
+        public static final int izivk_auth_continue = 0x7f121532; // 2131891506
+        public static final int izivk_music_auth_required_title = 0x7f121533; // 2131891507
+        public static final int izivk_music_auth_required_message = 0x7f121534; // 2131891508
         public static final int autoalltranslate_summ = 0x7f12152e; // 2131891502
         public static final int autoalltranslate_title = 0x7f12152f; // 2131891503
         public static final int autocache_summ = 0x7f121530; // 2131891504

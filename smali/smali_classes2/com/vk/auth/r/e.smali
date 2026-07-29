@@ -212,6 +212,10 @@
 
 .field public static final login_button:I = 0x7f0a0789
 
+.field public static final login_anonymous_button:I = 0x7f0a1027
+
+.field public static final login_full_button:I = 0x7f0a1028
+
 .field public static final login_pass_separator:I = 0x7f0a078a
 
 .field public static final login_via_fb_button:I = 0x7f0a078c

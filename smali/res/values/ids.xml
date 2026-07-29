@@ -1817,6 +1817,8 @@
     <item name="locations_list" type="id" />
     <item name="lock" type="id" />
     <item name="login_button" type="id" />
+    <item name="login_anonymous_button" type="id" />
+    <item name="login_full_button" type="id" />
     <item name="login_pass_separator" type="id" />
     <item name="login_via_button" type="id" />
     <item name="login_via_fb_button" type="id" />
