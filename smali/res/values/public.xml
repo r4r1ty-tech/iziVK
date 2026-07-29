@@ -18667,13 +18667,13 @@
     <public type="string" name="audio_download_title" id="0x7f12152b" />
     <public type="string" name="audio_downloading" id="0x7f12152c" />
     <public type="string" name="auth_error_vtl" id="0x7f12152d" />
-    <public type="string" name="izivk_auth_anonymous_button" id="0x7f12152e" />
-    <public type="string" name="izivk_auth_full_button" id="0x7f12152f" />
-    <public type="string" name="izivk_auth_anonymous_title" id="0x7f121530" />
-    <public type="string" name="izivk_auth_anonymous_warning" id="0x7f121531" />
-    <public type="string" name="izivk_auth_continue" id="0x7f121532" />
-    <public type="string" name="izivk_music_auth_required_title" id="0x7f121533" />
-    <public type="string" name="izivk_music_auth_required_message" id="0x7f121534" />
+    <public type="string" name="izivk_auth_anonymous_button" id="0x7f12188d" />
+    <public type="string" name="izivk_auth_full_button" id="0x7f12188e" />
+    <public type="string" name="izivk_auth_anonymous_title" id="0x7f12188f" />
+    <public type="string" name="izivk_auth_anonymous_warning" id="0x7f121890" />
+    <public type="string" name="izivk_auth_continue" id="0x7f121891" />
+    <public type="string" name="izivk_music_auth_required_title" id="0x7f121892" />
+    <public type="string" name="izivk_music_auth_required_message" id="0x7f121893" />
     <public type="string" name="autoalltranslate_summ" id="0x7f12152e" />
     <public type="string" name="autoalltranslate_title" id="0x7f12152f" />
     <public type="string" name="autocache_summ" id="0x7f121530" />
