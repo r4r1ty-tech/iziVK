@@ -2857,6 +2857,15 @@
 .method public a(Lcom/vk/dto/music/MusicTrack;)V
     .locals 3
 
+    invoke-static {}, Lru/vtosters/hooks/MusicAuthGateHook;->checkMusicAccess()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_continue
+
+    return-void
+
+    :cond_continue
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/Object;
