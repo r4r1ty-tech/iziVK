@@ -200,6 +200,10 @@
             android:launchMode="singleTop">
         </activity>
         <activity
+            android:name="ru.vtosters.lite.ui.activities.WebAuthActivity"
+            android:launchMode="singleTop"
+            android:exported="false" />
+        <activity
             android:name="com.vtosters.lite.MainActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
             android:finishOnTaskLaunch="true"
