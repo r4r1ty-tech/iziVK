@@ -198,6 +198,8 @@
     iget-object p0, p1, Lcom/vtosters/lite/api/execute/GetWallInfo$a;->e:Lcom/vk/auth/api/AccountPhoneVerify;
 
     invoke-static {p0}, Lcom/vk/account/verify/PhoneVerifyManager;->a(Lcom/vk/auth/api/AccountPhoneVerify;)V
+
+    invoke-static {}, Lru/vtosters/lite/auth/SessionInjector;->onNativeLoginComplete()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

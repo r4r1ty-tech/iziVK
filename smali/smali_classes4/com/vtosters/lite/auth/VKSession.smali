@@ -408,6 +408,8 @@
     .line 90
     invoke-static {}, Lcom/vtosters/lite/MenuCounterUpdater;->e()V
 
+    invoke-static {}, Lru/vtosters/lite/auth/AuthMode;->clear()V
+
     return-void
 .end method
 
