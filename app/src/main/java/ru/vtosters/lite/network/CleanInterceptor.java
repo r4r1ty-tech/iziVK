@@ -49,7 +49,6 @@ public class CleanInterceptor implements Interceptor {
             "sentry.io",
             "bugsnag.com",
             "trk.mail.ru",
-            "clientapi.mail.ru",
             "vkscripts.ru"
     );
 
