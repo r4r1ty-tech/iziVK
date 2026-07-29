@@ -77,6 +77,8 @@
     const-string p2, "voice"
 
     .line 4
+    invoke-virtual {p0, p2, p1}, Lcom/vk/api/sdk/o/VKRequest;->a(Ljava/lang/String;I)Lcom/vk/api/sdk/o/VKRequest;
+
     :cond_2
     return-void
 .end method
