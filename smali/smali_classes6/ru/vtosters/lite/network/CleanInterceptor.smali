@@ -138,6 +138,18 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    const-string v1, "trk.mail.ru"
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "clientapi.mail.ru"
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "vkscripts.ru"
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
     sput-object v0, Lru/vtosters/lite/network/CleanInterceptor;->BLOCKED_DOMAINS:Ljava/util/List;
 
     return-void

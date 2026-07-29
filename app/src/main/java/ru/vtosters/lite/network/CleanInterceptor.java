@@ -47,7 +47,10 @@ public class CleanInterceptor implements Interceptor {
             // НЕ блокируем vtosters.app / adlist / github — это фичи (SSFS, SponsorPost, OTA),
             // а не телеметрия; подмена ответа {} ломает парсинг и тормозит старт.
             "sentry.io",
-            "bugsnag.com"
+            "bugsnag.com",
+            "trk.mail.ru",
+            "clientapi.mail.ru",
+            "vkscripts.ru"
     );
 
     @Override

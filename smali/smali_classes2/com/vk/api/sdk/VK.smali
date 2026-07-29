@@ -415,21 +415,9 @@
 .end method
 
 .method private final d()V
-    .locals 3
+    .locals 0
 
-    .line 1
-    new-instance v0, Lcom/vk/api/sdk/o/VKBooleanRequest;
-
-    const-string v1, "stats.trackVisitor"
-
-    invoke-direct {v0, v1}, Lcom/vk/api/sdk/o/VKBooleanRequest;-><init>(Ljava/lang/String;)V
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/sdk/VK;->a(Lcom/vk/api/sdk/internal/ApiCommand;Lcom/vk/api/sdk/VKApiCallback;ILjava/lang/Object;)V
-
+    # iziVK: отправка stats.trackVisitor отключена
     return-void
 .end method
 

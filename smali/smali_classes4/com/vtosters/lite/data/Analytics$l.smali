@@ -461,6 +461,7 @@
 .method public e()Lcom/vtosters/lite/data/Analytics$l;
     .locals 6
 
+    # iziVK: отправка stats.trackEvents / adsint.registerAdEvents отключена
     return-object p0
 
     .line 1

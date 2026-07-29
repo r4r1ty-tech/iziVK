@@ -169,39 +169,10 @@
 
 # virtual methods
 .method public final a()Lio/reactivex/disposables/Disposable;
-    .locals 3
+    .locals 1
 
-    .line 2
-    new-instance v0, Lcom/vk/api/base/BooleanApiRequest;
-
-    const-string v1, "stats.trackVisitor"
-
-    invoke-direct {v0, v1}, Lcom/vk/api/base/BooleanApiRequest;-><init>(Ljava/lang/String;)V
-
-    .line 3
-    iget v1, p0, Lcom/vk/webapp/helpers/VkAppsAnalytics;->d:I
-
-    const-string v2, "app_id"
-
-    invoke-virtual {v0, v2, v1}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    .line 4
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
-
-    move-result-object v0
-
-    .line 5
-    sget-object v1, Lcom/vk/webapp/helpers/VkAppsAnalytics$j;->a:Lcom/vk/webapp/helpers/VkAppsAnalytics$j;
-
-    sget-object v2, Lcom/vk/webapp/helpers/VkAppsAnalytics$k;->a:Lcom/vk/webapp/helpers/VkAppsAnalytics$k;
-
-    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
-
-    move-result-object v0
+    # iziVK: отправка stats.trackVisitor отключена
+    sget-object v0, Lio/reactivex/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex/internal/disposables/EmptyDisposable;
 
     return-object v0
 .end method
